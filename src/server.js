@@ -1,6 +1,7 @@
 import express from "express";
 import compression from "compression";
 import index from "./routes/index";
+import discussion from "./routes/discussion"
 import path from "path";
 
 // Server var
@@ -17,6 +18,7 @@ app.use(express.static(__dirname + "/public"));
 
 //Routes
 app.use("/", index);
+app.use("/discussion",discussion);
 
 const port = process.env.PORT || 3000;
 
