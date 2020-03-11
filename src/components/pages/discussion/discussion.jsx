@@ -1,16 +1,19 @@
 import React from "react";
+import Navbar from "../../navbar/navbar";
+import GlobalStyle from "../../styles/global";
+import Loader from "../../loader/loader";
 
 class Discussion extends React.Component {
     
     constructor(props) {
         super(props);
-        this.state = {text: '', inputText: '', mode:'view'};
+        this.state = {text: '', inputText: '', mode:'view', navbarOpen: false};
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
     }
-      
+    
     handleChange = (e) => {
         this.setState({ inputText: e.target.value });
     }
