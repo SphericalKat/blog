@@ -2,18 +2,29 @@ import React from "react";
 import Navbar from "../../navbar/navbar";
 import GlobalStyle from "../../styles/global";
 import Loader from "../../loader/loader";
+import {Cube} from 'styled-loaders-react';
+
 
 class Discussion extends React.Component {
     
     constructor(props) {
         super(props);
-        this.state = {text: '', inputText: '', mode:'view', navbarOpen: false};
+        this.state = {text: '', inputText: '', mode:'view', navbarOpen: false, loading: true};
         
         this.handleChange = this.handleChange.bind(this);
         this.handleSave = this.handleSave.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
     }
     
+    componentDidMount=()=>{
+      setTimeout(()=>{
+        this.setState({
+          loading: false
+        })
+      }, 3000)
+      this.setState({loading: true})
+    }
+
     handleChange = (e) => {
         this.setState({ inputText: e.target.value });
     }
@@ -61,11 +72,17 @@ class Discussion extends React.Component {
     }
       
     render() {
+      const ret = <span>
+                  <p>Text: {this.state.text}</p>
+                  {this.renderInputField()}
+                  {this.renderButton()}
+                  </span>
+                  
         return (
           <div>
-            <p>Text: {this.state.text}</p>
-            {this.renderInputField()}
-            {this.renderButton()}
+            {
+              this.state.loading ? <Cube color="blue"/> : ret
+            }
           </div>
         );
     }
