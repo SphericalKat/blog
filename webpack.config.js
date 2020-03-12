@@ -1,13 +1,14 @@
 const path = require("path");
 
-const config = {
+const config = [{
     entry: {
         vendor: ["@babel/polyfill", "react"],
         index: ["./src/components/entrypoints/index.jsx"],
-        discussion: ["./src/components/entrypoints/discussion.jsx"]
+        discussion: ["./src/components/entrypoints/discussion.jsx"],
+        signUp: ["./src/components/entrypoints/signUp.jsx"]
     },
     output: {
-        path: path.resolve(__dirname, "src", "public"),
+        path: path.resolve(__dirname, "src", "public","js"),
         filename: "[name].js"
     },
     module: {
@@ -21,12 +22,12 @@ const config = {
                     }
                 },
                 exclude: [/node_modules/, /public/]
-            }
+            },
         ]
     },
     resolve: {
         extensions: [".js", ".jsx", ".json", ".wasm", ".mjs", "*"]
     }
-};
+}];
 
 module.exports = config;
