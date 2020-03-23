@@ -1,7 +1,5 @@
 import React from "react";
 import Navbar from "../../navbar/navbar";
-import GlobalStyle from "../../styles/global";
-import Loader from "../../loader/loader";
 import {Cube} from 'styled-loaders-react';
 
 
