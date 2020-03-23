@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import {hydrate} from "react-dom";
+import { hydrate } from 'react-dom'
 
 import Discussion from '../pages/discussion/discussion'
 
-hydrate(<Discussion/>, document.getElementById("root"));
+hydrate(<Discussion />, document.getElementById('root'))

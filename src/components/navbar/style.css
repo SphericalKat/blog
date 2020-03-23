@@ -1,50 +1,59 @@
 * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
-.nav-wrapper{
-	display: flex;
-	align-items: baseline;
+
+.nav-wrapper {
+    display: flex;
+    align-items: baseline;
 }
+
 nav {
-	padding-left: 9%;
-	padding-right: 2.5%;
-	padding-top: .5%;
-	background-color: rgba(0, 0, 0, 0);
-	display: inline-block;
+    padding-left: 9%;
+    padding-right: 2.5%;
+    padding-top: .5%;
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-block;
 }
+
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
-li{
-	list-style: none;
+
+li {
+    list-style: none;
 }
-.container{
-	margin-left: auto;
-	display: flex;
-	flex-direction: row;
+
+.container {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
 }
-.branches {
-	color: #3ba2fa;
-	font-family: 'Segoe UI';
-	font-size: 21px;
-	font-weight: 700;
-	line-height: 36px;
-	margin: 1em;
+
+.navbar-branches {
+    color: #3ba2fa;
+    font-family: 'Segoe UI';
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 1em;
 }
-.username {
-	color: #fc5185;
-	font-family: Arial;
-	font-size: 24px;
-	font-weight: 400;
+
+.navbar-user {
+    color: #fc5185;
+    font-family: Arial, serif;
+    font-size: 24px;
+    font-weight: 400;
 }
+
 .lang {
-	color: #fc5185;
-	font-family: 'Segoe UI';
-	font-size: 21px;
-	font-weight: 700;
-	padding-left: 76px;
+    color: #fc5185;
+    font-family: 'Segoe UI';
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 76px;
 }
-img{
-	height: 100%;
+
+.navbar-user-image {
+    height: 100%;
 }

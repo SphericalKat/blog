@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import {hydrate} from "react-dom";
+import { hydrate } from 'react-dom'
 
-import Signup from '../pages/signUp/signup';
+import Signup from '../pages/signUp/signup'
 
-hydrate(<Signup/>, document.getElementById("root"));
-
+hydrate(<Signup />, document.getElementById('root'))

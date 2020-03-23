@@ -1,29 +1,32 @@
-import express from "express";
-import compression from "compression";
-import index from "./routes/index";
-import discussion from "./routes/discussion"
-import signup from "./routes/signUp"
-import path from "path";
+import express from 'express'
+import compression from 'compression'
+import index from './routes/index'
+import discussion from './routes/discussion'
+import signup from './routes/signUp'
+import path from 'path'
 
 // Server var
-const app = express();
+const app = express()
 
 // View engine setup
-app.set("views", path.join(__dirname,"views"));
-app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
+//set url
+app.locals.url = 'http://localhost:3000'
 
 // Middleware
-app.use(compression());
-console.log(__dirname);
-app.use(express.static(__dirname + "/public"));
+app.use(compression())
+console.log(__dirname)
+app.use(express.static(__dirname + '/public'))
 
-//Routes
-app.use("/", index);
-app.use("/discussion",discussion);
-app.use("/signup",signup);
+// Routes
+app.use('/', index)
+app.use('/discussion', discussion)
+app.use('/signup', signup)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
-app.listen(port, function listenHandler() {
-    console.info(`Running on ${port}`)
-});
+app.listen(port, function listenHandler () {
+  console.info(`Running on ${port}`)
+})
