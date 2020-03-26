@@ -1,5 +1,6 @@
 body, html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
 }
 * {
     padding: 0;
@@ -10,45 +11,144 @@ body {
     background: #e4e4e4;
 }
 
-.container {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: #666;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #ddd;
-  }
-  
-  li a.active {
-    color: white;
-    background-color: #4CAF50;
-  }
-  
 .main{
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.rendered-values{
+    margin-top: 56px;
+    position: relative;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: #564ec9;
+    top: 0;
+    left: 0;
+    height: 56px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15rem;    
+}
+
+.space{
+    flex: 1;
+}
+
+.nav-items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-items li{
+    padding: 0 2.5rem;
+}
+
+.nav-logo {
+    margin: .5rem;
+}
+
+.nav-logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.nav-items a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.nav-items a:hover,
+.nav-items a:active{
+    color: yellowgreen;
+}
+
+.toggle-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none; /*need to change this when I place logo*/
+    padding : 0;
+    box-sizing: border-box;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.line{
+    width:25px;
+    height: 2px;
+    background: white;
+}
+
+.side-drawer{
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;   
+    z-index: 200;
+    transform: translateX(-150%);
+    transition: transform 0.6s ease-out;
+}
+
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.side-drawer.open{
+    transform: translateX(0);
+}
+
+.side-drawer ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-drawer li{
+    margin:  0.5rem 0.5rem;
+}
+
+.side-drawer a{
+    color: #564ec9;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: yellowgreen;
+}
+
+@media (max-width: 768px) {
+    .nav-items {
+        display: none;
+    }
 }

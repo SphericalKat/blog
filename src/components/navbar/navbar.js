@@ -1,13 +1,27 @@
 import React from 'react'
+import '../sideDrawer/toggle';
+import ToggleButton from '../sideDrawer/toggle';
 
-const Navbar = () => {
-  return (
-    <div className='nav'>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </div>
+const Navbar = (props) => {
+  return(
+  <header className="navbar">
+    <nav className="navigation">
+      <div>
+        <ToggleButton click={props.toggleClickHandle}/>
+      </div>
+      <div className='nav-logo'><a href='/'>The logo</a></div>
+      <div className='space' />
+      <div className='nav-items'>
+        <ul>
+          <li><a href='/discussion'>Languages</a></li>
+          <li><a href='/#'>ML</a></li>
+          <li><a href='/#'>Dev</a></li>
+          <li><a href='/#'>Blockchain</a></li>
+        </ul>
+      </div>
+      <div className='nav-user'><a href='/'>user</a></div>
+    </nav>
+  </header>
   )
 }
-export default Navbar;
+export default Navbar
