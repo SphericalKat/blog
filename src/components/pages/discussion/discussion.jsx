@@ -77,7 +77,7 @@ class Discussion extends React.Component {
     return (
       <div>
         {
-          this.state.loading ? <Cube color="blue"/> : ret
+          this.state.loading ?<div className='main'> <Cube color="blue"/></div> : ret
         }
       </div>
     )
