@@ -4,7 +4,7 @@ import React from "react";
 class Index extends React.Component {
     constructor() {
         super();
-        this.state = {name: "a", email: ""}
+        this.state = {name: "", password: ""}
     }
 
 
@@ -16,36 +16,49 @@ class Index extends React.Component {
         this.setState({name: event.target.value});
     }
 
-    onEmailChangeHandler = (event) => {
-        this.setState({email: event.target.value});
+    onPasswordChangeHandler = (event) => {
+        this.setState({password: event.target.value});
     }
 
     render() {
+        const inputs = window.document.querySelectorAll('.input');
+
+        function focusFunc(){
+            let parent = this.parentNode.parentNode;
+            parent.classList.add('focus');
+        }
+        input.forEach(input => {
+            input.addEventListner('focus',focusFunc);
+        })
         return (
             <div>
-                <h1>--hacx--</h1>
-                <div className="programmer">
-                    
-                </div>
-                {/* <form onSubmit={this.onFormSubmit}>
-                    <div>
-                        <label htmlFor={"name-input"} defaultValue={"Name"}>Name: </label>
-                        <input name={"name-input"} onChange={this.onNameChangeHandler} type={"text"}
-                               value={this.state.name}/>
+            <div className="main-container">
+            <div className="index-container">
+                        <div className="programmer">
+                            <img src='http://localhost:3000/svg/fingerprint.svg' />
+                        </div>
+                        <div className="login-container">
+                            <form onSubmit={this.onFormSubmit}>
+                                <img className="avatar" src='http://localhost:3000/svg/male_avatar.svg' />
+                                <h2>Welcome</h2>
+                                <div className="input-div one">
+                                    <div>
+                                        <h5>Username</h5>
+                                        <input onChange={this.onNameChangeHandler} type="text" value={this.state.name}/>
+                                    </div>
+                                </div>
+                                <div className="input-div two">
+                                    <div>
+                                        <h5>Password</h5>
+                                        <input onChange={this.onPasswordChangeHandler} type="password" value={this.state.password}/>
+                                    </div>
+                                </div>
+                                <a className="forgotPassword" href='#'>Forgot Password</a>
+                                <button type="submit" className="btn" value="">Log In</button>
+                            </form>
                     </div>
-                    <br/>
-                    <div>
-                        <label htmlFor={"email-input"} defaultValue={"Email"}>Email: </label>
-                        <input name={"email-input"} onChange={this.onEmailChangeHandler} type={"email"}
-                               placeholder={"email"} value={this.state.email}/>
-                    </div>
-                    <br/>
-                    <div>
-                        <button type={"submit"}>Submit</button>
-                    </div>
-                </form>
-                <span><h5>Name: {this.state.name}</h5></span>
-                <span><h5>Email: {this.state.email}</h5></span> */}
+            </div>
+            </div>
             </div>
         )
     }
