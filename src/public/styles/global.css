@@ -14,12 +14,17 @@ body {
 /*index.jsx*/
 
 .index-container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 7rem;
     padding: 0 2rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .programmer{
@@ -29,7 +34,7 @@ body {
 }
 
 .programmer img{
-    width: 500px;
+    width: 450px;
 }
 
 .login-container{
@@ -39,7 +44,7 @@ body {
 }
 
 form{
-    width: 250px;
+    width: 300px;
 }
 
 .avatar{
@@ -155,6 +160,45 @@ a{
     color: #e4e4e4;
     transition: background-color 0.3s ease-in,
                 color 0.3s ease-in;
+}
+
+@media screen and (max-width: 1050px){
+	.index-container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.login-container h2{
+        width: 100%;
+        height: 100%;
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.programmer img{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.index-container{
+        width: 100%;
+        height: 100%;
+		grid-template-columns: 1fr;
+	}
+
+	.programmer{
+		display: none;
+	}
+
+	.login-container{
+		justify-content: center;
+	}
 }
 /*discussion.jsx*/
 
@@ -319,4 +363,3 @@ a{
     .toggle-button{
         display: flex;
     }
-}
