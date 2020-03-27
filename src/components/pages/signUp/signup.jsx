@@ -52,20 +52,7 @@ class SignUp extends React.Component{
         return(
             <div style={{height: '100%'}}>
                 <Navbar />
-                <div className='form'>
-                    <div className='svg'>
-                        
-                    </div>
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" defaultValue={""} placeholder="First Name" onChange={this.onFirstNameChange}></input><br></br>
-                        <input type="text" defaultValue={""} placeholder="Last Name" onChange={this.onLastNameChange}></input><br></br>
-                        <input type="text" defaultValue={""} placeholder="Forum Name" onChange={this.onForumNameChange}></input><br></br>
-                        <input type="email" defaultValue={""} placeholder="emailID@something.com" onChange={this.onEmailChange}></input><br></br>
-                        <input type="password" defaultValue={""} onChange={this.onPasswordChange}></input><br></br>
-                        <input type="password" defaultValue={""} onChange={this.onPasswordCheck}></input><br></br>
-                        <button className='submit'>Submit</button>
-                    </form>
-                </div>
+                
             </div>
         );
     }
