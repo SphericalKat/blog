@@ -21,15 +21,15 @@ class Index extends React.Component {
     }
 
     render() {
-        const inputs = window.document.querySelectorAll('.input');
+        // const inputs = window.document.querySelectorAll('.input');
 
-        function focusFunc(){
-            let parent = this.parentNode.parentNode;
-            parent.classList.add('focus');
-        }
-        input.forEach(input => {
-            input.addEventListner('focus',focusFunc);
-        })
+        // function focusFunc(){
+        //     let parent = this.parentNode.parentNode;
+        //     parent.classList.add('focus');
+        // }
+        // input.forEach(input => {
+        //     input.addEventListner('focus',focusFunc);
+        // })
         return (
             <div>
             <div className="main-container">
