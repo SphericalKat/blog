@@ -1,7 +1,7 @@
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import Index from '../components/pages/index/index'
+import Index from '../components/pages/index'
 
 const router = express.Router()
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class Index extends React.Component {
     constructor() {
         super();
@@ -22,8 +23,11 @@ class Index extends React.Component {
     render() {
         return (
             <div>
-                <h1>Smoke -h</h1>
-                <form onSubmit={this.onFormSubmit}>
+                <h1>--hacx--</h1>
+                <div className="programmer">
+                    <img src='../../public/svg/programmer.svg' />
+                </div>
+                {/* <form onSubmit={this.onFormSubmit}>
                     <div>
                         <label htmlFor={"name-input"} defaultValue={"Name"}>Name: </label>
                         <input name={"name-input"} onChange={this.onNameChangeHandler} type={"text"}
@@ -41,7 +45,7 @@ class Index extends React.Component {
                     </div>
                 </form>
                 <span><h5>Name: {this.state.name}</h5></span>
-                <span><h5>Email: {this.state.email}</h5></span>
+                <span><h5>Email: {this.state.email}</h5></span> */}
             </div>
         )
     }
