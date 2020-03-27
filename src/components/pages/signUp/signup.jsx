@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../../navbar/navSignup'
 
 class SignUp extends React.Component{
 
@@ -15,11 +16,11 @@ class SignUp extends React.Component{
     }
 
     handleSubmit=()=>{
-        if(firstName == '' || lastName == '' || forumName == '' || emailID == '' || password == '' || reEnterPassword == ''){
+        if(firstName == "" || lastName == "" || forumName == "" || emailID == "" || password == "" || reEnterPassword == ""){
             alert("Fill the all the fields of the form");
         }
         else{
-            this.setState({submut: true});
+            this.setState({submit: true});
         }
     }
 
@@ -49,16 +50,22 @@ class SignUp extends React.Component{
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" defaultValue={""} placeholder="First Name" onChange={this.onFirstNameChange}></input><br></br>
-                    <input type="text" defaultValue={""} placeholder="Last Name" onChange={this.onLastNameChange}></input><br></br>
-                    <input type="text" defaultValue={""} placeholder="Forum Name" onChange={this.onForumNameChange}></input><br></br>
-                    <input type="email" defaultValue={""} placeholder="emailID@something.com" onChange={this.onEmailChange}></input><br></br>
-                    <input type="password" defaultValue={""} onChange={this.onPasswordChange}></input><br></br>
-                    <input type="password" defaultValue={""} onChange={this.onPasswordCheck}></input><br></br>
-                    <buttom>Submit</buttom>
-                </form>
+            <div style={{height: '100%'}}>
+                <Navbar />
+                <div className='form'>
+                    <div className='svg'>
+                        
+                    </div>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" defaultValue={""} placeholder="First Name" onChange={this.onFirstNameChange}></input><br></br>
+                        <input type="text" defaultValue={""} placeholder="Last Name" onChange={this.onLastNameChange}></input><br></br>
+                        <input type="text" defaultValue={""} placeholder="Forum Name" onChange={this.onForumNameChange}></input><br></br>
+                        <input type="email" defaultValue={""} placeholder="emailID@something.com" onChange={this.onEmailChange}></input><br></br>
+                        <input type="password" defaultValue={""} onChange={this.onPasswordChange}></input><br></br>
+                        <input type="password" defaultValue={""} onChange={this.onPasswordCheck}></input><br></br>
+                        <button className='submit'>Submit</button>
+                    </form>
+                </div>
             </div>
         );
     }

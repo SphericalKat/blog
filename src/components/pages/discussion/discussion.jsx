@@ -15,6 +15,7 @@ class Discussion extends React.Component {
       navbarOpen: false, 
       loading: true,
       sideDrawerOpen: false,
+      isLoggedIn: false,
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -98,7 +99,7 @@ class Discussion extends React.Component {
                   <Navbar toggleClickHandle={this.toggleClickHandle}/>
                     <SideDrawer show={this.state.sideDrawerOpen}/>
                     {backdrop}
-                <div>
+                <div className='rendered-values'>
                   <p>Text: {this.state.text}</p>
                     {this.renderInputField()}
                     {this.renderButton()}
@@ -108,8 +109,7 @@ class Discussion extends React.Component {
     return (
       <div>
         {
-          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> : 
-          ret
+          this.state.loading ?<div className='main'> <Cube color="blue"/></div> : ret
         }
       </div>
     )
