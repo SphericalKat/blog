@@ -1,64 +1,192 @@
-
+body, html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background: #213246;
+    background: #e4e4e4;
 }
 
-.nav-wrapper {
+
+
+/*discussion.jsx*/
+
+.main{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rendered-values{
+    margin-top: 56px;
+    position: relative;
+}
+
+/*NAVBAR.js*/
+
+header{
+    z-index:9999;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: #564ec9;
+    top: 0;
+    left: 0;
+    height: 56px;
+}
+
+.navigation{
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    height: 100%;
+    padding: 0 15rem;    
 }
 
-nav {
-    padding-left: 9%;
-    padding-right: 2.5%;
-    padding-top: .5%;
-    background-color: rgba(0, 0, 0, 0);
-    display: inline-block;
+.space{
+    flex: 1;
 }
 
-a {
+.nav-user a{
+    padding-right: 0;
+}
+
+.nav-items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-items li{
+    padding: 0 2.5rem;
+}
+
+.nav-logo {
+    margin: .5rem;
+}
+
+.nav-logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.nav-items a{
+    color: white;
+    font-size: 1.2rem;
     text-decoration: none;
 }
-
-li {
-    list-style: none;
+.nav-items a:hover,
+.nav-items a:active{
+    color: yellowgreen;
 }
 
-.container {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
+.toggle-button{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none; /*need to change this when I place logo*/
+    padding : 0;
+    box-sizing: border-box;
 }
 
-.navbar-branches {
-    color: #3ba2fa;
-    font-family: 'Segoe UI';
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 36px;
-    margin: 1em;
+.toggle-button:focus {
+    outline: none;
 }
 
-.navbar-user {
-    color: #fc5185;
-    font-family: Arial, serif;
-    font-size: 24px;
-    font-weight: 400;
+.line{
+    width:25px;
+    height: 2px;
+    background: white;
 }
 
-.lang {
-    color: #fc5185;
-    font-family: 'Segoe UI';
-    font-size: 21px;
-    font-weight: 700;
-    padding-left: 76px;
-}
-
-.navbar-user-image {
+.side-drawer{
     height: 100%;
+    background-color: white;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;   
+    z-index: 200;
+    transform: translateX(-150%);
+    transition: transform 0.6s ease-out;
+}
+
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.side-drawer.open{
+    transform: translateX(0);
+}
+
+.side-drawer ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-drawer li{
+    margin:  0.5rem 0.5rem;
+}
+
+.side-drawer a{
+    color: #564ec9;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: yellowgreen;
+}
+
+
+/*signup.jsx*/
+
+.form{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 1024px) {
+    .navigation{
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-items li{
+        display: none;
+    }
+    .navigation{
+        padding: 0 1rem;
+    }
+    .toggle-button{
+        display: flex;
+    }
 }

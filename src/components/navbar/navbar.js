@@ -1,20 +1,27 @@
 import React from 'react'
+import '../sideDrawer/toggle';
+import ToggleButton from '../sideDrawer/toggle';
 
-const Navbar = () => {
-  return (
-    <nav className='nav-wrapper'>
-      <img src='Logo.png' className='navbar-logo' alt='logo' />
-      <a className='lang' href='#'>Programming Language</a>
-      <ul className='container'>
-        <a className='right-navbar navbar-branches' href='#'>ML and AI</a>
-        <a className='right-navbar navbar-branches' href='#'>Dev and DevOps</a>
-        <a className='right-navbar navbar-branches' href='#'>Electrical</a>
-        <a className='right-navbar navbar-branches' href='#'>Mechanical</a>
-        <a className='right-navbar navbar-user' href='#'>
-          <img className='right-navbar navbar-user-image' alt='' /> Username
-        </a>
-      </ul>
+const Navbar = (props) => {
+  return(
+  <header className="navbar">
+    <nav className="navigation">
+      <div>
+        <ToggleButton click={props.toggleClickHandle}/>
+      </div>
+      <div className='nav-logo'><a href='/'>The logo</a></div>
+      <div className='space' />
+      <div className='nav-items'>
+        <ul>
+          <li><a href='/discussion'>Languages</a></li>
+          <li><a href='/#'>ML</a></li>
+          <li><a href='/#'>Dev</a></li>
+          <li><a href='/#'>Blockchain</a></li>
+        </ul>
+      </div>
+      <div className='nav-user'><a href='/'>user</a></div>
     </nav>
+  </header>
   )
 }
 export default Navbar
