@@ -232,8 +232,16 @@ a{
 }
 
 .rendered-values{
-    margin-top: 56px;
+    margin-top: 7rem;
     position: relative;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.question{
+    color: rgb(68, 68, 68);
+    font-size: 2rem;
+    text-align: center;
 }
 
 /*NAVBAR.js*/

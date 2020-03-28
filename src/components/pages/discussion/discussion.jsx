@@ -16,6 +16,8 @@ class Discussion extends React.Component {
       loading: true,
       sideDrawerOpen: false,
       isLoggedIn: false,
+      question: 'We ask relevant questions here! so waht is intergration?',
+      //img: require('/')//insert image url
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -64,12 +66,12 @@ class Discussion extends React.Component {
 
     if (this.state.mode === 'view') {
       button =
-        <button onClick={this.handleEdit}>
+        <button className="save-edit" onClick={this.handleEdit}>
           Edit
         </button>
     } else {
       button =
-        <button onClick={this.handleSave}>
+        <button className="save-edit" onClick={this.handleSave}>
           Save
         </button>
     }
@@ -87,6 +89,18 @@ class Discussion extends React.Component {
     this.setState({sideDrawerOpen : false})
   }
 
+
+  renderQuestion = () => {
+    let question = <div className="question">
+      Q:{this.state.question}
+      <div className="ques-img">
+        <img src={this.state.img} />
+      </div>
+    </div>
+
+    return question;
+  }
+
   render () {
 
     let backdrop;
@@ -100,7 +114,8 @@ class Discussion extends React.Component {
                     <SideDrawer show={this.state.sideDrawerOpen}/>
                     {backdrop}
                 <div className='rendered-values'>
-                  <p>Text: {this.state.text}</p>
+                    {this.renderQuestion()}
+                  <span>Text: {this.state.text}</span>
                     {this.renderInputField()}
                     {this.renderButton()}
                 </div>
@@ -109,7 +124,8 @@ class Discussion extends React.Component {
     return (
       <div>
         {
-          this.state.loading ?<div className='main'> <Cube color="blue"/></div> : ret
+          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> : 
+          ret
         }
       </div>
     )
