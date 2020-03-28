@@ -23,6 +23,7 @@ class Index extends React.Component {
     render() {
         return (
             <div>
+                    <button type="submit" className="sign-btn" value="">SIGNUP</button>
             <div className="main-container">
             <div className="index-container">
                         <div className="programmer">
@@ -45,7 +46,7 @@ class Index extends React.Component {
                                     </div>
                                 </div>
                                 <a className="forgotPassword" href='#'>Forgot Password</a>
-                                <button type="submit" className="btn" value="">Log In</button>
+                                <button type="submit" className="btn" value="">LOGIN</button>
                             </form>
                     </div>
             </div>
