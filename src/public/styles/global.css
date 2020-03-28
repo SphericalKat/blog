@@ -1,7 +1,8 @@
-body, html{
+body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -13,11 +14,11 @@ body {
 
 /*index.jsx*/
 
-.index-container{
+.index-container {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 7rem;
     padding: 0 2rem;
     margin: 0;
@@ -27,39 +28,39 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.programmer{
+.programmer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.programmer img{
+.programmer img {
     width: 450px;
 }
 
-.login-container{
+.login-container {
     display: flex;
-    align-items:center;
-    text-align:center;
+    align-items: center;
+    text-align: center;
 }
 
-form{
+form {
     width: 300px;
 }
 
-.avatar{
-    width:150px;
+.avatar {
+    width: 150px;
 }
 
-form h2{
+form h2 {
     font-size: 2.9rem;
     text-transform: uppercase;
-    margin-top:15px;
+    margin-top: 15px;
     margin-bottom: 10px;;
-    color:  #6C63FF;
+    color: #6C63FF;
 }
 
-.input-div{
+.input-div {
     position: relative;
     display: grid;
     margin: 25px 0;
@@ -68,7 +69,7 @@ form h2{
     width: 100%;
 }
 
-.input-div:after, .input-div:before{
+.input-div:after, .input-div:before {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -78,72 +79,72 @@ form h2{
     transition: border-bottom 0.3s ease-in;
 }
 
-.input-div:after{
+.input-div:after {
     left: 50%;
 }
 
-.input-div:before{
-    right:50%;
+.input-div:before {
+    right: 50%;
 }
 
-.input-div.focus>div>h5{
+.input-div.focus > div > h5 {
     top: -5px;
     font-size: 15px;
 }
 
-.input-div.focus:after, .input-div:before{
+.input-div.focus:after, .input-div:before {
     width: 50%;
 }
 
-.elements h5{
+.elements h5 {
     width: 100%;
 }
 
-.input-div.one{
-    margin-top:0
+.input-div.one {
+    margin-top: 0
 }
 
-.input-div.two{
+.input-div.two {
     margin-bottom: 4px;
 }
 
-.input-div > div{
+.input-div > div {
     position: relative;
     height: 45px;
 }
 
-.input-div >div >h5{
+.input-div > div > h5 {
     position: absolute;
-    left:10px;
-    top:50%;
+    left: 10px;
+    top: 50%;
     color: #999;
     font-size: 18px;
     transition: .3s;
 }
 
-input{
+input {
     position: absolute;
-    width:100%;
+    width: 100%;
     height: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     border: none;
     outline: none;
     background: none;
     padding: 0.5rem 0.7rem;
-    font-size:1.2rem;
+    font-size: 1.2rem;
     color: #555;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.forgotPassword{
+.forgotPassword {
     padding-top: 3px;
 }
 
-.btn{
+.btn {
     display: block;
     width: 100%;
     height: 2.5rem;
@@ -155,19 +156,19 @@ a{
     color: #6C63FF;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #6C63FF;
     color: #e4e4e4;
     transition: background-color 0.3s ease-in,
-                color 0.3s ease-in;
+    color 0.3s ease-in;
 }
 
-.sign-btn{
+.sign-btn {
     display: block;
     width: 6.5rem;
     height: 2.5rem;
     border-radius: 8px;
-    outline:none;
+    outline: none;
     border-color: #6C63FF;
     color: #6C63FF;
     float: right;
@@ -176,54 +177,55 @@ a{
     margin-top: 3rem;;
 }
 
-.sign-btn:hover{
+.sign-btn:hover {
     background-color: #6C63FF;
     color: #e4e4e4;
     transition: background-color 0.3s ease-in,
-                color 0.3s ease-in;
+    color 0.3s ease-in;
 }
 
-@media screen and (max-width: 1050px){
-	.index-container{
-		grid-gap: 5rem;
-	}
+@media screen and (max-width: 1050px) {
+    .index-container {
+        grid-gap: 5rem;
+    }
 }
 
-@media screen and (max-width: 1000px){
-	form{
-		width: 290px;
-	}
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
 
-	.login-container h2{
+    .login-container h2 {
         width: 100%;
         height: 100%;
         font-size: 2.4rem;
         margin: 8px 0;
-	}
+    }
 
-	.programmer img{
-		width: 400px;
-	}
+    .programmer img {
+        width: 400px;
+    }
 }
 
-@media screen and (max-width: 900px){
-	.index-container{
+@media screen and (max-width: 900px) {
+    .index-container {
         width: 100%;
         height: 100%;
-		grid-template-columns: 1fr;
-	}
+        grid-template-columns: 1fr;
+    }
 
-	.programmer{
-		display: none;
-	}
+    .programmer {
+        display: none;
+    }
 
-	.login-container{
-		justify-content: center;
-	}
+    .login-container {
+        justify-content: center;
+    }
 }
+
 /*discussion.jsx*/
 
-.main{
+.main {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -231,18 +233,18 @@ a{
     transform: translate(-50%, -50%);
 }
 
-.rendered-values{
+.rendered-values {
     margin-top: 56px;
     position: relative;
 }
 
 /*NAVBAR.js*/
 
-header{
-    z-index:9999;
+header {
+    z-index: 9999;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
     background: #6C63FF;
@@ -251,29 +253,29 @@ header{
     height: 56px;
 }
 
-.navigation{
+.navigation {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 15rem;    
+    padding: 0 15rem;
 }
 
-.space{
+.space {
     flex: 1;
 }
 
-.nav-user a{
+.nav-user a {
     padding-right: 0;
 }
 
-.nav-items ul{
+.nav-items ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.nav-items li{
+.nav-items li {
     padding: 0 2.5rem;
 }
 
@@ -281,18 +283,19 @@ header{
     margin: .5rem;
 }
 
-.nav-logo a{
+.nav-logo a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
 }
-.nav-items a{
+
+.nav-items a {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
 }
 
-.toggle-button{
+.toggle-button {
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -300,7 +303,7 @@ header{
     width: 30px;
     background: transparent;
     border: none; /*need to change this when I place logo*/
-    padding : 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -308,41 +311,41 @@ header{
     outline: none;
 }
 
-.line{
-    width:25px;
+.line {
+    width: 25px;
     height: 2px;
     background: white;
 }
 
-.side-drawer{
+.side-drawer {
     height: 100%;
     background-color: white;
-    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 70%;
-    max-width: 400px;   
+    max-width: 400px;
     z-index: 200;
     transform: translateX(-150%);
     transition: transform 0.6s ease-out;
 }
 
-.backdrop{
+.backdrop {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
     top: 0;
     left: 0;
 }
 
-.side-drawer.open{
+.side-drawer.open {
     transform: translateX(0);
 }
 
-.side-drawer ul{
+.side-drawer ul {
     height: 100%;
     list-style: none;
     display: flex;
@@ -350,21 +353,22 @@ header{
     justify-content: center;
 }
 
-.side-drawer li{
-    margin:  0.5rem 0.5rem;
+.side-drawer li {
+    margin: 0.5rem 0.5rem;
 }
 
-.side-drawer a{
+.side-drawer a {
     color: #6C63FF;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
 /*signup.jsx*/
-.main-container{
+.main-container {
     height: 100%;
     width: 100%;
 }
+
 .sign-container {
     margin: 0;
     position: absolute;
@@ -374,25 +378,26 @@ header{
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
-
 @media (max-width: 1024px) {
-    .navigation{
+    .navigation {
         padding: 0 4rem;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-items li{
+    .nav-items li {
         display: none;
     }
-    .navigation{
+
+    .navigation {
         padding: 0 1rem;
     }
-    .toggle-button{
+
+    .toggle-button {
         display: flex;
     }
 }
