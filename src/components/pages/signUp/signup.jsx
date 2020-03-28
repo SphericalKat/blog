@@ -52,20 +52,33 @@ class SignUp extends React.Component{
         return(
             <div style={{height: '100%'}}>
                 <Navbar />
-                <div className='form'>
-                    <div className='svg'>
-                        
+                <div className="main-container">
+                <div className="index-container">
+                        <div className="programmer">
+                            <img src='http://localhost:3000/svg/good_team.svg' />
+                        </div>
+                        <div className="login-container">
+                            <form onSubmit={this.onFormSubmit}>
+                                <img className="avatar" src='http://localhost:3000/svg/male_avatar.svg' />
+                                <h2>Welcome</h2>
+                                <div className="input-div one">
+                                    <div>
+                                        <h5>Username</h5>
+                                        <input onChange={this.onNameChangeHandler} type="text" value={this.state.name}/>
+                                    </div>
+                                </div>
+                                <div className="input-div two">
+                                    <div>
+                                        <h5>Password</h5>
+                                        <input onChange={this.onPasswordChangeHandler} type="password" value={this.state.password}/>
+                                    </div>
+                                </div>
+                                <a className="forgotPassword" href='#'>Forgot Password</a>
+                                <button type="submit" className="btn" value="">Log In</button>
+                            </form>
                     </div>
-                    <form onSubmit={this.handleSubmit}>
-                        <input type="text" defaultValue={""} placeholder="First Name" onChange={this.onFirstNameChange}></input><br></br>
-                        <input type="text" defaultValue={""} placeholder="Last Name" onChange={this.onLastNameChange}></input><br></br>
-                        <input type="text" defaultValue={""} placeholder="Forum Name" onChange={this.onForumNameChange}></input><br></br>
-                        <input type="email" defaultValue={""} placeholder="emailID@something.com" onChange={this.onEmailChange}></input><br></br>
-                        <input type="password" defaultValue={""} onChange={this.onPasswordChange}></input><br></br>
-                        <input type="password" defaultValue={""} onChange={this.onPasswordCheck}></input><br></br>
-                        <button className='submit'>Submit</button>
-                    </form>
-                </div>
+            </div>
+            </div>
             </div>
         );
     }
