@@ -12,10 +12,11 @@ const Navbar = (props) => {
       <div className='nav-logo'><a href='/'>The logo</a></div>
       <div className='nav-items'>
         <ul>
-          <li><a href='/discussion'>Languages</a></li>
+          <li><a href='/'>Home</a></li>
+          {/* <li><a href='/discussion'>Languages</a></li>
           <li><a href='/#'>ML</a></li>
           <li><a href='/#'>Dev</a></li>
-          <li><a href='/#'>Blockchain</a></li>
+          <li><a href='/#'>Blockchain</a></li> */}
         </ul>
       </div>
       <div className="space" />

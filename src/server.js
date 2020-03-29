@@ -1,7 +1,7 @@
 import express from 'express'
 import compression from 'compression'
 import index from './routes/index'
-import discussion from './routes/discussion'
+import home from './routes/home'
 import signup from './routes/signUp'
 import path from 'path'
 
@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'))
 
 // Routes
 app.use('/', index)
-app.use('/discussion', discussion)
+app.use('/home', home)
 app.use('/signup', signup)
 
 const port = process.env.PORT || 3000

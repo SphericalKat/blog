@@ -16,13 +16,7 @@ class Discussion extends React.Component {
       loading: true,
       sideDrawerOpen: false,
       isLoggedIn: false,
-      question: 'We ask relevant questions here! so waht is intergration?',
-      //img: require('/')//insert image url
     }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSave = this.handleSave.bind(this)
-    this.handleEdit = this.handleEdit.bind(this)
   }
 
   componentDidMount = () => {
@@ -32,51 +26,6 @@ class Discussion extends React.Component {
       })
     }, 3000)
     this.setState({ loading: true })
-  }
-
-  handleChange = (e) => {
-    this.setState({ inputText: e.target.value })
-  }
-
-  handleSave = () => {
-    this.setState({ text: this.state.inputText, mode: 'view' })
-  }
-
-  handleEdit = () => {
-    this.setState({ mode: 'edit' })
-  }
-
-  renderInputField = () => {
-    let input
-
-    if (this.state.mode !== 'view') {
-      input =
-        <p>
-          <input
-            onChange={this.handleChange}
-            value={this.state.inputText}/>
-        </p>
-    }
-
-    return input
-  }
-
-  renderButton = () => {
-    let button
-
-    if (this.state.mode === 'view') {
-      button =
-        <button className="save-edit" onClick={this.handleEdit}>
-          Edit
-        </button>
-    } else {
-      button =
-        <button className="save-edit" onClick={this.handleSave}>
-          Save
-        </button>
-    }
-
-    return button
   }
 
   toggleClickHandle = () => {
@@ -89,17 +38,6 @@ class Discussion extends React.Component {
     this.setState({sideDrawerOpen : false})
   }
 
-
-  renderQuestion = () => {
-    let question = <div className="question">
-      Q:{this.state.question}
-      <div className="ques-img">
-        <img src={this.state.img} />
-      </div>
-    </div>
-
-    return question;
-  }
 
   render () {
 
@@ -114,10 +52,6 @@ class Discussion extends React.Component {
                     <SideDrawer show={this.state.sideDrawerOpen}/>
                     {backdrop}
                 <div className='rendered-values'>
-                    {this.renderQuestion()}
-                  <span>Text: {this.state.text}</span>
-                    {this.renderInputField()}
-                    {this.renderButton()}
                 </div>
                 </div>
 

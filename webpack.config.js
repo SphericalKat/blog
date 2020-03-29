@@ -4,7 +4,7 @@ const config = [{
   entry: {
     vendor: ['@babel/polyfill', 'react'],
     index: ['./src/components/entrypoints/index.jsx'],
-    discussion: ['./src/components/entrypoints/discussion.jsx'],
+    home: ['./src/components/entrypoints/home.jsx'],
     signUp: ['./src/components/entrypoints/signUp.jsx']
   },
   output: {

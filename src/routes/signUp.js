@@ -1,7 +1,7 @@
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import Signup from '../components/pages/signUp/signup'
+import Signup from '../components/pages/signup'
 
 const router = express.Router()
 
