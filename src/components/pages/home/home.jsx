@@ -54,6 +54,7 @@ class Discussion extends React.Component {
                     {backdrop}
                 <div className='rendered-values'>
                   <Card />
+                  <Card />
                 </div>
                 </div>
 
