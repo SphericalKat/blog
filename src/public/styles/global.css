@@ -233,13 +233,8 @@ a {
     transform: translate(-50%, -50%);
 }
 
-<<<<<<< HEAD
 .rendered-values{
     margin-top: 7rem;
-=======
-.rendered-values {
-    margin-top: 56px;
->>>>>>> 24aba1ba069170af86a59e704cb2d74945fc755c
     position: relative;
     margin-left: 5rem;
     margin-right: 5rem;
@@ -277,12 +272,8 @@ header {
     flex: 1;
 }
 
-<<<<<<< HEAD
 .nav-user a{
     padding-left: 10rem;
-=======
-.nav-user a {
->>>>>>> 24aba1ba069170af86a59e704cb2d74945fc755c
     padding-right: 0;
 }
 
