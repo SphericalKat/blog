@@ -10,7 +10,6 @@ const Navbar = (props) => {
         <ToggleButton click={props.toggleClickHandle}/>
       </div>
       <div className='nav-logo'><a href='/'>The logo</a></div>
-      <div className='space' />
       <div className='nav-items'>
         <ul>
           <li><a href='/discussion'>Languages</a></li>
@@ -19,7 +18,8 @@ const Navbar = (props) => {
           <li><a href='/#'>Blockchain</a></li>
         </ul>
       </div>
-      <div className='nav-user'><a href='/'>user</a></div>
+      <div className="space" />
+      <div className="nav-user"><a href='/'>user</a></div>
     </nav>
   </header>
   )

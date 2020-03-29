@@ -121,7 +121,7 @@ form h2{
     transition: .3s;
 }
 
-input{
+.index-input{
     position: absolute;
     width:100%;
     height: 100%;
@@ -271,6 +271,7 @@ header{
 }
 
 .nav-user a{
+    padding-left: 10rem;
     padding-right: 0;
 }
 
