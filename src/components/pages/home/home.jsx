@@ -3,6 +3,7 @@ import Navbar from '../../navbar/navbar'
 import { Cube } from 'styled-loaders-react'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
+import Card from '../../cardh/cardh'
 
 class Discussion extends React.Component {
 
@@ -52,6 +53,7 @@ class Discussion extends React.Component {
                     <SideDrawer show={this.state.sideDrawerOpen}/>
                     {backdrop}
                 <div className='rendered-values'>
+                  <Card />
                 </div>
                 </div>
 
