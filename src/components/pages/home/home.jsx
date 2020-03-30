@@ -55,6 +55,7 @@ class Discussion extends React.Component {
                 <div className='rendered-values'>
                   <Card />
                   <Card />
+                  <Card />
                 </div>
                 </div>
 
