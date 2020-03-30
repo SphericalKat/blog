@@ -11,7 +11,7 @@ const card = (props) => {   //the props passed herer will contain the rendering 
                             <img src='http://localhost:3000/svg/forumlogo.svg' />
                         </div>
                         <div className='topic-name'>
-                            Header
+                            #Header
                         </div>
                     </div>
                     <div className='topic-description'>
@@ -47,7 +47,7 @@ const card = (props) => {   //the props passed herer will contain the rendering 
                         </div>
                         <div className='details'>
                             <div className='user-name'>
-                                Abhijay Kishore
+                                latest-user name
                             </div>
                             <div className='time'>
                                 4 min

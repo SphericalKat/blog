@@ -7,13 +7,13 @@ import Card from '../../cardh/cardh'
 
 class Discussion extends React.Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.state = { 
-      text: '', 
-      inputText: '', 
-      mode: 'view', 
-      navbarOpen: false, 
+    this.state = {
+      text: '',
+      inputText: '',
+      mode: 'view',
+      navbarOpen: false,
       loading: true,
       sideDrawerOpen: false,
       isLoggedIn: false,
@@ -31,33 +31,39 @@ class Discussion extends React.Component {
 
   toggleClickHandle = () => {
     this.setState((pevState) => {
-      return {sideDrawerOpen : !pevState.sideDrawerOpen}; //passing reference
+      return { sideDrawerOpen: !pevState.sideDrawerOpen }; //passing reference
     })
   };
 
   backdropClickHandle = () => {
-    this.setState({sideDrawerOpen : false})
+    this.setState({ sideDrawerOpen: false })
   }
 
 
-  render () {
+  render() {
 
     let backdrop;
 
-    if(this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandle}/>
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandle} />
     }
 
-    const ret = <div style={{height: '100%'}}>
-                  <Navbar toggleClickHandle={this.toggleClickHandle}/>
-                    <SideDrawer show={this.state.sideDrawerOpen}/>
-                    {backdrop}
-                <div className='rendered-values'>
-                  <Card />
-                  <Card />
-                  <Card />
-                </div>
-                </div>
+    const ret = <div className='center' style={{ height: '100%' }}>
+      <Navbar toggleClickHandle={this.toggleClickHandle} />
+      <SideDrawer show={this.state.sideDrawerOpen} />
+      {backdrop}
+
+      <div className='rendered-values'>
+        <div className='home-space'></div>
+        <div>
+          <Card />
+          <Card />
+          <Card />
+        </div>
+        <div className='home-space'></div>
+      </div>
+
+    </div>
 
     return (
       <div>

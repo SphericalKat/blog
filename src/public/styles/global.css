@@ -223,7 +223,10 @@ a {
     }
 }
 
-/*discussion.jsx*/
+/*home.jsx*/
+.center{
+    width: 100%;
+}
 
 .main {
     margin: 0;
@@ -231,6 +234,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
 }
 
 .rendered-values{
@@ -238,12 +242,29 @@ a {
     position: relative;
     margin-left: 5rem;
     margin-right: 5rem;
+    display: flex;
 }
 
 .question{
     color: rgb(68, 68, 68);
     font-size: 2rem;
     text-align: center;
+}
+
+.home-space {
+    width: 20%;
+}
+
+@media (max-width: 768px) {
+    .home-space {
+        width: 5%;
+    }
+}
+
+@media (max-width: 426px) {
+    .home-space {
+        width: 0;
+    }
 }
 
 /*NAVBAR.js*/
@@ -373,6 +394,8 @@ header {
 }
 
 /*signup.jsx*/
+
+
 .main-container {
     height: 100%;
     width: 100%;
@@ -414,7 +437,8 @@ header {
 /*cardh.js*/
 
 .card {
-    margin: 0 15rem;
+    margin: 0 0;
+    position: relative;
     border-width: 1px;
     margin-bottom: -1px;
     margin-top: -1px;
@@ -427,6 +451,7 @@ header {
 
 .card:hover {
     transform: scale(1.1);
+    z-index: 100;
     transition: transform 0.3s ease-in;
 }
 
@@ -538,12 +563,15 @@ header {
 
 @media (max-width: 1024px) {
     .card {
-        width: 100%;
         margin: -1px 0;
     }
 
     .topic-description{
         font-size: 1rem;
+    }
+
+    .tb{
+        font-size: 14px;
     }
 
     .query {
@@ -553,4 +581,70 @@ header {
     .latest {
         padding-left: 10px;
     }
+
+    .latest-details {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .topic-logo {
+        width: 17px;
+    }
+    
+    .topic-logo img{
+        width: 100%;
+    }
+    
+    .topic-name {
+        font-size: 1rem ;
+    }
+
+    .topic-description {
+        font-size: 14px;
+    }
+
+    .tb {
+        padding-top: 3px;
+        font-size: 12px;
+    }
+
+    .latest-details {
+        padding-left: 10px;
+    }
+
+    .query{
+        font-size: 14px;
+    }
+
+    .details {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .topic-logo {
+        width: 10px;
+    }
+
+    .topic-logo img{
+        padding-top: 2.5px;   
+    }
+
+    .topic-name {
+        padding-left: 3px;
+        font-size: 14px;
+    }
+
+    .topic-description {
+        font-size: 12px;
+    }
+
+    .latest {
+        visibility: hidden;
+        clear: both;
+    }
+
 }
