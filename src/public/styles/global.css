@@ -223,7 +223,10 @@ a {
     }
 }
 
-/*discussion.jsx*/
+/*home.jsx*/
+.center{
+    width: 100%;
+}
 
 .main {
     margin: 0;
@@ -231,6 +234,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
 }
 
 .rendered-values{
@@ -238,12 +242,29 @@ a {
     position: relative;
     margin-left: 5rem;
     margin-right: 5rem;
+    display: flex;
 }
 
 .question{
     color: rgb(68, 68, 68);
     font-size: 2rem;
     text-align: center;
+}
+
+.home-space {
+    width: 20%;
+}
+
+@media (max-width: 768px) {
+    .home-space {
+        width: 5%;
+    }
+}
+
+@media (max-width: 426px) {
+    .home-space {
+        width: 0;
+    }
 }
 
 /*NAVBAR.js*/
@@ -373,6 +394,8 @@ header {
 }
 
 /*signup.jsx*/
+
+
 .main-container {
     height: 100%;
     width: 100%;
@@ -398,9 +421,10 @@ header {
 }
 
 @media (max-width: 768px) {
-    .nav-items li {
+    .nav-items {
         display: none;
     }
+
 
     .navigation {
         padding: 0 1rem;
@@ -408,5 +432,262 @@ header {
 
     .toggle-button {
         display: flex;
+    }
+}
+
+@media(max-width: 320px){
+    .nav-logo a{
+        font-size: 18px;
+    }
+}
+
+/*cardh.js*/
+
+.card {
+    margin: 0 0;
+    position: relative;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-color: rgb(122, 122, 122);
+    transform: scale(1);
+    background-color: #e4e4e4;
+    transition: transform 0.3s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 100;
+    box-shadow: 1px 3px rgba(107, 99, 255, 0.24);
+    border: none;
+    transition: transform 0.3s ease-in,
+    box-shadow 0.3s ease-in;
+}
+
+.card-fluid {
+    padding: 1rem;
+    display: flex;
+}
+
+.topic {
+    width: 60%;
+    font-size: 1rem;
+}
+
+.topic-header {
+    display: flex;
+}
+
+.topic-logo {
+    width: fit-content;
+}
+
+.topic-logo img{
+    width: 20px;
+}
+
+.topic-name {
+    color: #6C63FF;
+    font-weight: bold;
+    align-self: center;
+    font-size: 20px;
+    padding-left: 1rem;
+}
+
+.topic-description {
+    color: #999;
+    font-size: 20px;
+}
+
+.threads-blogs {
+    padding-top: 0.5rem;
+    display: flex;
+    width: 70%;
+}
+
+.threads{
+    display: flex;
+    width: 35%;
+}
+
+.tb-sign {
+    width: fit-content;
+}
+
+.tb-sign img{
+    width: 15px;
+}
+
+.tb img{
+    width: 20px;
+}
+
+.tb {
+    font-size: 1rem;
+    margin-top: 3px;
+    color: #6C63FF;
+    margin-left: 3px;
+}
+
+.blogs {
+    padding-left: 1rem;
+    display: flex;
+    width: 50%;
+}
+
+.latest {
+    width: 40%;
+    display: flex;
+    height: inherit;
+    font-size: 1rem;
+}
+
+.latest-user-img {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+}
+
+.latest-user-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.query {
+    color: rgb(153, 148, 236);
+    font-weight: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-name {
+    color: #999;
+}
+
+.time {
+    color: #6C63FF;
+}
+
+@media (max-width: 1024px) {
+
+
+    .topic-description{
+        font-size: 1rem;
+    }
+
+    .tb{
+        font-size: 14px;
+    }
+
+    .query {
+        font-size: 1.2rem;
+    }
+
+    .latest {
+        padding-left: 10px;
+    }
+
+    .latest-details {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .topic-logo {
+        width: 17px;
+    }
+    
+    .topic-logo img{
+        width: 100%;
+    }
+    
+    .topic-name {
+        font-size: 1rem ;
+    }
+
+    .topic-description {
+        font-size: 14px;
+    }
+
+    .tb {
+        padding-top: 3px;
+        font-size: 12px;
+    }
+
+    .latest-details {
+        padding-left: 10px;
+    }
+
+    .query{
+        font-size: 14px;
+    }
+
+    .details {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .topic {
+        width: 100%;
+    }
+
+    .topic-logo {
+        width: 10px;
+    }
+
+    .topic-logo img{
+        padding-top: 2.5px;   
+    }
+
+    .topic-name {
+        padding-left: 3px;
+        font-size: 14px;
+    }
+
+    .threads-blogs{
+        width: 100%;
+    }
+
+    .topic-description {
+        font-size: 12px;
+    }
+
+    .tb-sign img{
+        width: 10px;
+    }
+
+    .tb{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .latest {
+        visibility: hidden;
+        clear: both;
+        display: none;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .threads-blogs{
+        margin-top: 0.5px;
+    }
+
+    .threads{
+        width: 50%;
+    }
+
+    .blogs{
+        padding: 0 0;
+    }
+
+    .tb{
+        font-size: 10px;
+        justify-content: center;
     }
 }
