@@ -444,23 +444,19 @@ header {
 /*cardh.js*/
 
 .card {
-    margin: 0 0;
+    margin: 5px 0;
     position: relative;
-    border-width: 1px;
-    border-bottom-style: solid;
-    border-color: rgb(122, 122, 122);
     transform: scale(1);
     background-color: #e4e4e4;
     transition: transform 0.3s ease-in;
+    box-shadow: 1px 3px rgba(143, 143, 143, 0.24);
 }
 
 .card:hover {
     transform: scale(1.1);
     z-index: 100;
-    box-shadow: 1px 3px rgba(107, 99, 255, 0.24);
     border: none;
-    transition: transform 0.3s ease-in,
-    box-shadow 0.3s ease-in;
+    transition: transform 0.3s ease-in;
 }
 
 .card-fluid {
@@ -482,7 +478,7 @@ header {
 }
 
 .topic-logo img{
-    width: 20px;
+    width: 30px;
 }
 
 .topic-name {
@@ -494,8 +490,10 @@ header {
 }
 
 .topic-description {
+    padding-top: 3px;
+    padding-bottom: 3px;
     color: #999;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .threads-blogs {
@@ -514,7 +512,7 @@ header {
 }
 
 .tb-sign img{
-    width: 15px;
+    width: 20px;
 }
 
 .tb img{
