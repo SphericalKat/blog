@@ -421,9 +421,10 @@ header {
 }
 
 @media (max-width: 768px) {
-    .nav-items li {
+    .nav-items {
         display: none;
     }
+
 
     .navigation {
         padding: 0 1rem;
@@ -434,16 +435,20 @@ header {
     }
 }
 
+@media(max-width: 320px){
+    .nav-logo a{
+        font-size: 18px;
+    }
+}
+
 /*cardh.js*/
 
 .card {
     margin: 0 0;
     position: relative;
     border-width: 1px;
-    margin-bottom: -1px;
-    margin-top: -1px;
-    border-style: solid;
-    border-color: #555;
+    border-bottom-style: solid;
+    border-color: rgb(122, 122, 122);
     transform: scale(1);
     background-color: #e4e4e4;
     transition: transform 0.3s ease-in;
@@ -452,7 +457,10 @@ header {
 .card:hover {
     transform: scale(1.1);
     z-index: 100;
-    transition: transform 0.3s ease-in;
+    box-shadow: 1px 3px rgba(107, 99, 255, 0.24);
+    border: none;
+    transition: transform 0.3s ease-in,
+    box-shadow 0.3s ease-in;
 }
 
 .card-fluid {
@@ -562,9 +570,7 @@ header {
 }
 
 @media (max-width: 1024px) {
-    .card {
-        margin: -1px 0;
-    }
+
 
     .topic-description{
         font-size: 1rem;
@@ -625,6 +631,10 @@ header {
 
 @media (max-width: 426px) {
 
+    .topic {
+        width: 100%;
+    }
+
     .topic-logo {
         width: 10px;
     }
@@ -638,13 +648,46 @@ header {
         font-size: 14px;
     }
 
+    .threads-blogs{
+        width: 100%;
+    }
+
     .topic-description {
         font-size: 12px;
+    }
+
+    .tb-sign img{
+        width: 10px;
+    }
+
+    .tb{
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .latest {
         visibility: hidden;
         clear: both;
+        display: none;
     }
 
+}
+
+@media (max-width: 375px) {
+    .threads-blogs{
+        margin-top: 0.5px;
+    }
+
+    .threads{
+        width: 50%;
+    }
+
+    .blogs{
+        padding: 0 0;
+    }
+
+    .tb{
+        font-size: 10px;
+        justify-content: center;
+    }
 }
