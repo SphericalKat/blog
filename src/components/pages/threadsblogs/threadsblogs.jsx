@@ -3,9 +3,9 @@ import Navbar from '../../navbar/navbar'
 import { Cube } from 'styled-loaders-react'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import Card from '../../cardh/cardh'
+import Card from '../../cardh/cardtb'
 
-class Discussion extends React.Component {
+class Threadsblogs extends React.Component {
 
   constructor(props) {
     super(props)
@@ -14,6 +14,8 @@ class Discussion extends React.Component {
       loading: true,
       sideDrawerOpen: false,
       isLoggedIn: false,
+      isBlog: false,
+      isThread: true
     }
   }
 
@@ -49,17 +51,23 @@ class Discussion extends React.Component {
       <Navbar toggleClickHandle={this.toggleClickHandle} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
-
       <div className='rendered-values'>
-        <div className='home-space'></div>
-        <div>
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className='home-space'></div>
+      <div className='home-space'></div> 
+        <div className='cards'>
+        <div className='previous-heading'>
+          #Dev
       </div>
-
+      <div className='btnc'>
+      <button type="submit" className="create-btn" value="">CREATE</button>
+      </div>
+       
+          <Card />
+          <Card />
+          <Card />  
+        
+      </div>
+      <div className='home-space'></div>
+      </div>
     </div>
 
     return (
@@ -73,4 +81,4 @@ class Discussion extends React.Component {
   }
 }
 
-export default Discussion
+export default Threadsblogs
