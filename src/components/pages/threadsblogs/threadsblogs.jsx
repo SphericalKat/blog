@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../../navbar/navbar'
-import { Cube } from 'styled-loaders-react'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
 import Card from '../../cardh/cardtb'
@@ -15,7 +14,7 @@ class Threadsblogs extends React.Component {
       sideDrawerOpen: false,
       isLoggedIn: false,
       isBlog: false,
-      isThread: true
+      isForum: true
     }
   }
 
@@ -55,7 +54,7 @@ class Threadsblogs extends React.Component {
       <div className='home-space'></div> 
         <div className='cards'>
         <div className='previous-heading'>
-          #Dev
+          #Dev    {/* pass heading here */}
       </div>
       <div className='btnc'>
       <button type="submit" className="create-btn" value="">CREATE</button>

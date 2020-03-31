@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const card = (props) => {   //the props passed herer will contain the rendering text and the whether it is thread or logo 
+const card = (props) => {   //the props passed herer will contain the rendering text images and the whether it is thread or logo 
     return (
         <div className='card'>
             <div className='card-fluid'>
