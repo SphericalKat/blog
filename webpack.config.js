@@ -5,7 +5,8 @@ const config = [{
     vendor: ['@babel/polyfill', 'react'],
     index: ['./src/components/entrypoints/index.jsx'],
     home: ['./src/components/entrypoints/home.jsx'],
-    signUp: ['./src/components/entrypoints/signUp.jsx']
+    signUp: ['./src/components/entrypoints/signUp.jsx'],
+    threadsblogs: ['./src/components/entrypoints/threadsblogs.jsx']
   },
   output: {
     path: path.resolve(__dirname, 'src', 'public', 'js'),
@@ -19,7 +20,7 @@ const config = [{
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react']
-          }
+          } 
         },
         exclude: [/node_modules/, /public/]
       }

@@ -224,6 +224,8 @@ a {
 }
 
 /*home.jsx*/
+
+
 .center{
     width: 100%;
 }
@@ -245,6 +247,10 @@ a {
     display: flex;
 }
 
+.info{
+    display: flex;
+}
+
 .question{
     color: rgb(68, 68, 68);
     font-size: 2rem;
@@ -253,6 +259,10 @@ a {
 
 .home-space {
     width: 20%;
+}
+
+.cards{
+    width: 60%
 }
 
 @media (max-width: 768px) {
@@ -502,9 +512,18 @@ header {
     width: 70%;
 }
 
+.threads-blogs-tb{
+    width: 20%;
+}
+
 .threads{
     display: flex;
     width: 35%;
+}
+
+.threads-tb{
+    display: flex;
+    width:20%;
 }
 
 .tb-sign {
@@ -517,6 +536,14 @@ header {
 
 .tb img{
     width: 20px;
+}
+
+.tb-tb {
+    font-size: 1rem;
+    margin-top: 3px;
+    color: #6C63FF;
+    margin-left: 3px;
+    width: fit-content;
 }
 
 .tb {
@@ -546,9 +573,22 @@ header {
     justify-content: center;
 }
 
+.latest-user-img-tb {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+}
+
 .latest-user-img img{
     width: 50px;
     height: 50px;
+    border-radius: 4px;
+}
+
+.latest-user-img-tb img{
+    width: 60px;
+    height: 60px;
     border-radius: 4px;
 }
 
@@ -687,5 +727,47 @@ header {
     .tb{
         font-size: 10px;
         justify-content: center;
+    }
+}
+
+/*threadsblogs.jsx*/
+
+.previous-heading {
+    position: relative;
+    font-size: 3rem;
+    color: rgb(58, 51, 185);
+    text-align: center;
+}
+.create-btn {
+    display: block;
+    width: 6.5rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    outline: none;
+    border-color: #6C63FF;
+    color: #6C63FF;
+    font-size: 1rem;
+    position: relative;
+    
+}
+
+.create-btn:hover {
+    background-color: #6C63FF;
+    color: #e4e4e4;
+    transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
+}
+
+@media (max-width: 426px) {
+
+    .previous-heading{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .previous-heading{
+        font-size: 2rem;
     }
 }
