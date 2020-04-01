@@ -10,22 +10,9 @@ class Create extends React.Component {
     super(props)
     this.state = {
       navbarOpen: false,
-      loading: true,
       sideDrawerOpen: false,
-      isLoggedIn: false,
-      isBlog: false,
-      isForum: true,
       input: ''
     }
-  }
-
-  componentDidMount = () => {
-    setTimeout(() => {
-      this.setState({
-        loading: false
-      })
-    }, 3000)
-    this.setState({ loading: true })
   }
 
   toggleClickHandle = () => {
@@ -39,7 +26,7 @@ class Create extends React.Component {
   }
 
   inputChangeHandle = (event) => {
-    this.setState({input:  event.target.value})
+    this.setState({ input: event.target.value })
   }
 
   render() {
@@ -57,14 +44,14 @@ class Create extends React.Component {
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
       <div className='rendered-values'>
-      <div className="input-div two">
-                  <div>
-                    <h5>Password</h5>
-                    <input onChange={this.inputChangeHandle} className={'input'} type="text"
-                           value={this.state.input}/>
-                  </div>
-                </div>
-                <Markdown />
+        <div className="input-div two">
+          <div>
+            <h5>Password</h5>
+            <input onChange={this.inputChangeHandle} className={'input'} type="text"
+              value={this.state.input} />
+          </div>
+        </div>
+        <Markdown />
       </div>
     </div>
 
