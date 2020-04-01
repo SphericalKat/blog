@@ -34,14 +34,16 @@ class Index extends React.Component {
                 <div className="input-div one">
                   <div>
                     <h5>Username</h5>
-                    <input onChange={this.onNameChangeHandler} className={'input'} type="text"
+                    <input onChange={this.onNameChangeHandler} className={'input'}
+                           type="text"
                            value={this.state.name}/>
                   </div>
                 </div>
                 <div className="input-div two">
                   <div>
                     <h5>Password</h5>
-                    <input onChange={this.onPasswordChangeHandler} className={'input'} type="password"
+                    <input onChange={this.onPasswordChangeHandler} className={'input'}
+                           type="password"
                            value={this.state.password}/>
                   </div>
                 </div>

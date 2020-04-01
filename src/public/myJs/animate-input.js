@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener('load', function (event) {
 
   const inputs = document.querySelectorAll('.input')
 
@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   function focusLostFunc (e) {
     const parent = e.target.parentNode.parentNode
-    console.log(e)
     if (e.target.value === '')
       parent.classList.remove('focus')
   }
 
   inputs.forEach(input => {
     input.addEventListener('focus', focusFunc)
-    input.addEventListener('change',focusFunc)
+    input.addEventListener('input', focusFunc)
+    input.addEventListener('change', focusFunc)
     input.addEventListener('focusout', focusLostFunc)
   })
 })
