@@ -79,6 +79,11 @@ form h2 {
     transition: border-bottom 0.3s ease-in;
 }
 
+input:-webkit-autofill {
+    -webkit-text-fill-color:#555 !important;
+    background-color: #e4e4e4 !important;
+}
+
 .input-div:after {
     left: 50%;
 }

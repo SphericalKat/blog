@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import Card from '../../cardh/cardtb'
+import Card from '../../cardh/cardt'
 
 class Threads extends React.Component {
 
@@ -13,7 +13,6 @@ class Threads extends React.Component {
       loading: true,
       sideDrawerOpen: false,
       isLoggedIn: false,
-      isBlog: false,
       isForum: true
     }
   }
@@ -54,7 +53,7 @@ class Threads extends React.Component {
       <div className='home-space'></div> 
         <div className='cards'>
         <div className='previous-heading'>
-          #Dev    {/* pass heading here */}
+          What is the question?    {/* pass heading here */}
       </div>
       <div className='btnc'>
       <button type="submit" className="create-btn" value="">CREATE</button>
