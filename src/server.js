@@ -5,6 +5,7 @@ import home from './routes/home'
 import signup from './routes/signUp'
 import threadsblogs from './routes/threadsblogs'
 import threads from './routes/threads'
+import create from './routes/create'
 import path from 'path'
 
 // Server var
@@ -28,6 +29,7 @@ app.use('/home', home)
 app.use('/signup', signup)
 app.use('/threadsblogs',threadsblogs)
 app.use('/threads',threads)
+app.use('/create',create)
 
 const port = process.env.PORT || 3000
 

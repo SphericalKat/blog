@@ -7,7 +7,8 @@ const config = [{
     home: ['./src/components/entrypoints/home.jsx'],
     signUp: ['./src/components/entrypoints/signUp.jsx'],
     threadsblogs: ['./src/components/entrypoints/threadsblogs.jsx'],
-    threads: ['./src/components/entrypoints/threads.jsx']
+    threads: ['./src/components/entrypoints/threads.jsx'],
+    create: ['./src/components/entrypoints/create.jsx']
   },
   output: {
     path: path.resolve(__dirname, 'src', 'public', 'js'),
