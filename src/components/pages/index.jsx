@@ -28,7 +28,7 @@ class Index extends React.Component {
               <img src='http://localhost:3000/svg/fingerprint.svg'/>
             </div>
             <div className="login-container">
-              <form onSubmit={this.onFormSubmit} autoComplete="off">
+              <form onSubmit={this.onFormSubmit}>
                 <img className="avatar" src='http://localhost:3000/svg/male_avatar.svg'/>
                 <h2>Welcome</h2>
                 <div className="input-div one">
