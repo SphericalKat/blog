@@ -49,7 +49,7 @@ form {
 }
 
 .avatar {
-    width: 150px;
+    width: 200px;
 }
 
 form h2 {
@@ -110,7 +110,7 @@ input:-webkit-autofill {
 }
 
 .input-div.two {
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .input-div > div {
@@ -145,9 +145,6 @@ a {
     text-decoration: none;
 }
 
-.forgotPassword {
-    padding-top: 3px;
-}
 
 .btn {
     display: block;

@@ -59,22 +59,38 @@ class SignUp extends React.Component {
             </div>
             <div className="login-container">
               <form onSubmit={this.onFormSubmit}>
-                <img className="avatar" src='http://localhost:3000/svg/male_avatar.svg'/>
-                <h2>Welcome</h2>
                 <div className="input-div one">
                   <div>
-                    <h5>Username</h5>
-                    <input onChange={this.onNameChangeHandler} type="text" value={this.state.name}/>
+                    <h5>First Name</h5>
+                    <input onChange={this.onFirstNameChange} type="text" value={this.state.firstName}/>
+                  </div>
+                </div>
+                <div className="input-div">
+                  <div>
+                    <h5>Last Name</h5>
+                    <input onChange={this.onLastNameChange} type="text" value={this.state.lastName}/>
+                  </div>
+                </div>
+                <div className="input-div">
+                  <div>
+                    <h5>Email ID</h5>
+                    <input onChange={this.onEmailChange} type="" value={this.state.emailID}/>
+                  </div>
+                </div>
+                <div className="input-div">
+                  <div>
+                    <h5>Password</h5>
+                    <input onChange={this.onPasswordChange} type="" value={this.state.password}/>
                   </div>
                 </div>
                 <div className="input-div two">
                   <div>
-                    <h5>Password</h5>
-                    <input onChange={this.onPasswordChangeHandler} type="password" value={this.state.password}/>
+                    <h5>Confirm Password</h5>
+                    <input onChange={this.onPasswordCheck} type="" value={this.state.reEnterPassword}/>
                   </div>
                 </div>
                 <a className="forgotPassword" href='#'>Forgot Password</a>
-                <button type="submit" className="btn" value="">Log In</button>
+                <button type="submit" className="btn" value="">SIGNUP</button>
               </form>
             </div>
           </div>
