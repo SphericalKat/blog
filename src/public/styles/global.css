@@ -93,8 +93,9 @@ input:-webkit-autofill {
 }
 
 .input-div.focus > div > h5 {
-    top: -5px;
+    top: 0;
     font-size: 15px;
+    color: #6C63FF;
 }
 
 .input-div.focus:after, .input-div:before {
@@ -119,8 +120,8 @@ input:-webkit-autofill {
 }
 
 .input-div > div > h5 {
-    position: absolute;
-    left: 10px;
+    position: relative;
+    right: 35%;
     top: 50%;
     color: #999;
     font-size: 18px;
@@ -136,7 +137,7 @@ input {
     border: none;
     outline: none;
     background: none;
-    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0.7rem;
     font-size: 1.2rem;
     color: #555;
 }
@@ -176,7 +177,7 @@ a {
     float: right;
     font-size: 1rem;
     margin-right: 5rem;
-    margin-top: 3rem;;
+    margin-top: 3rem;
 }
 
 .sign-btn:hover {

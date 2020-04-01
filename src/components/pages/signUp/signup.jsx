@@ -62,31 +62,31 @@ class SignUp extends React.Component {
                 <div className="input-div one">
                   <div>
                     <h5>First Name</h5>
-                    <input onChange={this.onFirstNameChange} type="text" value={this.state.firstName}/>
+                    <input onChange={this.onFirstNameChange} type="text" value={this.state.firstName} className={'input'}/>
                   </div>
                 </div>
                 <div className="input-div">
                   <div>
                     <h5>Last Name</h5>
-                    <input onChange={this.onLastNameChange} type="text" value={this.state.lastName}/>
+                    <input onChange={this.onLastNameChange} type="text" value={this.state.lastName} className={'input'}/>
                   </div>
                 </div>
                 <div className="input-div">
                   <div>
                     <h5>Email ID</h5>
-                    <input onChange={this.onEmailChange} type="" value={this.state.emailID}/>
+                    <input onChange={this.onEmailChange} type="" value={this.state.emailID} className={'input'}/>
                   </div>
                 </div>
                 <div className="input-div">
                   <div>
                     <h5>Password</h5>
-                    <input onChange={this.onPasswordChange} type="" value={this.state.password}/>
+                    <input onChange={this.onPasswordChange} type="" value={this.state.password} className={'input'}/>
                   </div>
                 </div>
                 <div className="input-div two">
                   <div>
                     <h5>Confirm Password</h5>
-                    <input onChange={this.onPasswordCheck} type="" value={this.state.reEnterPassword}/>
+                    <input onChange={this.onPasswordCheck} type="" value={this.state.reEnterPassword} className={'input'}/>
                   </div>
                 </div>
                 <a className="forgotPassword" href='#'>Forgot Password</a>
