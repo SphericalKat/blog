@@ -279,17 +279,26 @@ a {
 }
 
 .back{
-    align-content: center;
-    width: 100%;
-    margin-left: 5rem;
-    margin-right: 5rem;
-}
-
-.back img{
     display: block;
+    left: 12%;
     position: fixed;
     z-index: -1;
-    width: fit-content;
+    width: 75%;
+}
+
+.back-m{
+    position: fixed;
+    z-index: -1;
+    display: none;
+    width: 100%;
+    bottom: 0;
+}
+
+.mask{
+    position: fixed;
+    z-index: -1000;
+    bottom: 0;
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -302,6 +311,19 @@ a {
     .home-space {
         width: 0;
     }
+
+    .back-m{
+        display: block;
+    }
+
+    .back{
+        display: none;
+    }
+
+
+.mask{
+    display: block;
+}
 }
 
 /*NAVBAR.js*/
@@ -481,7 +503,7 @@ header {
 /*cardh.js*/
 
 .card {
-    margin: 5px 0;
+    margin: 10px 0;
     position: relative;
     transform: scale(1);
     background-color: #e4e4e4;
@@ -695,6 +717,12 @@ header {
 
 @media (max-width: 426px) {
 
+    .rendered-values{
+        margin-top: 4rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
     .topic {
         width: 100%;
     }
@@ -738,6 +766,39 @@ header {
 }
 
 @media (max-width: 375px) {
+
+    .rendered-values{
+        margin-top: 3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .threads-blogs {
+        margin-top: 0.5px;
+    }
+
+    .threads {
+        width: 50%;
+    }
+
+    .blogs {
+        padding: 0 0;
+    }
+
+    .tb {
+        font-size: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .rendered-values{
+        margin-top: 4rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
     .threads-blogs {
         margin-top: 0.5px;
     }
