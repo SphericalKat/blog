@@ -8,7 +8,7 @@ const Navbar = (props) => {
       <nav className="navigation">
         <div>
           <ToggleButton click={props.toggleClickHandle} />
-        </div>gti 
+        </div>
         <div className='nav-logo' style={{fontWeight: 'bold'}}><a href='/'>C4</a></div>
         <div className='nav-items'>
           <ul>
