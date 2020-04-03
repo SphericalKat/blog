@@ -335,10 +335,11 @@ header {
 .navbar {
     position: fixed;
     width: 100%;
-    background: #6C63FF;
+    background: #e4e4e4;
     top: 0;
     left: 0;
     height: 56px;
+    box-shadow: 0 1px 0 #c2c1c1;
 }
 
 .navigation {
@@ -373,13 +374,13 @@ header {
 }
 
 .nav-logo a {
-    color: white;
+    color: #6C63FF;
     text-decoration: none;
     font-size: 1.5rem;
 }
 
 .nav-items a {
-    color: white;
+    color: #6C63FF;
     font-size: 1.2rem;
     text-decoration: none;
 }
@@ -403,12 +404,12 @@ header {
 .line {
     width: 25px;
     height: 2px;
-    background: white;
+    background: #6C63FF;
 }
 
 .side-drawer {
     height: 100%;
-    background-color: white;
+    background-color: #e4e4e4;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
