@@ -278,6 +278,20 @@ a {
     width: 60%;
 }
 
+.back{
+    align-content: center;
+    width: 100%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.back img{
+    display: block;
+    position: fixed;
+    z-index: -1;
+    width: fit-content;
+}
+
 @media (max-width: 768px) {
     .home-space {
         width: 5%;
