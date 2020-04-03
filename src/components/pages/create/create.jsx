@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import Markdown from '../../markdown/markdown'
+import ReactMarkdown from 'react-markdown'
 
 class Create extends React.Component {
 
@@ -11,7 +11,8 @@ class Create extends React.Component {
     this.state = {
       navbarOpen: false,
       sideDrawerOpen: false,
-      input: ''
+      input: '',
+      display: 'none'
     }
   }
 
@@ -29,6 +30,10 @@ class Create extends React.Component {
     this.setState({ input: event.target.value })
   }
 
+  renderMarkdown = () => {
+    return (<ReactMarkdown source={this.setState.input} />);
+  }
+
   render() {
 
     const input = this.state.input;
@@ -44,21 +49,23 @@ class Create extends React.Component {
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
       <div className='rendered-values'>
-        <div className="input-div two">
+        <form className='create-input' onSubmit={this.renderMarkdown} >
+        <div className="create-form">
+          <h5>
+            We recommend using Markdown for best performance
+          </h5>
           <div>
-            <h5>Password</h5>
-            <input onChange={this.inputChangeHandle} className={'input'} type="text"
-              value={this.state.input} />
+            <textarea className='create-text' onChange={this.inputChangeHandle} type="text" value={this.state.input} />
           </div>
         </div>
-        <Markdown />
+        <button className="create-btn" onSubmit={this.renderMarkdown}>Submit</button>
+        </form>
       </div>
     </div>
 
     return (
       <div>
         {
-          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> : 
           ret
         }
       </div>

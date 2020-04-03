@@ -49,9 +49,10 @@ class Discussion extends React.Component {
       <Navbar toggleClickHandle={this.toggleClickHandle} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
-
       <div className='rendered-values'>
-        <div className='home-space'></div>
+        <div className='home-space'>
+          <img src='http://localhost:3000/svg/avatar.svg' />
+        </div>
         <div>
           <Card />
           <Card />
