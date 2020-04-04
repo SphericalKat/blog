@@ -1032,14 +1032,15 @@ header {
     margin: 9rem 0;
     font-size: 1.2rem;
     outline: none;
-    background-color: rgb(136, 130, 255);
+    background-color: transparent;
+    border-style: solid;
     border-color: #e4e4e4;
     color: #e4e4e4;
 }
 
 .explore-btn-alt:hover{
     background-color: #e4e4e4;
-    color: #6C63FF;
+    color: rgb(136, 130, 255);
     transition: background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
