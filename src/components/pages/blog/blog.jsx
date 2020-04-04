@@ -1,9 +1,8 @@
 import React from 'react'
 import Navbar from '../../navbar/navbar'
-import { Cube } from 'styled-loaders-react'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import Card from '../../cardh/cardh'
+import Card from '../../cardh/cardb'
 
 class Blog extends React.Component {
 
@@ -49,18 +48,17 @@ class Blog extends React.Component {
       <Navbar toggleClickHandle={this.toggleClickHandle} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
-        <img className='back' src='http://localhost:3000/svg/back.svg' />
-        <img className='back-m' src='http://localhost:3000/svg/post_online.svg' />
-        <img className='mask' src='http://localhost:3000/svg/mask.svg' />
-      <div className='rendered-values'>
-        <div className='home-space'>
+      <div className='heading-blog'>
+        <h1>Blogs</h1>
+        <div className='text-blog'>
+          <p>Write something here to describe<br></br>blogs!</p>
         </div>
-        <div>
-          <Card />
-          <Card />
-          <Card />
+      </div>
+      <div  className='blog-svg'>
+        <img src='http://localhost:3000/svg/blog.svg' />
         </div>
-        <div className='home-space'></div>
+      <div className='rendered-values-blogs'>
+        <Card />
       </div>
 
     </div>
