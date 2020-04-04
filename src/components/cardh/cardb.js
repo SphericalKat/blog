@@ -7,8 +7,8 @@ const card = (props) => {   //the props passed herer will contain the rendering 
             <div className='dev-div'>
                 <div className='details'>
                     <div className='head'>
-                    <h1>
-                        -sudo dev info
+                        <h1>
+                            -sudo dev info
                     </h1>
                     </div>
                     <div className='head-details'>
@@ -23,13 +23,13 @@ const card = (props) => {   //the props passed herer will contain the rendering 
                 </div>
             </div>
             <div className='dev-div'>
-            <div className='div-svg'>
+                <div className='div-svg'>
                     <img src='http://localhost:3000/svg/AI.svg'></img>
                 </div>
-            <div className='details'>
+                <div className='details'>
                     <div className='head-alt'>
-                    <h1>
-                        -keRas not found
+                        <h1>
+                            -keRas not found
                     </h1>
                     </div>
                     <div className='head-details-alt'>
@@ -41,10 +41,10 @@ const card = (props) => {   //the props passed herer will contain the rendering 
                 </div>
             </div>
             <div className='dev-div'>
-            <div className='details'>
+                <div className='details'>
                     <div className='head'>
-                    <h1>
-                        -sudo dev info
+                        <h1>
+                            -sudo dev info
                     </h1>
                     </div>
                     <div className='head-details'>

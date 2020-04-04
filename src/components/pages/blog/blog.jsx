@@ -54,9 +54,9 @@ class Blog extends React.Component {
           <p>Write something here to describe<br></br>blogs!</p>
         </div>
       </div>
-      <div  className='blog-svg'>
+      <div className='blog-svg'>
         <img src='http://localhost:3000/svg/blog.svg' />
-        </div>
+      </div>
       <div className='rendered-values-blogs'>
         <Card />
       </div>
@@ -66,7 +66,6 @@ class Blog extends React.Component {
     return (
       <div>
         {
-          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> : 
           ret
         }
       </div>
