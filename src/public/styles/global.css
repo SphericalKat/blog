@@ -895,8 +895,9 @@ header {
 
 /*blog.jsx*/
 
+
 .heading-blog{
-    width: 100%;
+    width: fit-content;
     top: 20%;
     left: 15%;
     position: fixed;
@@ -922,13 +923,13 @@ header {
 .blog-svg{
     z-index: -2;
     position: fixed;
-    width: 100%;
+    width: fit-content;
     top: 20rem;
-    left: 65rem;
+    left: 55%;
 }
 
 .blog-svg img{
-    width: 45%;
+    width: 55%;
 }
 
 .rendered-values-blogs{
@@ -937,8 +938,75 @@ header {
     margin-top: 907px;
 }
 
+.blog-svg-m {
+    display: none;
+}
 
-/*blogb.js*/
+@media(max-width: 1024px){
+    .heading-blog{
+        width: fit-content;
+        top: 20%;
+        left: 15%;
+        position: fixed;
+        z-index: -1;
+    }
+    
+    .heading-blog h1{
+        color: #6C63FF;
+        font-size: 100px;
+        display: flex;
+    }
+    
+    .text-blog{
+        position: fixed;
+        z-index: -1;
+    }
+    
+    .text-blog p{
+        color: #555;
+        font-size: 25px;
+    }
+    
+    .blog-svg{
+        z-index: -2;
+        position: fixed;
+        width: fit-content;
+        top: 20rem;
+        left: 30%;
+    }
+    
+    .blog-svg img{
+        width: 60%;
+    }
+}
+
+@media(max-width:425px){
+    
+    .heading-blog h1{
+        font-size: 500%;
+    }
+    .blog-svg{
+        display: none;
+    }
+
+    .text-blog p{
+        font-size: 16px;
+    }
+
+    .blog-svg-m{
+        top:50%;
+        left: 20%;
+        position: fixed;
+        display: block;
+        z-index: -2;
+    }
+
+    .blog-svg-m img{
+        width: 80%;
+    }
+}
+
+/*cardb.js*/
 
 .blog-page{
     width: 100%;
@@ -977,6 +1045,7 @@ header {
 .head-alt{
     width: fit-content;
     border-bottom-style: solid;
+    margin-right: 10px;
     border-width: 3px;
     border-bottom-color: rgb(196, 196, 196);
 }
@@ -1046,10 +1115,84 @@ header {
 }
 
 .div-svg{
+    width:40%;
     padding-top: 20px;
     padding-left: 5rem;
 }
 
 .div-svg img{
     width: 80%;
+}
+
+@media (max-width:1024px){
+
+    .dev-div{
+        height: 400px;
+    }
+
+    .details{
+        width:60%;
+        margin-left: 2rem;
+    }
+
+    .head h1{
+        font-size: 50px;
+    }
+    
+    .head-alt h1{
+        font-size: 50px;
+    }
+    
+    .head-details{
+        font-size: 28px;
+    }
+    
+    .head-details-alt{
+        font-size: 28px;
+    }
+
+    .explore-btn {
+        width: 7rem;
+        height: 2.5rem;
+        margin: 4rem 0;
+        font-size: 1rem;
+    }
+    
+    .explore-btn-alt {
+        width: 7rem;
+        height: 2.5rem;
+        margin: 4rem 0;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:425px){
+    
+    .dev-div{
+        height: 400px;
+    }
+
+    .div-svg{
+        display: none;
+    }
+    
+    .details{
+        width: 100%;
+    }
+
+    .head h1{
+        font-size: 48px;
+    }
+
+    .head-alt h1{
+        font-size: 48px;
+    }
+
+    .head-details{
+        font-size: 16px;
+    }
+
+    .head-details-alt{
+        font-size: 16px;
+    }
 }

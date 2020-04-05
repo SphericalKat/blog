@@ -48,6 +48,7 @@ class Blog extends React.Component {
       <Navbar toggleClickHandle={this.toggleClickHandle} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
+      <div className='align'>
       <div className='heading-blog'>
         <h1>Blogs</h1>
         <div className='text-blog'>
@@ -56,6 +57,10 @@ class Blog extends React.Component {
       </div>
       <div className='blog-svg'>
         <img src='http://localhost:3000/svg/blog.svg' />
+      </div>
+      <div className='blog-svg-m'>
+        <img src='http://localhost:3000/svg/mobile_feed.svg' />
+      </div>
       </div>
       <div className='rendered-values-blogs'>
         <Card />
