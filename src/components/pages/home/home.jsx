@@ -3,7 +3,8 @@ import Navbar from '../../navbar/navbar'
 import { Cube } from 'styled-loaders-react'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import Card from '../../cardh/cardh'
+import UserCard from '../../cardh/user-card'
+import Create from '../../cardh/create-card'
 
 class Discussion extends React.Component {
 
@@ -49,19 +50,10 @@ class Discussion extends React.Component {
       <Navbar toggleClickHandle={this.toggleClickHandle} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
-        <img className='back' src='http://localhost:3000/svg/back.svg' />
-        <img className='back-m' src='http://localhost:3000/svg/post_online.svg' />
-        <img className='mask' src='http://localhost:3000/svg/mask.svg' />
-      <div className='rendered-values'>
-        <div className='home-space'>
+        <div className='render-user'>
+          <UserCard />
+          <Create />
         </div>
-        <div>
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <div className='home-space'></div>
-      </div>
 
     </div>
 
