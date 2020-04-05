@@ -7,10 +7,12 @@ const CreatePost = (props) => {
                 <p>New Post</p>
             </div>
             <div className='write'>
-                <div className='write-head'>
-                    Write your post...
-                </div>
-                <input></input>
+                <input placeholder='Write your post...'></input>
+            </div>
+            <div className='send'>
+                <button className='send-btn'>
+                <img src='http://localhost:3000/svg/post.svg' />
+                </button>
             </div>
         </div>
     )
