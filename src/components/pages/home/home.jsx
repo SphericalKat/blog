@@ -6,6 +6,7 @@ import Backdrop from '../../backdrop/backdrop'
 import UserCard from '../../cardh/user-card'
 import Create from '../../cardh/create-card'
 import Hashtag from '../../cardh/user-hashtag'
+import CreatePost from '../../cardh/user-create-post'
 
 class Discussion extends React.Component {
 
@@ -52,9 +53,15 @@ class Discussion extends React.Component {
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
         <div className='render-user'>
-          <UserCard />
-          <Create />
-          <Hashtag />
+          <div className='side-left'>
+            <UserCard />
+            <Create />
+            <Hashtag />
+          </div>
+          <div className='side-middle'>
+          <CreatePost />
+          </div>
+          <div className='side-right'></div>
         </div>
 
     </div>

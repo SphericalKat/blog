@@ -302,6 +302,11 @@ a {
     display: none;
 }
 
+.side-middle{
+    position: relative;
+    left: 5%;
+}
+
 @media (max-width: 768px) {
     .home-space {
         width: 5%;
@@ -1262,6 +1267,7 @@ header {
     padding-left: 10%;
     top: 7rem;
     height: fit-content;
+    display: flex;
 }
 
 /*create-card.js*/
@@ -1270,7 +1276,7 @@ header {
     position: relative;
     width: 290px;
     height: 75px;
-    margin-top: 2%;
+    margin-top: 10%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -1297,7 +1303,7 @@ header {
     position: relative;
     width: 290px;
     height: 265px;
-    margin-top: 2%;
+    margin-top: 10%;
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1313,6 +1319,7 @@ header {
     color: #181818;
     margin-top:5%;
     margin-left: 5%;
+    font-weight: bold;
 }
 
 .hash-div{
@@ -1326,16 +1333,50 @@ header {
 
 .hashes{
     position: relative;
-    width: 64px;
-    height: 32px;
+    width: 60px;
+    height: 28px;
     background: #e4e4e4;
     border-radius: 4px;
 }
 
 .text{
+    font-size: 12px;
     text-align: center;
     position: relative;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+/*user-create-post.js*/
+
+.create-post{
+    position: absolute;
+    width: 728px;
+    height: 125px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.create-post-head{
+    position: relative;
+    width: 673px;
+    left: 26px;
+    border-bottom: 1px solid rgba(107, 99, 255, 0.281);
+    height: 44px;
+}
+
+.create-post-head p{
+    position: relative;
+    top:50%;
+    transform: translate(0,-50%);
+    font-size: 16px;
+    height: 16px;
+    color: #6C63FF;
+}
+
+.write{
+    position: relative;
+    left:26px;
 }
