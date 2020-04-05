@@ -1258,8 +1258,8 @@ header {
 
 .render-user{
     position: relative;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
     top: 7rem;
     height: fit-content;
 }
@@ -1267,7 +1267,7 @@ header {
 /*create-card.js*/
 
 .create-box{
-    position: absolute;
+    position: relative;
     width: 290px;
     height: 75px;
     margin-top: 2%;
@@ -1277,7 +1277,7 @@ header {
 }
 
 .create-button{
-    position: absolute;
+    position: relative;
     width: 80%;
     height: 32px;
     top: 50%;
@@ -1289,4 +1289,53 @@ header {
     box-shadow: 0px 4px 4px rgba(107, 99, 255, 0.377);
     border-radius: 4px;
     outline: none;
+}
+
+/*hashtag-box.js*/
+
+.hashtag-box{
+    position: relative;
+    width: 290px;
+    height: 265px;
+    margin-top: 2%;
+    background: #FCFDFD;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hash-head{
+    position: absolute;
+    width: fit-content ;
+    height: 11px;
+    font-size: 12px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #181818;
+    margin-top:5%;
+    margin-left: 5%;
+}
+
+.hash-div{
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+.hashes{
+    position: relative;
+    width: 64px;
+    height: 32px;
+    background: #e4e4e4;
+    border-radius: 4px;
+}
+
+.text{
+    text-align: center;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

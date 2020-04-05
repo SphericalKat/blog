@@ -5,6 +5,7 @@ import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
 import UserCard from '../../cardh/user-card'
 import Create from '../../cardh/create-card'
+import Hashtag from '../../cardh/user-hashtag'
 
 class Discussion extends React.Component {
 
@@ -53,6 +54,7 @@ class Discussion extends React.Component {
         <div className='render-user'>
           <UserCard />
           <Create />
+          <Hashtag />
         </div>
 
     </div>
