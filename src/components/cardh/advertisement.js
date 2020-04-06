@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Follower = (props) => {
+const Advertisement = (props) => {
     return(
         <div className='follower-card'>
 
@@ -8,4 +8,4 @@ const Follower = (props) => {
     )
 }
 
-export default Follower
+export default Advertisement

@@ -305,7 +305,8 @@ a {
 .side-middle{
     position: relative;
     width: 60%;
-    padding: 0 10%;
+    margin: 0 5%;
+    align-content: center;
 }
 
 .side-left{
@@ -1210,7 +1211,7 @@ header {
 /*user-card.js*/
 
 .user-card{
-    width: 230px;
+    width: 100%;
     height: 230px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1271,7 +1272,7 @@ header {
 /*create-card.js*/
 
 .create-box{
-    width: 230px;
+    width: 100%;
     height: 75px;
     margin-top: 10%;
     background: #FFFFFF;
@@ -1298,7 +1299,7 @@ header {
 /*hashtag-box.js*/
 
 .hashtag-box{
-    width: 230px;
+    width: 100%;
     height: 225px;
     margin-top: 10%;
     background: #FFFFFF;
@@ -1348,18 +1349,17 @@ header {
 /*user-create-post.js*/
 
 .create-post{
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
     height: 125px;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
+    padding: 0 5%;
+
 }
 
 .create-post-head{
-    position: relative;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     border-bottom: 1px solid rgba(107, 99, 255, 0.281);
     height: 44px;
 }
@@ -1375,7 +1375,6 @@ header {
 
 .write{
     position: relative;
-    left:26px;
     top:10%;
     height: fit-content;
 }
@@ -1390,7 +1389,6 @@ header {
     width: fit-content;
     height: 40px;
     float: right;
-    right: 5%;
     top: 20%;
 }
 
@@ -1406,7 +1404,8 @@ header {
 
 .card-tb{
     position: relative;
-    width: 728px;
+    width: 90%;
+    padding: 0 5%;
     height: 158px;
     background: #FFFFFF;
     border-radius: 4px;
@@ -1420,7 +1419,6 @@ header {
     width: 178px;
     height: 46.74px;
     top: 10%;
-    left: 26px;
 }
 
 .photo{
@@ -1460,15 +1458,14 @@ header {
 
 .writeup{
     position: relative;
-    width: 676px;
+    width: 100%;
     max-height: 46px;
-    left: 26px;
     top: 20px;
 }
 .gradient{
     position: absolute;
     height: 46px;
-    width: 676px;
+    width: 90%;
     left: 26px;
     top: 60px;
     z-index: 1;
@@ -1486,15 +1483,21 @@ header {
     background: none;
     position: absolute;
     text-decoration: none;
+    text-emphasis: none;
+    font-weight: bold;
+}
+
+.button{
+    color: #6C63FF;
 }
 
 /*follower.js*/
 
 .follower-card{
     position: relative;
-    width: 290px;
-    height: 245px;
-    background: #ffffff;
+    width: 100%;
+    height: 700px;
+    background: rgba(136, 130, 255, 0.445);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }

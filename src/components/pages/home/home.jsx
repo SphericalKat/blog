@@ -8,7 +8,7 @@ import Create from '../../cardh/create-card'
 import Hashtag from '../../cardh/user-hashtag'
 import CreatePost from '../../cardh/user-create-post'
 import Card from '../../cardh/card'
-import Follower from '../../cardh/follower'
+import Advertisement from '../../cardh/advertisement'
 
 
 class Discussion extends React.Component {
@@ -63,8 +63,10 @@ class Discussion extends React.Component {
           </div>
           <div className='side-middle'>
             <CreatePost />
+            <Card />
           </div>
           <div className='side-right'>
+            <Advertisement />
           </div>
         </div>
 

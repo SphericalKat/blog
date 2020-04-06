@@ -21,7 +21,7 @@ const Card = (props) => {
             <div className='writeup'>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui.
             </p>
-            <p className="read-more"><a href="#" className="button">Read More</a></p>
+            <p className="read-more"><a href="#" className="button">READ MORE</a></p>
             </div>
         </div>
     )
