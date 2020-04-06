@@ -46,7 +46,7 @@ const card = (props) => {   //the props passed herer will contain the rendering 
                             Questions or blogs
                         </div>
                         <div className='details'>
-                            <div className='user-name'>
+                            <div className='user-name-details'>
                                 latest-user name
                             </div>
                             <div className='time'>

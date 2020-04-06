@@ -514,11 +514,9 @@ header {
 /*cardh.js*/
 
 .card {
-    margin: 10px 0;
+    top: 25%;
     position: relative;
-    transform: scale(1);
     background-color: #FFFFFF;
-    transition: transform 0.3s ease-in;
     box-shadow: 1px 3px rgba(143, 143, 143, 0.24);
     width: 100%;
 }
@@ -652,7 +650,7 @@ header {
     font-size: 20px;
 }
 
-.user-name {
+.user-name-details {
     color: #999;
 }
 
@@ -1346,7 +1344,7 @@ header {
 /*user-create-post.js*/
 
 .create-post{
-    position: absolute;
+    position: relative;
     width: 728px;
     height: 125px;
     background-color: #FFFFFF;
@@ -1398,4 +1396,90 @@ header {
     background: none;
     width: 40px;
     height: 40px;
+}
+
+/*card.js*/
+
+.card-tb{
+    position: relative;
+    width: 728px;
+    height: 158px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    top: 5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.head-card{
+    display: flex;
+    position: relative;
+    width: 178px;
+    height: 46.74px;
+    top: 10%;
+    left: 26px;
+}
+
+.photo{
+    position: relative;
+    width: 46.74px;
+    height: 46.74px;
+    background-color: rgba(107, 99, 255, 0.377);
+    border-radius: 100%;
+}
+
+.photo-details{
+    position: relative;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.photo-name{
+    position: relative;
+    width: 121px;
+    height: 11px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 13px;
+    color: #181818;
+    left: 16px;
+}
+
+.des{
+    position: relative;
+    left: 16px;
+    width: 99px;
+    height: 13px;    
+    font-size: 10px;
+    line-height: 150%;
+    color: #181818;
+}
+
+.writeup{
+    position: relative;
+    width: 676px;
+    max-height: 46px;
+    left: 26px;
+    top: 20px;
+}
+.gradient{
+    position: absolute;
+    height: 46px;
+    width: 676px;
+    left: 26px;
+    top: 60px;
+    z-index: 1;
+    background: linear-gradient(to bottom, transparent , white);
+}
+
+.writeup p{
+    font-size: 14px;
+    line-height: 150%;
+    max-height: 46px;
+    overflow: hidden;
+}
+
+.writeup .read-more{
+    background: none;
+    position: absolute;
+    text-decoration: none;
 }
