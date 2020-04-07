@@ -19,10 +19,9 @@ const Card = (props) => {
             </div>
             <div className='gradient'></div>
             <div className='writeup'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui.
-            </p>
-            <p className="read-more"><a href="#" className="button">READ MORE</a></p>
+            <p>{props.content}</p>
             </div>
+          <div className="read-more"><div className="button">... Read More</div></div>
         </div>
     )
 }

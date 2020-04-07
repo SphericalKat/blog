@@ -20,7 +20,7 @@ const Navbar = (props) => {
             <li><a href='/discussion'>Blog</a></li>
           </ul>
         </div>
-        <div className="space" />
+        <div className="space"><Search/></div>
         <div className="nav-user"><a href='/'>user</a></div>
       </nav>
     </header>
