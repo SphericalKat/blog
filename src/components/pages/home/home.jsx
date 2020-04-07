@@ -10,12 +10,10 @@ import CreatePost from '../../cardh/user-create-post'
 import Card from '../../cardh/card'
 import Advertisement from '../../cardh/advertisement'
 import Activity from '../../cardh/activity'
-import Search from '../../cardh/search'
-
 
 class Discussion extends React.Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       navbarOpen: false,
@@ -36,55 +34,53 @@ class Discussion extends React.Component {
 
   toggleClickHandle = () => {
     this.setState((pevState) => {
-      return { sideDrawerOpen: !pevState.sideDrawerOpen }; //passing reference
+      return { sideDrawerOpen: !pevState.sideDrawerOpen } //passing reference
     })
-  };
+  }
 
   backdropClickHandle = () => {
     this.setState({ sideDrawerOpen: false })
   }
 
+  render () {
 
-  render() {
-
-    let backdrop;
+    let backdrop
 
     if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandle} />
+      backdrop = <Backdrop click={this.backdropClickHandle}/>
     }
 
     const ret = <div className='center' style={{ height: '100%', paddingBottom: '20px' }}>
-      <Navbar toggleClickHandle={this.toggleClickHandle} />
-      <SideDrawer show={this.state.sideDrawerOpen} />
+      <Navbar toggleClickHandle={this.toggleClickHandle}/>
+      <SideDrawer show={this.state.sideDrawerOpen}/>
       {backdrop}
-        <div className='render-user'>
-          <div className='side-left'>
-            <UserCard />
-            <Create />
-            <Hashtag />
-            <Activity />
-          </div>
-          <div className='side-middle'>
-            <CreatePost />
-            <Search />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
-          <div className='side-right'>
-            <Advertisement />  
-          </div>
+      <div className='render-user'>
+        <div className='side-left'>
+          <UserCard/>
+          <Create/>
+          <Hashtag/>
+          <Activity/>
         </div>
+        <div className='side-middle'>
+          <CreatePost/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+        </div>
+        <div className='side-right'>
+          <Advertisement/>
+        </div>
+      </div>
 
     </div>
 
     return (
       <div>
         {
-          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> : 
+          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> :
           ret
         }
       </div>
