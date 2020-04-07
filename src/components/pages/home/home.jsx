@@ -66,7 +66,7 @@ class Discussion extends React.Component {
           <Card
             content={'* Lorem ipsum dolor sit amet, \n \n consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui.\n'}/>
           <Card
-            content={'# My name is anshu :blush: \n \n * This is a new queery. \n \n * I wanna fuck a girl so bad.'}/>
+            content={'# My name is anshu :blush: :kiss: --- \n \n * This is a new queery. \n \n * '}/>
           <Card
             content={'Lorem ipsum dolor sit amet, \n \n --- \n \n consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui.\n'}/>
           <Card
