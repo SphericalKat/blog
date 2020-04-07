@@ -14,9 +14,6 @@ const Navbar = (props) => {
           <ul>
             <li><a href='/'>Home</a></li>
             <li><a href='/discussion'>Blog</a></li>
-          <li><a href='/#'></a></li>
-          <li><a href='/#'>Dev</a></li>
-          <li><a href='/#'>Blockchain</a></li>
           </ul>
         </div>
         <div className="space" />

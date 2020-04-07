@@ -6,8 +6,6 @@ const config = [{
     index: ['./src/components/entrypoints/index.jsx'],
     home: ['./src/components/entrypoints/home.jsx'],
     signUp: ['./src/components/entrypoints/signUp.jsx'],
-    threadsblogs: ['./src/components/entrypoints/threadsblogs.jsx'],
-    threads: ['./src/components/entrypoints/threads.jsx'],
     create: ['./src/components/entrypoints/create.jsx'],
     blog: ['./src/components/entrypoints/blog.jsx'],
     user: ['./src/components/entrypoints/user.jsx']

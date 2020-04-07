@@ -3,8 +3,6 @@ import compression from 'compression'
 import index from './routes/index'
 import home from './routes/home'
 import signup from './routes/signUp'
-import threadsblogs from './routes/threadsblogs'
-import threads from './routes/threads'
 import create from './routes/create'
 import blog from './routes/blog'
 import user from './routes/user'
@@ -29,8 +27,6 @@ app.use(express.static(__dirname + '/public'))
 app.use('/', index)
 app.use('/home', home)
 app.use('/signup', signup)
-app.use('/threadsblogs',threadsblogs)
-app.use('/threads',threads)
 app.use('/create',create)
 app.use('/blog',blog)
 app.use('/user',user)
