@@ -1411,6 +1411,7 @@ header {
     border-radius: 4px;
     top: 5%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 5%;
 }
 
 .head-card{
@@ -1507,8 +1508,45 @@ header {
 .activity{
     position: relative;
     width: 100%;
-    height: 260px;
+    height: fit-content;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 3%;
+    border-radius: 4px;
+}
+
+.activity-head{
+    width: fit-content;
+    height: 11px;
+    font-size: 12px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #181818;
+    padding-top: 10%;
+    padding-left: 26px;
+    font-weight: bold;
+}
+
+.activity-div{
+    position: relative;
+    left: 26px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.activity-detail{
+    position: relative;
+    width: fit-content;
+    height: 80px;
+}
+
+.number{
+    font-size: 44px;
+    color: #6C63FF;
+}
+
+.number-detail{
+    color: #555;
+    font-weight: bold;
+    font-size: 12px;
 }

@@ -52,7 +52,7 @@ class Discussion extends React.Component {
       backdrop = <Backdrop click={this.backdropClickHandle} />
     }
 
-    const ret = <div className='center' style={{ height: '100%' }}>
+    const ret = <div className='center' style={{ height: '100%', paddingBottom: '20px' }}>
       <Navbar toggleClickHandle={this.toggleClickHandle} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
@@ -65,6 +65,11 @@ class Discussion extends React.Component {
           </div>
           <div className='side-middle'>
             <CreatePost />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
             <Card />
           </div>
           <div className='side-right'>
