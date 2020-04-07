@@ -9,6 +9,7 @@ import Hashtag from '../../cardh/user-hashtag'
 import CreatePost from '../../cardh/user-create-post'
 import Card from '../../cardh/card'
 import Advertisement from '../../cardh/advertisement'
+import Activity from '../../cardh/activity'
 
 
 class Discussion extends React.Component {
@@ -60,13 +61,14 @@ class Discussion extends React.Component {
             <UserCard />
             <Create />
             <Hashtag />
+            <Activity />
           </div>
           <div className='side-middle'>
             <CreatePost />
             <Card />
           </div>
           <div className='side-right'>
-            <Advertisement />
+            <Advertisement />  
           </div>
         </div>
 
