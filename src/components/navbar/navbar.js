@@ -9,6 +9,7 @@ const Navbar = (props) => {
         <div>
           <ToggleButton click={props.toggleClickHandle} />
         </div>
+        <img className='logo'></img>
         <div className='nav-logo' style={{fontWeight: 'bold'}}><a href='/'>C4</a></div>
         <div className='nav-items'>
           <ul>
