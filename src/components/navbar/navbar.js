@@ -9,15 +9,14 @@ const Navbar = (props) => {
         <div>
           <ToggleButton click={props.toggleClickHandle} />
         </div>
-        <img className='logo'></img>
-        <div className='nav-logo' style={{fontWeight: 'bold'}}><a href='/'>C4</a></div>
+        <div className='nav-logo' style={{fontWeight: 'bold'}}><img className='logo' src='http://localhost:3000/svg/logo.svg'></img><a href='/'>C4</a></div>
         <div className='nav-items'>
           <ul>
             <li><a href='/'>Home</a></li>
-            {/* <li><a href='/discussion'>Languages</a></li>
-          <li><a href='/#'>ML</a></li>
+            <li><a href='/discussion'>Blog</a></li>
+          <li><a href='/#'></a></li>
           <li><a href='/#'>Dev</a></li>
-          <li><a href='/#'>Blockchain</a></li> */}
+          <li><a href='/#'>Blockchain</a></li>
           </ul>
         </div>
         <div className="space" />

@@ -383,6 +383,9 @@ header {
 .nav-user a {
     padding-left: 10rem;
     padding-right: 0;
+    font-size: 1.2rem;
+    color: #6C63FF;
+    text-transform: uppercase;
 }
 
 .nav-items ul {
@@ -398,6 +401,10 @@ header {
 
 .nav-logo {
     margin: .5rem;
+}
+
+.logo{
+    width: 20px;
 }
 
 .nav-logo a {
@@ -1610,6 +1617,7 @@ header {
     overflow: hidden;
 }
 
+
 .writeup .read-more{
     background: none;
     position: absolute;
@@ -1620,6 +1628,10 @@ header {
 
 .button{
     color: #6C63FF;
+}
+
+.ask{
+    position: relative;
 }
 
 @media(max-width:1024px){
