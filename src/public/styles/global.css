@@ -11,6 +11,82 @@ body {
     background: whitesmoke;
 }
 
+/* markdown */
+
+.markdown blockquote {
+    margin: 1em 40px;
+}
+
+.markdown body {
+    margin: 8px
+}
+
+.markdown dd {
+    margin-left: 40px;
+}
+
+.markdown dl {
+    margin: 1em 0;
+}
+
+.markdown fieldset {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.markdown figure {
+    margin: 1em 40px;
+}
+
+.markdown h1 {
+    margin: 0.67em 0;
+}
+
+.markdown h2 {
+    margin: 0.83em 0;
+}
+
+.markdown h3 {
+    margin: 1em 0;
+}
+
+.markdown h4 {
+    margin: 1.33em 0;
+}
+
+.markdown h5 {
+    margin: 1.67em 0;
+}
+
+.markdown h6 {
+    margin: 2.33em 0;
+}
+
+.markdown hr {
+    margin: 0.5em auto;
+    border-top: 1px solid black
+}
+
+.markdown menu {
+    margin: 1em 0;
+}
+
+.markdown ol {
+    margin: 1em 0;
+}
+
+.markdown p {
+    margin: 1em 0;
+}
+
+.markdown pre {
+    margin: 1em 0;
+}
+
+.markdown ul {
+    margin: 1em 0 1em 0;
+}
+
 /*index.jsx*/
 
 .index-container {
@@ -1626,7 +1702,7 @@ header {
     top: -77px;
 }
 
-.writeup p {
+.writeup .content {
     font-size: 14px;
     line-height: 150%;
     max-height: 46px;

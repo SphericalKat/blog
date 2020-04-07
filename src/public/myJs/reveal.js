@@ -6,7 +6,7 @@ $(document).ready(function () {
     console.log(event)
     const card = event.target.parentNode.parentNode
     const gradient = card.querySelector('.gradient')
-    const content = card.querySelector('.writeup p')
+    const content = card.querySelector('.writeup .content')
     const writeup = card.querySelector('.writeup')
     const readMore = card.querySelector('.read-more')
     console.log(content)
@@ -14,6 +14,7 @@ $(document).ready(function () {
     writeup.style.top = '18px'
     readMore.style.display = 'none'
     content.style.maxHeight = 'none'
+    content.style.overflow = 'unset'
     gradient.style.display = 'none'
     card.style.height = 'auto'
     // totalHeight = 0
