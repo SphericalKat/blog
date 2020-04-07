@@ -11,7 +11,7 @@ const UserCard = (props) => {
                 Abhijay Kishore
             </div>
             <div className='user-details-home'>
-                Losem Ipsum something about yourself and you<br></br> not much
+                Losem Ipsum something 
             </div>
         </div>
     )
