@@ -949,7 +949,6 @@ header {
     color: #6C63FF;
     font-size: 1rem;
     position: relative;
-
 }
 
 .create-btn:hover {
@@ -1987,4 +1986,91 @@ button {
     color: white;
     transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
+}
+
+/*createBlog.jsx*/
+
+.blog-form h5{
+    padding-bottom: 1%;
+    position: relative;
+    color: #6C63FF;
+    font-size: 50px;
+    text-align: center;
+}
+
+.textarea{
+    display: flex;
+}
+
+textarea{
+    resize: none;
+}
+
+textarea:invalid{
+    border: 2px dashed red;
+}
+
+textarea:valid{
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+textarea:focus{
+    border: 2px solid #6C63FF;
+}
+
+.textarea textarea{
+    position: relative;
+    margin: 0 2%;
+    width: 60%;
+    height: 700px;
+    background: transparent;
+}
+
+.create-blog-btn {
+    margin-top: 1%;
+    display: block;
+    width: 6.5rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    outline: none;
+    border-color: #6C63FF;
+    color: #6C63FF;
+    font-size: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.create-blog-btn:hover {
+    background-color: #6C63FF;
+    color: whitesmoke;
+    transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
+}
+
+.side{
+    width: 20%;
+}
+
+.rendered-values-blog {
+    margin-top: 5rem;
+    position: relative;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width:425px){
+    .side{
+        display: none;
+    }
+
+    .textarea textarea{
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 100%;
+        margin: 0 0;
+    }
 }
