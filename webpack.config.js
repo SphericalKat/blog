@@ -8,7 +8,8 @@ const config = [{
     signUp: ['./src/components/entrypoints/signUp.jsx'],
     create: ['./src/components/entrypoints/create.jsx'],
     blog: ['./src/components/entrypoints/blog.jsx'],
-    user: ['./src/components/entrypoints/user.jsx']
+    user: ['./src/components/entrypoints/user.jsx'],
+    createBlog: ['./src/components/entrypoint/createBlog.jsx']
   },
   output: {
     path: path.resolve(__dirname, 'src', 'public', 'js'),
