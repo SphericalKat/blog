@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
 import CommentContainer from './comment-container'
 
 const hljs = require('highlight.js')
@@ -19,7 +18,6 @@ const markdown = require('markdown-it')({
 }).use(require('markdown-it-emoji'))
 
 const Card = (props) => {
-
   const markdownContent = markdown.render(props.content)
   return (
     <div className='card-tb'>
@@ -28,30 +26,30 @@ const Card = (props) => {
           <div className='card-top-details-head'>
             HEAD
           </div>
-          <div className='space'></div>
+          <div className='space' />
           <div className='card-top-details-dev'>
             #DEV
           </div>
         </div>
       </div>
       <div className='writeup'>
-        <div className={'content markdown'} dangerouslySetInnerHTML={{ __html: markdownContent }}></div>
+        <div className='content markdown' dangerouslySetInnerHTML={{ __html: markdownContent }} />
       </div>
-      <div className="read-more">
-        <div className="button">...Read More</div>
+      <div className='read-more'>
+        <div className='button'>...Read More</div>
       </div>
       <div className='functions'>
-        <div className={'like-box'}>
+        <div className='like-box'>
           <div className='like'>
-            <img src='http://localhost:3000/svg/thumbs-up.svg'/>
+            <img src='http://localhost:3000/svg/thumbs-up.svg' />
             <div className='i'>
-              57 <div className={'i-text'}>Likes</div>
+              57 <div className='i-text'>Likes</div>
             </div>
           </div>
           <div className='like'>
-            <img src='http://localhost:3000/svg/message-circle.svg'/>
+            <img src='http://localhost:3000/svg/message-circle.svg' alt='fuck you' />
             <div className='i'>
-              57 <div className={'i-text'}>Comments</div>
+              57 <div className='i-text'>Comments</div>
             </div>
           </div>
         </div>
@@ -64,13 +62,11 @@ const Card = (props) => {
               Engineer
             </div>
           </div>
-          <div className='photo'>
-          </div>
+          <div className='photo' />
         </div>
-        <div>
-        </div>
+        <div />
       </div>
-      <CommentContainer/>
+      <CommentContainer />
     </div>
   )
 }

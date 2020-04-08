@@ -6,7 +6,7 @@ import Create from '../components/pages/create/create'
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-  const reactComp = renderToString(<Create/>)
+  const reactComp = renderToString(<Create />)
   res.status(200).render('pages/create', { reactApp: reactComp, url: req.app.locals.url })
 })
 
