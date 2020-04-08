@@ -1,14 +1,14 @@
 let $el, $ps, $up, totalHeight
 
 $(document).ready(function () {
-  console.log(1)
+
   $('.read-more .button').click(function (event) {
-    console.log(event)
+
     const card = event.target.parentNode.parentNode
     const content = card.querySelector('.writeup .content')
     const writeup = card.querySelector('.writeup')
     const readMore = card.querySelector('.read-more')
-    console.log(content)
+
 
     // writeup.style.top = '18px'
     readMore.style.display = 'none'

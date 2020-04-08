@@ -1142,9 +1142,7 @@ header {
 
 .details {
     width: 60%;
-    margin: 0 0;
-    margin-top: 5rem;
-    margin-left: 5rem;
+    margin: 5rem 0 0 5rem;
 }
 
 .head {
@@ -1419,7 +1417,7 @@ header {
     font-weight: bold;
 }
 
-.btn-space{
+.btn-space {
     height: 10px;
 }
 
@@ -1655,32 +1653,32 @@ header {
     margin-bottom: 5%;
 }
 
-.card-top{
+.card-top {
     width: 90%;
     padding: 0 5%;
     height: 44px;
     border-bottom: 1px solid #d3d2d2;
 }
 
-.card-top-details{
+.card-top-details {
     position: relative;
-    top:50%;
-    transform: translate(0,-50%);
+    top: 50%;
+    transform: translate(0, -50%);
     display: flex;
     width: 100%;
     height: fit-content;
 }
 
-.card-top-details-head{
+.card-top-details-head {
     position: relative;
-    color:rgb(136, 130, 255);
+    color: rgb(136, 130, 255);
     font-weight: bold;
 
 }
 
-.card-top-details-dev{
+.card-top-details-dev {
     position: relative;
-    color:rgb(136, 130, 255);
+    color: rgb(136, 130, 255);
     font-weight: bold;
 }
 
@@ -1698,13 +1696,13 @@ header {
     background-color: rgba(107, 99, 255, 0.377);
     border-radius: 100%;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
 }
 
 .photo-details {
     position: relative;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     height: fit-content;
     width: fit-content;
     padding-right: 3%;
@@ -1753,7 +1751,8 @@ header {
     position: relative;
     text-decoration: none;
     text-emphasis: none;
-    font-weight: bold;
+    font-size: 0.85em;
+    font-weight: bolder;
 }
 
 .read-more .button {
@@ -1763,33 +1762,49 @@ header {
     padding-right: 5%;
 }
 
-.functions{
+.read-more .button-comments {
+    float: right;
+    cursor: pointer;
+    width: fit-content;
+    padding-right: 5%;
+    color: #6C63FF;
+}
+
+.functions {
     position: relative;
     width: 90%;
     bottom: 0%;
-    height: 44px;
     padding: 0 5%;
     display: flex;
 }
 
-.like{
+.like-box {
+    width: 100%;
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.like {
     position: relative;
+    width: fit-content;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     height: 15px;
     display: flex;
     padding-right: 3%;
 }
 
-.i{
+.i {
     position: relative;
-    padding-top:1%;
-    padding-left: 2%;
+    padding-top: 1%;
     color: #555;
     font-weight: bold;
     font-size: 12px;
-    width: fit-content;
+    width: auto;
+}
 
+.i-text {
+    display: inline;
 }
 
 button {
@@ -1809,11 +1824,14 @@ button {
 }
 
 @media (max-width: 786px) {
+    .i .i-text {
+        display: none;
+    }
 
 }
 
 @media (max-width: 425px) {
-    .i{
+    .i {
         display: none;
     }
 }
@@ -1867,52 +1885,58 @@ button {
     border: none;
 }
 
-@media(max-width: 425px){
-    .home-search{
+@media (max-width: 425px) {
+    .home-search {
         border: none;
     }
+
     .search-text {
         left: 16px;
     }
 }
 
-/*comment.js*/
+/*comment-container.js*/
 
-.comment{
+.comment {
     position: relative;
     height: fit-content;
     width: 100%;
     background-color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 5%;
 }
 
-.comment-div{
+.comment-div {
     position: relative;
     width: 90%;
     height: fit-content;
-    padding: 3% 5%;
+    padding: 0 5% 3% 5%;
 }
 
-.comment-head{
+.comment-head {
     color: #555;
+    font-size: 0.86em;
     font-weight: bold;
     margin-bottom: 2%;
 }
 
-.comment-box{
+.comment-box {
     width: 95%;
     height: fit-content;
     padding-left: 5%;
+    margin-top: 20px;
     margin-bottom: 1%;
 }
 
-.user-comment{
+.comment-box-header {
+    margin-bottom: 6px;
+}
+
+.user-comment {
     position: relative;
     padding-bottom: 1%;
 }
 
-.comment-photo{
+.comment-photo {
     position: relative;
     width: 30px;
     height: 30px;
@@ -1921,19 +1945,24 @@ button {
     margin-right: 2%;
 }
 
-.user-comment-name{
+.user-comment-name {
     font-size: 14px;
     color: #6C63FF;
     font-weight: 400;
 }
 
-.user-des{
+.comments-ul {
+    padding: 0;
+    padding-inline-start: 0;
+}
+
+.user-des {
     font-size: 10px;
     color: #555;
 }
 
-.comments{
-    width: 100%;
+.comments {
+    width: 95%;
     height: fit-content;
     border: 1px solid #999;
     padding: 1% 1%;
@@ -1941,22 +1970,22 @@ button {
     color: #555;
 }
 
-.comment-like{
+.comment-like {
     padding-top: 1%;
 }
 
-.func{
+.func {
     padding: 0 1%;
 }
 
-.add-comment-div{
+.add-comment-div {
     position: relative;
     width: 90%;
     height: fit-content;
     padding: 0% 5%;
 }
 
-.comment-sec{
+.comment-sec {
     position: relative;
     width: 100%;
     padding: 1% 1%;
@@ -1964,16 +1993,14 @@ button {
     color: #555;
 }
 
-.add{
+.add {
     position: relative;
-    padding: 1% 0%;
-    padding-bottom: 3%;
+    padding: 1% 0 3% 0;
 }
 
-.add-btn{
+.add-btn {
     outline: none;
-    border:1px solid #6C63FF;
-    background: none;
+    border: 1px solid #6C63FF;
     background-color: white;
     color: #6C63FF;
     width: 60px;
@@ -1982,7 +2009,7 @@ button {
     font-size: 12px;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     background-color: #6C63FF;
     color: white;
     transition: background-color 0.3s ease-in,
