@@ -3,7 +3,7 @@ import React from 'react'
 const CommentBox = (props) => {
     return (
         <div className='comment-box'>
-            <div style={{display: 'flex'}}>
+            <div className={'comment-box-header'} style={{display: 'flex'}}>
             <div className='comment-photo'>
             </div>
             <div className='user-comment'>

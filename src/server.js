@@ -21,7 +21,7 @@ app.locals.url = 'http://localhost:3000'
 
 // Middleware
 app.use(compression())
-console.log(__dirname)
+
 app.use(express.static(__dirname + '/public'))
 
 // Routes
