@@ -21,6 +21,17 @@ const Card = (props) => {
     const markdownContent = markdown.render(props.content )
     return(
         <div className='card-tb'>
+          <div className='card-top'>
+            <div className='card-top-details'>
+              <div className='card-top-details-head'>
+                HEAD
+              </div>
+              <div className='space'></div>
+              <div className='card-top-details-dev'>
+                #DEV
+              </div>
+            </div>
+          </div>
             <div className='head-card'>
                 <div className='photo'>
                 </div>
@@ -38,11 +49,11 @@ const Card = (props) => {
             <div className='writeup'>
               <div className={'content markdown'} dangerouslySetInnerHTML={{__html:markdownContent}}></div>
             </div>
-          <div className="read-more"><div className="button">... Read More</div></div>
+          <div className="read-more"><div className="button">READ MORE</div></div>
           <div className='functions'>
             <div className='like'>
               <img src='http://localhost:3000/svg/thumbs-up.svg' />
-              <div className='i' style={{width: '56px'}}>
+              <div className='i' style={{width: '60px'}}>
                 57 LIKES
               </div>
             </div>

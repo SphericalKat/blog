@@ -1396,7 +1396,8 @@ header {
 
 .create-box {
     width: 100%;
-    height: 75px;
+    height: fit-content;
+    padding: 10% 0;
     margin-top: 10%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1404,12 +1405,11 @@ header {
 }
 
 .create-button {
-    padding-bottom: 1%;
-    padding-top: 1%;
+    padding: 3% 0;
+    width: 80%;
     position: relative;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     text-align: center;
     background: #6C63FF;
     color: #FFFFFF;
@@ -1417,6 +1417,10 @@ header {
     border-radius: 4px;
     outline: none;
     font-weight: bold;
+}
+
+.btn-space{
+    height: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -1644,11 +1648,40 @@ header {
 .card-tb {
     box-sizing: border-box;
     padding: 10px 0 10px 0;
-    height: 220px;
+    height: fit-content;
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 5%;
+}
+
+.card-top{
+    width: 90%;
+    padding: 0 5%;
+    height: 44px;
+    border-bottom: 1px solid #d3d2d2;
+}
+
+.card-top-details{
+    position: relative;
+    top:50%;
+    transform: translate(0,-50%);
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.card-top-details-head{
+    position: relative;
+    color:rgb(136, 130, 255);
+    font-weight: bold;
+
+}
+
+.card-top-details-dev{
+    position: relative;
+    color:rgb(136, 130, 255);
+    font-weight: bold;
 }
 
 .head-card {
@@ -1656,6 +1689,7 @@ header {
     width: 178px;
     height: 47px;
     padding: 0 6%;
+    padding-top: 3%;
 }
 
 .photo {
@@ -1723,7 +1757,7 @@ header {
     float: right;
     cursor: pointer;
     width: fit-content;
-    padding-right: 10px;
+    padding-right: 5%;
 }
 
 .functions{
@@ -1776,7 +1810,9 @@ button {
 }
 
 @media (max-width: 425px) {
-
+    .i{
+        display: none;
+    }
 }
 
 /*advertisement.js*/
@@ -1796,7 +1832,6 @@ button {
     height: 40px;
     border: 1px solid #6C63FF;
     border-radius: 4px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     top: 3%;
     display: flex;
 }
@@ -1827,4 +1862,13 @@ button {
     outline: none;
     background: none;
     border: none;
+}
+
+@media(max-width: 425px){
+    .home-search{
+        border: none;
+    }
+    .search-text {
+        left: 16px;
+    }
 }
