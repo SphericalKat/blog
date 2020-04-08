@@ -1644,7 +1644,7 @@ header {
 .card-tb {
     box-sizing: border-box;
     padding: 10px 0 10px 0;
-    height: 188px;
+    height: 220px;
     background: #FFFFFF;
     border-radius: 4px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -1655,7 +1655,7 @@ header {
     display: flex;
     width: 178px;
     height: 47px;
-    padding: 0 10px;
+    padding: 0 6%;
 }
 
 .photo {
@@ -1695,7 +1695,7 @@ header {
 .writeup {
     position: relative;
     width: 90%;
-    padding: 0 6%;
+    padding: 0 5%;
     z-index: 0;
 }
 
@@ -1724,6 +1724,35 @@ header {
     cursor: pointer;
     width: fit-content;
     padding-right: 10px;
+}
+
+.functions{
+    position: relative;
+    width: 90%;
+    bottom: 0%;
+    height: 44px;
+    padding: 0 5%;
+    display: flex;
+}
+
+.like{
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    height: 15px;
+    display: flex;
+    padding-right: 3%;
+}
+
+.i{
+    position: relative;
+    padding-top:1%;
+    padding-left: 2%;
+    color: #555;
+    font-weight: bold;
+    font-size: 12px;
+    width: fit-content;
+
 }
 
 button {

@@ -10,15 +10,17 @@ $(document).ready(function () {
     const readMore = card.querySelector('.read-more')
     console.log(content)
 
-    writeup.style.top = '18px'
+    // writeup.style.top = '18px'
     readMore.style.display = 'none'
     content.style.maxHeight = 'none'
     content.style.overflow = 'unset'
     card.style.height = 'auto'
+    writeup.style.paddingBottom = '5%'
+
     // totalHeight = 0
     // //need to remove gradient -> display: none on expansion
     // $el = $(this)
-    // $p = $el.parent()
+    // $p = $el.parent()    padding-bottom: 5%;
     // $up = $p.parent()
     // $ps = $up.find('p:not(\'.read-more\')')
     // $ps.each(function () {

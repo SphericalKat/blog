@@ -39,6 +39,26 @@ const Card = (props) => {
               <div className={'content markdown'} dangerouslySetInnerHTML={{__html:markdownContent}}></div>
             </div>
           <div className="read-more"><div className="button">... Read More</div></div>
+          <div className='functions'>
+            <div className='like'>
+              <img src='http://localhost:3000/svg/thumbs-up.svg' />
+              <div className='i' style={{width: '56px'}}>
+                57 LIKES
+              </div>
+            </div>
+            <div className='like'>
+              <img src='http://localhost:3000/svg/message-circle.svg' />
+              <div className='i' style={{width: '100px'}}>
+                57 COMMENTS
+              </div>
+            </div>
+            <div className='like'>
+              <img src='http://localhost:3000/svg/share.svg' />
+              <div className='i'>
+                SHARE
+              </div>
+            </div>
+          </div>
         </div>
     )
 }
