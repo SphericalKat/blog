@@ -32,20 +32,6 @@ const Card = (props) => {
               </div>
             </div>
           </div>
-            <div className='head-card'>
-                <div className='photo'>
-                </div>
-                <div>
-                <div className='photo-details'>
-                <div className='photo-name'>
-                        Shizuka
-                    </div>
-                    <div className='des'>
-                        Engineer
-                    </div>
-                </div>
-                </div>
-            </div>
             <div className='writeup'>
               <div className={'content markdown'} dangerouslySetInnerHTML={{__html:markdownContent}}></div>
             </div>
@@ -68,6 +54,21 @@ const Card = (props) => {
               <div className='i'>
                 SHARE
               </div>
+            </div>
+            <div className='space'></div>
+            <div className='head-card'>
+            <div className='photo-details'>
+                <div className='photo-name'>
+                        Shizuka
+                    </div>
+                    <div className='des'>
+                        Engineer
+                    </div>
+                </div>
+                <div className='photo'>
+                </div>
+                </div>
+                <div> 
             </div>
           </div>
         </div>

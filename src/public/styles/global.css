@@ -1686,42 +1686,45 @@ header {
 
 .head-card {
     display: flex;
-    width: 178px;
-    height: 47px;
-    padding: 0 6%;
-    padding-top: 3%;
+    width: fit-content;
+    height: 44px;
+
 }
 
 .photo {
-    width: 47px;
-    height: 47px;
+    position: relative;
+    width: 30px;
+    height: 30px;
     background-color: rgba(107, 99, 255, 0.377);
     border-radius: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
 }
 
 .photo-details {
     position: relative;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0,-50%);
+    height: fit-content;
+    width: fit-content;
+    padding-right: 3%;
 }
 
 .photo-name {
     position: relative;
-    width: 121px;
+    width: fit-content;
     height: 11px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 11px;
     line-height: 13px;
-    color: #181818;
-    left: 16px;
+    color: #999;
 }
 
 .des {
     position: relative;
-    left: 16px;
-    width: 99px;
+    width: fit-content;
     height: 13px;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 150%;
     color: #181818;
 }
