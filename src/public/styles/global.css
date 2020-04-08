@@ -40,26 +40,32 @@ body {
 
 .markdown h1 {
     margin: 0.67em 0;
+    line-height: 2em;
 }
 
 .markdown h2 {
     margin: 0.83em 0;
+    line-height: 1.5em;
 }
 
 .markdown h3 {
     margin: 1em 0;
+    line-height: 1.17em;
 }
 
 .markdown h4 {
     margin: 1.33em 0;
+    line-height: 1em;
 }
 
 .markdown h5 {
     margin: 1.67em 0;
+    line-height: 0.83em;
 }
 
 .markdown h6 {
     margin: 2.33em 0;
+    line-height: .70em;
 }
 
 .markdown hr {
@@ -1637,7 +1643,7 @@ header {
 
 .card-tb {
     box-sizing: border-box;
-    padding: 30px 0 30px 0;
+    padding: 10px 0 10px 0;
     height: 188px;
     background: #FFFFFF;
     border-radius: 4px;
@@ -1690,29 +1696,20 @@ header {
     position: relative;
     width: 90%;
     padding: 0 6%;
-    top: -164px;
     z-index: 0;
 }
 
-.gradient {
-    position: relative;
-    z-index: 1;
-    height: inherit;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1) 100%);
-    top: -77px;
-}
 
 .writeup .content {
     font-size: 14px;
     line-height: 150%;
-    max-height: 46px;
+    max-height: 93px;
     overflow: hidden;
 }
 
 
 .read-more {
     z-index: 2;
-    top: -150px;
     width: 100%;
     text-align: right;
     background: none;
@@ -1770,7 +1767,7 @@ button {
     height: 40px;
     border: 1px solid #6C63FF;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     top: 3%;
     display: flex;
 }

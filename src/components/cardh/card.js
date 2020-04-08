@@ -35,7 +35,6 @@ const Card = (props) => {
                 </div>
                 </div>
             </div>
-            <div className='gradient'></div>
             <div className='writeup'>
               <div className={'content markdown'} dangerouslySetInnerHTML={{__html:markdownContent}}></div>
             </div>
