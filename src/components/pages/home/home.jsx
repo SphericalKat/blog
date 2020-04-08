@@ -10,7 +10,7 @@ import CreatePost from '../../cardh/user-create-post'
 import Card from '../../cardh/card'
 import Advertisement from '../../cardh/advertisement'
 import Activity from '../../cardh/activity'
-
+import Comment from '../../cardh/comment'
 class Discussion extends React.Component {
 
   constructor (props) {
@@ -65,6 +65,8 @@ class Discussion extends React.Component {
           <CreatePost/>
           <Card
             content={'* Lorem ipsum dolor sit amet, \n \n consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum enim, interdum neque nulla. Gravida quis neque, consectetur lorem purus mauris tempor faucibus. Hac pellentesque dui.\n'}/>
+          <Comment />
+          
           <Card
             content={'# My name is anshu :blush: :kiss: --- \n \n * This is a new queery. \n \n * '}/>
           <Card
