@@ -17,27 +17,25 @@ const markdown = require('markdown-it')({
   }
 }).use(require('markdown-it-emoji'))
 
-
 class Card extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
+    // states
     this.card = {
-      head: 'HEAD', //Topic name needs to passed in here
-      tag: '#DEV', //Top tag ie #DEV
-      likes: 5, //Number of likes calculated dynamically
-      comments: 1, //Number of comments on the post
+      head: 'HEAD', // Topic name needs to passed in here
+      tag: '#DEV', // Top tag ie #DEV
+      likes: 5, // Number of likes calculated dynamically
+      comments: 1, // Number of comments on the post
       name: 'Shizuka', // Who posted the query
-      descriptionName: 'Enginner', //What Job description does he give, ex. FullStackDev 
+      descriptionName: 'Enginner', // What Job description does he give, ex. FullStackDev
       photoLink: ''
     }
 
     this.markdownContent = markdown.render(props.content)
-
-
   }
-
   render() {
+  
     const markdownContent = this.markdownContent;
     return (
       <div className='card-tb'>

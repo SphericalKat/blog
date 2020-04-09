@@ -5,7 +5,9 @@ import React from 'react'
 class CommentBox extends React.Component {
   constructor(props) {
     super(props)
+    
 
+    //states
     this.commentCard = {
       name : 'Shizuka',
       descriptionUser : 'Engineer',
