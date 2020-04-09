@@ -5,7 +5,6 @@ import home from './routes/home'
 import signup from './routes/signUp'
 import create from './routes/create'
 import blog from './routes/blog'
-import user from './routes/user'
 import createBlog from './routes/createBlog'
 import path from 'path'
 
@@ -30,7 +29,6 @@ app.use('/home', home)
 app.use('/signup', signup)
 app.use('/create', create)
 app.use('/blog', blog)
-app.use('/user', user)
 app.use('/createBlog', createBlog)
 
 const port = process.env.PORT || 3000

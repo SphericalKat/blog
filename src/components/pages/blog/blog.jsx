@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import Card from '../../cardh/cardb'
+import Card from '../../cardh/card-blog'
 
 class Blog extends React.Component {
   constructor (props) {
