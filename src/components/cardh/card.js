@@ -18,7 +18,7 @@ const markdown = require('markdown-it')({
 }).use(require('markdown-it-emoji'))
 
 class Card extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     // states
@@ -33,9 +33,9 @@ class Card extends React.Component {
     }
 
     this.markdownContent = markdown.render(props.content)
-
   }
   render() {
+  
     const markdownContent = this.markdownContent;
     return (
       <div className='card-tb'>
