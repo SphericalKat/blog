@@ -27,7 +27,10 @@ class Discussion extends React.Component {
       Hash : {
         number : 1,
         arrayHash : ['#Dev']
-      }
+      },
+      likes : 420,
+      issues : 69,
+      issuesSolved : 0
       
     }
 
@@ -70,7 +73,7 @@ class Discussion extends React.Component {
             <UserCard name={this.user.name} descriptionUser={this.user.descriptionUser} />
             <Create />
             <Hashtag numberHash={this.user.Hash.number} arrayDev={this.user.Hash.arrayHash}/>
-            <Activity />
+            <Activity likes={this.user.likes} issues={this.user.issues} issuesSolved={this.user.issuesSolved}/>
           </div>
           <div className='side-middle'>
             <Card
