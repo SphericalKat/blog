@@ -21,6 +21,11 @@ class Discussion extends React.Component {
       isLoggedIn: false
     }
 
+    this.user = {
+      name : 'Shizuka',
+      descriptionUser : 'FullStackDev',
+    }
+
     // Component Lifecycle
     this.componentDidMount = () => {
       setTimeout(() => {
@@ -57,7 +62,7 @@ class Discussion extends React.Component {
         {backdrop}
         <div className='render-user'>
           <div className='side-left'>
-            <UserCard />
+            <UserCard name={this.user.name} descriptionUser={this.user.descriptionUser} />
             <Create />
             <Hashtag />
             <Activity />
