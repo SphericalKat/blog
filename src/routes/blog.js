@@ -6,7 +6,7 @@ import blog from '../components/pages/blog/blog'
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-  const reactComp = renderToString(<blog/>)
+  const reactComp = renderToString(<blog />)
   res.status(200).render('pages/blog', { reactApp: reactComp, url: req.app.locals.url })
 })
 

@@ -16,22 +16,22 @@ const app = express()
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-//set url
+// set url
 app.locals.url = 'http://localhost:3000'
 
 // Middleware
 app.use(compression())
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Routes
 app.use('/', index)
 app.use('/home', home)
 app.use('/signup', signup)
-app.use('/create',create)
-app.use('/blog',blog)
-app.use('/user',user)
-app.use('/createBlog',createBlog)
+app.use('/create', create)
+app.use('/blog', blog)
+app.use('/user', user)
+app.use('/createBlog', createBlog)
 
 const port = process.env.PORT || 3000
 
