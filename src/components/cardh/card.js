@@ -1,12 +1,13 @@
 import React from 'react'
 import CommentContainer from './comment-container'
+import Comments from './comments'
 
 const hljs = require('highlight.js')
-const markdown = require('markdown-it')({
-  html: true,
-  linkify: true,
-  typographer: false,
-  highlight: function (str, lang) {
+    const markdown = require('markdown-it')({
+    html: true,
+    linkify: true,
+    typographer: false,
+    highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
         return hljs.highlight(lang, str).value
@@ -17,18 +18,37 @@ const markdown = require('markdown-it')({
   }
 }).use(require('markdown-it-emoji'))
 
-const Card = (props) => {
-  const markdownContent = markdown.render(props.content)
-  return (
-    <div className='card-tb'>
+
+class Card extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.card = {
+      head : 'HEAD', //Topic name needs to passed in here
+      tag : '#DEV', //Top tag ie #DEV
+      likes : 5, //Number of likes calculated dynamically
+      comments : 1, //Number of comments on the post
+      name : 'Shizuka', // Who posted the query
+      descriptionName : 'Enginner' //What Job description does he give, ex. FullStackDev 
+    }
+
+    this.markdownContent = markdown.render(props.content)
+    
+
+  }
+
+  render() {
+    const markdownContent = this.markdownContent;
+    return (
+      <div className='card-tb'>
       <div className='card-top'>
         <div className='card-top-details'>
           <div className='card-top-details-head'>
-            HEAD
+            {this.card.head}
           </div>
           <div className='space' />
           <div className='card-top-details-dev'>
-            #DEV
+            {this.card.tag}
           </div>
         </div>
       </div>
@@ -43,23 +63,23 @@ const Card = (props) => {
           <div className='like'>
             <img src='http://localhost:3000/svg/thumbs-up.svg' />
             <div className='i'>
-              57 <div className='i-text'>Likes</div>
+              {this.card.likes}
             </div>
           </div>
           <div className='like'>
             <img src='http://localhost:3000/svg/message-circle.svg' alt='fuck you' />
             <div className='i'>
-              57 <div className='i-text'>Comments</div>
+    {this.card.comments}
             </div>
           </div>
         </div>
         <div className='head-card'>
           <div className='photo-details'>
             <div className='photo-name'>
-              Shizuka
+              {this.card.name}
             </div>
             <div className='des'>
-              Engineer
+              {this.card.descriptionName}
             </div>
           </div>
           <div className='photo' />
@@ -68,7 +88,10 @@ const Card = (props) => {
       </div>
       <CommentContainer />
     </div>
-  )
+    )
+  }
+
+
 }
 
 export default Card
