@@ -7,11 +7,11 @@ const CreatePost = (props) => {
         <p>New Post</p>
       </div>
       <div className='write'>
-        <textarea className={"create-post-text"} placeholder='Write your post...'/>
+        <textarea className='create-post-text' placeholder='Write your post...' />
       </div>
       <div className='send'>
         <button className='send-btn'>
-          <img src='http://localhost:3000/svg/post.svg'/>
+          <img src='http://localhost:3000/svg/post.svg' />
         </button>
       </div>
     </div>

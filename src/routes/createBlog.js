@@ -6,7 +6,7 @@ import CreateBlog from '../components/pages/createBlog/createBlog'
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-  const reactComp = renderToString(<CreateBlog/>)
+  const reactComp = renderToString(<CreateBlog />)
   res.status(200).render('pages/createBlog', { reactApp: reactComp, url: req.app.locals.url })
 })
 

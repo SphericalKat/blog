@@ -7,13 +7,13 @@ const CommentContainer = (props) => {
   return (
     <div className='comment'>
       <div className='comment-div'>
-        <Comments/>
+        <Comments />
       </div>
       <div className='add-comment-div'>
         <div className='comment-head'>
           Add Comment
         </div>
-        <AddComment/>
+        <AddComment />
       </div>
     </div>
   )
