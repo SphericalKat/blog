@@ -24,6 +24,11 @@ class Discussion extends React.Component {
     this.user = {
       name : 'Shizuka',
       descriptionUser : 'FullStackDev',
+      Hash : {
+        number : 1,
+        arrayHash : ['#Dev']
+      }
+      
     }
 
     // Component Lifecycle
@@ -64,7 +69,7 @@ class Discussion extends React.Component {
           <div className='side-left'>
             <UserCard name={this.user.name} descriptionUser={this.user.descriptionUser} />
             <Create />
-            <Hashtag />
+            <Hashtag numberHash={this.user.Hash.number} arrayDev={this.user.Hash.arrayHash}/>
             <Activity />
           </div>
           <div className='side-middle'>
