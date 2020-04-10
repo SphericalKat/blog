@@ -536,6 +536,38 @@ header {
     transition: transform 0.6s ease-out;
 }
 
+
+.user-profile{
+    height: fit-content;
+}
+
+.user-circle-profile {
+    position: relative;
+    top: 50px;
+    width: 40px;
+    height: 40px;
+    left: 16px;
+    border-radius: 100%;
+    background-color: rgb(191, 188, 245);
+    background-blend-mode: normal;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 100px;
+}
+
+.user-name-profile {
+    position: relative;
+    top: 108px;
+    padding-left: 16px;
+    font-size: 16px;
+    color: #555;
+    width: 208px;
+}
+
+.userId{
+    font-size: 12px;
+}
+
 .backdrop {
     position: fixed;
     width: 100%;
@@ -551,7 +583,9 @@ header {
 }
 
 .side-drawer ul {
-    height: 100%;
+    top: 150px;
+    padding-top: 5%;
+    position: relative;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -559,13 +593,62 @@ header {
 }
 
 .side-drawer li {
-    margin: 0.5rem 0.5rem;
+    margin: 0 0;
+}
+
+.hash{
+    position: relative;
+    top: 150px;
+    background: none;
+}
+
+.hash .hashtag-box{
+    box-shadow: none;
+    background: none;
+    height: fit-content;
+}
+
+.hash .hashtag-box .hash-head{
+    left: 16px;
+    font-size: 12px;
+}
+
+.hash .hashtag-box .hash-div{
+    left: 16px;
+}
+
+.hash .hashtag-box .hash-div .hashes{
+    width: 48px;
+    height: 24px;
+}
+
+.hash .hashtag-box .hash-div .hashes .text{
+    font-size: 12px;
+    color: #6C63FF;
+}
+
+.hash .activity{
+    box-shadow: none;
+    position: relative;
+    background: none;
+}
+
+.hash .activity .activity-head{
+    font-size: 12px;
+}
+
+.hash .activity .activity-detail{
+    padding-top: 2%;
+}
+
+.hash .activity .activity-detail .number{
+    font-size: 20px;
 }
 
 .side-drawer a {
     color: #6C63FF;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 16px;
 }
 
 /*signup.jsx*/
