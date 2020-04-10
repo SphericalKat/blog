@@ -10,27 +10,25 @@ const sideDrawer = props => {
 
   return (
     <nav className={drawerClasses}>
-      <div className = 'user-profile'>
-        <img className = 'user-circle-profile' src=''/*insest photo*//>
-        <div className = 'user-name-profile'>
+      <div className='user-profile'>
+        <img className='user-circle-profile' src=''/>
+        <div className='user-name-profile'>
           {props.user.name}
-          <div className = 'userId'>
-          {props.user.emailId}
-        </div>
+          <div className='userId'>
+            {props.user.emailId}
+          </div>
         </div>
       </div>
       <ul>
         <li><a href='/home'>Home</a></li>
       </ul>
-      <div className = 'hash'>
-        <Hashes numberHash={props.user.Hash.number} arrayHash={props.user.Hash.arrayHash}/>
-        <Activity likes={props.user.likes} issuesSolved={props.user.issuesSolved} issues={props.user.issues}/>
+      <div className='hash'>
+        <Hashes numberHash={props.user.Hash.number} arrayHash={props.user.Hash.arrayHash} />
+        <Activity likes={props.user.likes} issuesSolved={props.user.issuesSolved} issues={props.user.issues} />
       </div>
-      <div className = 'activity-side'>
-        
-      </div>
+      <div className='activity-side' />
     </nav>
-  ) 
+  )
 }
 
 export default sideDrawer
