@@ -1,40 +1,34 @@
 import React from 'react'
 
-
 class Hashtag extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
-    this.numberHash = props.numberHash,
-      this.arrayHash = props.arrayHash
+    this.numberHash = props.numberHash
+    this.arrayHash = props.arrayHash
   }
 
-  onhandleHash = () => {
-
-    for (let i = 0; i < this.numberHash; i++) {
-      return (
-        <div className='hash-div'>
-          <div className='hashes'>
-            <div className='text'>
-              {this.arrayHash[i]}
-            </div>
-          </div>
-        </div>
-      )
-    }
-  }
-
-  render() {
+  render () {
+    const hashes = this.arrayHash
     return (
       <div className='hashtag-box'>
         <div className='hash-head'>
           Followed Hashtags
-      </div>
-        {this.onhandleHash}
+        </div>
+        <div className='hash-div'>
+          <div className='hashes'>
+            {hashes.map((value, index) => {
+              return (
+                <div key={index} className='text'>
+                  {value}
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     )
   }
-
 }
 
 export default Hashtag

@@ -34,9 +34,9 @@ class Card extends React.Component {
 
     this.markdownContent = markdown.render(props.content)
   }
-  render() {
-  
-    const markdownContent = this.markdownContent;
+
+  render () {
+    const markdownContent = this.markdownContent
     return (
       <div className='card-tb'>
         <div className='card-top'>
@@ -88,8 +88,6 @@ class Card extends React.Component {
       </div>
     )
   }
-
-
 }
 
 export default Card
