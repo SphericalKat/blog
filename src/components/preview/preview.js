@@ -20,9 +20,7 @@ class Preview extends React.Component {
   render () {
     const rendered = markdown.render(this.props.content)
     return (
-      <div className='preview-container' style={{ width: '100%' }}>
-        <div className='preview' dangerouslySetInnerHTML={rendered} />
-      </div>
+      <div className='preview' dangerouslySetInnerHTML={{ __html: rendered }} />
     )
   }
 }
