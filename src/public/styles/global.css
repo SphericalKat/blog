@@ -1,6 +1,10 @@
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
+    --main-color : #D83131;
+    --main-color-lay : rgba(216, 49, 49, 0.5);
+    --sec-color : whitesmoke;
+    --sec-color-lay : #FFFFFF;
 }
 
 * {
@@ -8,7 +12,7 @@ body, html {
 }
 
 body {
-    background: whitesmoke;
+    background: var(--sec-color);
 }
 
 /* markdown */
@@ -138,7 +142,7 @@ form h2 {
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 10px;;
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .input-div {
@@ -146,7 +150,6 @@ form h2 {
     display: grid;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 3px solid #555;
     width: 100%;
 }
 
@@ -157,13 +160,13 @@ form h2 {
     bottom: -2px;
     width: 50%;
     height: 2px;
-    border-bottom: 3px solid #6C63FF;
+    border-bottom: 3px solid var(--main-color);
     transition: border-bottom 0.3s ease-in;
 }
 
 input:-webkit-autofill {
     -webkit-text-fill-color: #555 !important;
-    background-color: whitesmoke !important;
+    background-color: var(--sec-color) !important;
 }
 
 .input-div:after {
@@ -177,7 +180,7 @@ input:-webkit-autofill {
 .input-div.focus > div > h5 {
     top: -15px;
     font-size: 15px;
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .input-div.focus:after, .input-div:before {
@@ -241,13 +244,13 @@ a {
     margin: 1.5rem 0;
     font-size: 1.2rem;
     outline: none;
-    border-color: #6C63FF;
-    color: #6C63FF;
+    border-color: var(--main-color);
+    color: var(--main-color);
 }
 
 .btn:hover {
-    background-color: #6C63FF;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--sec-color);
     transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
 }
@@ -260,8 +263,8 @@ a {
     height: 2.5rem;
     border-radius: 8px;
     outline: none;
-    border-color: #6C63FF;
-    color: #6C63FF;
+    border-color: var(--main-color);
+    color: var(--main-color);
     float: right;
     font-size: 1rem;
     margin-right: 3%;
@@ -269,8 +272,8 @@ a {
 }
 
 .sign-btn:hover {
-    background-color: #6C63FF;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--sec-color);
     transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
 }
@@ -444,7 +447,7 @@ header {
 .navbar {
     position: fixed;
     width: 100%;
-    background: whitesmoke;
+    background: var(--sec-color);
     top: 0;
     left: 0;
     height: 56px;
@@ -465,7 +468,7 @@ header {
 
 .nav-user a {
     font-size: 1.2rem;
-    color: #6C63FF;
+    color: var(--main-color);
     text-transform: uppercase;
 }
 
@@ -489,13 +492,13 @@ header {
 }
 
 .nav-logo a {
-    color: #6C63FF;
+    color: var(--main-color);
     text-decoration: none;
     font-size: 1.5rem;
 }
 
 .nav-items a {
-    color: #6C63FF;
+    color: var(--main-color);
     font-size: 1.2rem;
     text-decoration: none;
 }
@@ -519,12 +522,12 @@ header {
 .line {
     width: 25px;
     height: 2px;
-    background: #6C63FF;
+    background: var(--main-color);
 }
 
 .side-drawer {
     height: 100%;
-    background-color: whitesmoke;
+    background-color: var(--sec-color);
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -548,9 +551,9 @@ header {
     height: 40px;
     left: 16px;
     border-radius: 100%;
-    background-color: rgb(191, 188, 245);
+    background-color: var(--main-color-lay);
     background-blend-mode: normal;
-    border: 5px solid #FFFFFF;
+    border: 5px solid var(--sec-color-lay);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 100px;
 }
@@ -624,7 +627,7 @@ header {
 
 .hash .hashtag-box .hash-div .hashes .text{
     font-size: 12px;
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .hash .activity{
@@ -646,7 +649,7 @@ header {
 }
 
 .side-drawer a {
-    color: #6C63FF;
+    color: var(--main-color);
     text-decoration: none;
     font-size: 16px;
 }
@@ -709,7 +712,7 @@ header {
 .card {
     top: 25%;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: var(--sec-color-lay);
     box-shadow: 1px 3px rgba(143, 143, 143, 0.24);
     width: 100%;
 }
@@ -737,7 +740,7 @@ header {
 }
 
 .topic-name {
-    color: #6C63FF;
+    color: var(--main-color);
     font-weight: bold;
     align-self: center;
     font-size: 20px;
@@ -786,7 +789,7 @@ header {
 .tb-tb {
     font-size: 1rem;
     margin-top: 3px;
-    color: #6C63FF;
+    color: var(--main-color);
     margin-left: 3px;
     width: fit-content;
 }
@@ -794,7 +797,7 @@ header {
 .tb {
     font-size: 1rem;
     margin-top: 3px;
-    color: #6C63FF;
+    color: var(--main-color);
     margin-left: 3px;
 }
 
@@ -848,7 +851,7 @@ header {
 }
 
 .time {
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 @media (max-width: 1024px) {
@@ -1028,15 +1031,15 @@ header {
     height: 2.5rem;
     border-radius: 4px;
     outline: none;
-    border-color: #6C63FF;
-    color: #6C63FF;
+    border-color: var(--main-color);
+    color: var(--main-color);
     font-size: 1rem;
     position: relative;
 }
 
 .create-btn:hover {
-    background-color: #6C63FF;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--sec-color);
     transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
 }
@@ -1098,7 +1101,7 @@ header {
 }
 
 .heading-blog h1 {
-    color: #6C63FF;
+    color: var(--main-color);
     font-size: 200px;
     display: flex;
 }
@@ -1145,7 +1148,7 @@ header {
     }
 
     .heading-blog h1 {
-        color: #6C63FF;
+        color: var(--main-color);
         font-size: 100px;
         display: flex;
     }
@@ -1215,11 +1218,11 @@ header {
 }
 
 .dev-div:nth-child(odd) {
-    background-color: whitesmoke;
+    background-color: var(--sec-color);
 }
 
 .dev-div:nth-child(even) {
-    background-color: rgb(136, 130, 255);
+    background-color: var(--main-color);
 }
 
 .details {
@@ -1243,13 +1246,13 @@ header {
 }
 
 .head h1 {
-    color: #6C63FF;
+    color: var(--main-color);
     font-size: 100px;
     padding-bottom: 4px;
 }
 
 .head-alt h1 {
-    color: whitesmoke;
+    color: var(--sec-color);
     font-size: 100px;
     padding-bottom: 4px;
 }
@@ -1274,13 +1277,13 @@ header {
     margin: 9rem 0;
     font-size: 1.2rem;
     outline: none;
-    border-color: #6C63FF;
-    color: #6C63FF;
+    border-color: var(--main-color);
+    color: var(--main-color);
 }
 
 .explore-btn:hover {
-    background-color: #6C63FF;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--sec-color);
     transition: background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
@@ -1295,13 +1298,13 @@ header {
     outline: none;
     background-color: transparent;
     border-style: solid;
-    border-color: whitesmoke;
-    color: whitesmoke;
+    border-color: var(--sec-color);
+    color: var(--sec-color);
 }
 
 .explore-btn-alt:hover {
-    background-color: whitesmoke;
-    color: rgb(136, 130, 255);
+    background-color: var(--sec-color);
+    color: var(--main-color);
     transition: background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
@@ -1394,7 +1397,7 @@ header {
 .user-card {
     width: 100%;
     padding-bottom: 20px;
-    background: #FFFFFF;
+    background: var(--sec-color-lay);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
@@ -1402,7 +1405,7 @@ header {
 .user-back {
     width: 100%;
     height: 115px;
-    background-color: rgb(191, 188, 245);
+    background-color: var(--main-color-lay);
     margin-bottom: 20px;
     border-radius: 4px 4px 0px 0px;
 }
@@ -1415,9 +1418,9 @@ header {
     top: 50%;
     transform: translate(-50%, 0);
     border-radius: 100%;
-    background-color: rgb(191, 188, 245);
+    background-color: white;
     background-blend-mode: normal;
-    border: 5px solid #FFFFFF;
+    border: 5px solid var(--sec-color-lay);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1479,7 +1482,7 @@ header {
     height: fit-content;
     padding: 10% 0;
     margin-top: 10%;
-    background: #FFFFFF;
+    background: var(--sec-color-lay);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
@@ -1491,12 +1494,17 @@ header {
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
-    background: #6C63FF;
-    color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(107, 99, 255, 0.377);
+    background: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
     border-radius: 4px;
     outline: none;
     font-weight: bold;
+}
+
+.create-button:hover {
+    background-color: var(--main-color);
+    color: var(--sec-color);
 }
 
 .btn-space {
@@ -1529,7 +1537,7 @@ header {
     width: 80%;
     height: 225px;
     margin-top: 10%;
-    background: #FFFFFF;
+    background: var(--sec-color-lay);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1552,7 +1560,7 @@ header {
     position: relative;
     width: 60px;
     height: 28px;
-    background: whitesmoke;
+    background: var(--sec-color);
     border-radius: 4px;
 }
 
@@ -1622,7 +1630,7 @@ header {
 
 .number {
     font-size: 44px;
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .number-detail {
@@ -1655,7 +1663,7 @@ header {
 
 .create-post {
     width: 90%;
-    background-color: #FFFFFF;
+    background-color: var(--sec-color-lay);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     padding: 0 5%;
@@ -1675,7 +1683,7 @@ header {
     transform: translate(0, -50%);
     font-size: 16px;
     height: 16px;
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .write {
@@ -1697,11 +1705,11 @@ header {
 }
 
 .create-post-text:active {
-    border-color: rgb(136, 130, 255);
+    border-color: var(--main-color);
 }
 
 .create-post-text:focus {
-    border-color: rgb(136, 130, 255);
+    border-color: var(--main-color);
 }
 
 .write input {
@@ -1729,7 +1737,7 @@ header {
     box-sizing: border-box;
     padding: 10px 0 10px 0;
     height: fit-content;
-    background: #FFFFFF;
+    background: var(--sec-color-lay);
     border-radius: 4px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 5%;
@@ -1753,14 +1761,14 @@ header {
 
 .card-top-details-head {
     position: relative;
-    color: rgb(136, 130, 255);
+    color: var(--main-color);
     font-weight: bold;
 
 }
 
 .card-top-details-dev {
     position: relative;
-    color: rgb(136, 130, 255);
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -1775,7 +1783,7 @@ header {
     position: relative;
     width: 30px;
     height: 30px;
-    background-color: rgba(107, 99, 255, 0.377);
+    background-color: var(--main-color-lay);
     border-radius: 100%;
     top: 50%;
     transform: translate(0, -50%);
@@ -1849,7 +1857,7 @@ header {
     cursor: pointer;
     width: fit-content;
     padding-right: 5%;
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .functions {
@@ -1890,11 +1898,11 @@ header {
 }
 
 button {
-    background: whitesmoke;
+    background: var(--sec-color);
 }
 
 .button {
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .ask {
@@ -1924,7 +1932,7 @@ button {
     position: relative;
     width: 100%;
     height: 700px;
-    background: rgba(136, 130, 255, 0.445);
+    background: var(--main-color-lay);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
 }
@@ -1933,7 +1941,7 @@ button {
     position: relative;
     width: 100%;
     height: 40px;
-    border: 1px solid #6C63FF;
+    border: 1px solid var(--main-color);
     border-radius: 4px;
     top: 3%;
     display: flex;
@@ -1954,7 +1962,7 @@ button {
     height: 32px;
     font-size: 18px;
     line-height: 180%;
-    color: #6C63FF;
+    color: var(--main-color);
     left: 52px;
     margin: 0 0;
     top: 50%;
@@ -2022,14 +2030,14 @@ button {
     position: relative;
     width: 30px;
     height: 30px;
-    background-color: rgba(107, 99, 255, 0.377);
+    background-color: var(--main-color-lay);
     border-radius: 100%;
     margin-right: 2%;
 }
 
 .user-comment-name {
     font-size: 14px;
-    color: #6C63FF;
+    color: var(--main-color);
     font-weight: 400;
 }
 
@@ -2082,9 +2090,9 @@ button {
 
 .add-btn {
     outline: none;
-    border: 1px solid #6C63FF;
+    border: 1px solid var(--main-color);
     background-color: white;
-    color: #6C63FF;
+    color: var(--main-color);
     width: 60px;
     height: 30px;
     border-radius: 4px;
@@ -2092,7 +2100,7 @@ button {
 }
 
 .add-btn:hover {
-    background-color: #6C63FF;
+    background-color: var(--main-color);
     color: white;
     transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
@@ -2103,7 +2111,7 @@ button {
 .blog-form h5{
     padding-bottom: 1%;
     position: relative;
-    color: #6C63FF;
+    color: var(--main-color);
     font-size: 50px;
     text-align: center;
 }
@@ -2125,7 +2133,7 @@ textarea:valid{
 }
 
 textarea:focus{
-    border: 2px solid #6C63FF;
+    border: 2px solid var(--main-color);
 }
 
 .textarea textarea{
@@ -2143,8 +2151,8 @@ textarea:focus{
     height: 2.5rem;
     border-radius: 4px;
     outline: none;
-    border-color: #6C63FF;
-    color: #6C63FF;
+    border-color: var(--main-color);
+    color: var(--main-color);
     font-size: 1rem;
     position: relative;
     left: 50%;
@@ -2152,8 +2160,8 @@ textarea:focus{
 }
 
 .create-blog-btn:hover {
-    background-color: #6C63FF;
-    color: whitesmoke;
+    background-color: var(--main-color);
+    color: var(--sec-color);
     transition: background-color 0.3s ease-in,
     color 0.3s ease-in;
 }
