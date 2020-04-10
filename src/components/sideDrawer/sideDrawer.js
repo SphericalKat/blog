@@ -11,7 +11,7 @@ const sideDrawer = props => {
   return (
     <nav className={drawerClasses}>
       <div className='user-profile'>
-        <img className='user-circle-profile' src=''/>
+        <img className='user-circle-profile' src='' />
         <div className='user-name-profile'>
           {props.user.name}
           <div className='userId'>
