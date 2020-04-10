@@ -14,7 +14,7 @@ class UserCard extends React.Component {
     return (
       <div className='user-card'>
         <div className='user-back'>
-          <div className='user-circle' />
+          <img className='user-circle' />
         </div>
         <div className='user-name'>
           {this.user.name}
