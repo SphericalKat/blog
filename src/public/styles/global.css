@@ -1,10 +1,12 @@
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    < < < < < < < HEAD
     height: 100%;
-    --main-color : #D83131;
-    --main-color-lay : rgba(216, 49, 49, 0.5);
-    --sec-color : whitesmoke;
-    --sec-color-lay : #FFFFFF;
+    --main-color: #D83131;
+    --main-color-lay: rgba(216, 49, 49, 0.5);
+    --sec-color: whitesmoke;
+    --sec-color-lay: #FFFFFF;
+= = = = = = = >>> >>> > 0279 e8c . . . Initial Skeleton ready
 }
 
 * {
@@ -540,7 +542,7 @@ header {
 }
 
 
-.user-profile{
+.user-profile {
     height: fit-content;
 }
 
@@ -567,7 +569,7 @@ header {
     width: 208px;
 }
 
-.userId{
+.userId {
     font-size: 12px;
 }
 
@@ -599,52 +601,52 @@ header {
     margin: 0 0;
 }
 
-.hash{
+.hash {
     position: relative;
     top: 150px;
     background: none;
 }
 
-.hash .hashtag-box{
+.hash .hashtag-box {
     box-shadow: none;
     background: none;
     height: fit-content;
 }
 
-.hash .hashtag-box .hash-head{
+.hash .hashtag-box .hash-head {
     left: 16px;
     font-size: 12px;
 }
 
-.hash .hashtag-box .hash-div{
+.hash .hashtag-box .hash-div {
     left: 16px;
 }
 
-.hash .hashtag-box .hash-div .hashes{
+.hash .hashtag-box .hash-div .hashes {
     width: 48px;
     height: 24px;
 }
 
-.hash .hashtag-box .hash-div .hashes .text{
+.hash .hashtag-box .hash-div .hashes .text {
     font-size: 12px;
     color: var(--main-color);
 }
 
-.hash .activity{
+.hash .activity {
     box-shadow: none;
     position: relative;
     background: none;
 }
 
-.hash .activity .activity-head{
+.hash .activity .activity-head {
     font-size: 12px;
 }
 
-.hash .activity .activity-detail{
+.hash .activity .activity-detail {
     padding-top: 2%;
 }
 
-.hash .activity .activity-detail .number{
+.hash .activity .activity-detail .number {
     font-size: 20px;
 }
 
@@ -1059,35 +1061,119 @@ header {
 }
 
 
-/*creatae.jsx*/
+/*create-thread.jsx*/
+:read-only {
+    --create-thread-fs: 1.01em;
+}
 
-.create-input {
-    position: relative;
-    align-self: center;
+.create-thread-container {
+    width: 90%;
+    height: 550px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: var(--create-thread-fs);
+    padding: 10px 20px 10px 20px;
+}
+
+.create-thread-input {
+    position: inherit;
+    border: 1px solid rgba(50, 50, 50, 0.5);
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    font-size: var(--create-thread-fs);
+    color: black;
+    width: 95%;
+}
+
+.create-thread-content-group {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.create-content-container {
+    border: 1px solid rgba(50, 50, 50, 0.5);
+    flex: 1 1 auto;
+    width: 95%;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.create-content-state {
+    margin: -5px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
+    border-radius: 0 0 5px 5px;
+}
+
+.create-content-state-component {
+    display: inline;
+    padding: 5px;
+    border-right: 1px solid rgba(50, 50, 50, 0.5);
+    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
+    border-radius: 0 0 0 5px;
+    cursor: pointer;
+}
+
+#create-content-state-component-write {
+    margin-left: -5px;
+}
+
+#create-content-state-component-read {
+    border-radius: 0 5px 5px 0;
+}
+
+.create-content-input-container {
+    margin-top: 5px;
+    flex: 1 1 auto
+}
+
+.create-content-input {
+    width: calc(100% - 30px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1.1em;
+    border: none !important;
+}
+
+.create-content-input:focus {
+    outline: #FFFFFF;
+}
+
+.create-thread-button-group {
+    display: flex;
+    flex-flow: row-reverse wrap;
     width: 100%;
-    height: 700px;
 }
 
-.create-text {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #555;
-    width: 100%;
-    height: 50%;
+.create-thread-button {
+    margin: 10px 20px 0 20px;
+    background: white;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #6C63FF;
+    color: #6C63FF;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-.create-form {
-    position: relative;
-    margin: 25px 0;
-    padding: 5px 0;
-    width: 100%;
-    height: 700px;
+.create-thread-button:hover {
+    transition: background-color 200ms ease;
+    background: #6C63FF;
+    color: white
 }
 
-.create-form h5 {
-    float: right;
-    color: #555;
-}
 
 /*blog.jsx*/
 
@@ -2108,7 +2194,7 @@ button {
 
 /*createBlog.jsx*/
 
-.blog-form h5{
+.blog-form h5 {
     padding-bottom: 1%;
     position: relative;
     color: var(--main-color);
@@ -2116,27 +2202,27 @@ button {
     text-align: center;
 }
 
-.textarea{
+.textarea {
     display: flex;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-textarea:invalid{
+textarea:invalid {
     border: 2px dashed red;
 }
 
-textarea:valid{
+textarea:valid {
     border-radius: 8px;
 }
 
-textarea:focus{
+textarea:focus {
     border: 2px solid var(--main-color);
 }
 
-.textarea textarea{
+.textarea textarea {
     position: relative;
     margin: 0 2%;
     width: 60%;
@@ -2156,7 +2242,7 @@ textarea:focus{
     font-size: 1rem;
     position: relative;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
 }
 
 .create-blog-btn:hover {
@@ -2166,7 +2252,7 @@ textarea:focus{
     color 0.3s ease-in;
 }
 
-.side{
+.side {
     width: 20%;
 }
 
@@ -2179,14 +2265,14 @@ textarea:focus{
     justify-content: center;
 }
 
-@media(max-width:425px){
-    .side{
+@media (max-width: 425px) {
+    .side {
         display: none;
     }
 
-    .textarea textarea{
+    .textarea textarea {
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
         width: 100%;
         margin: 0 0;
     }
