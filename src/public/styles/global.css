@@ -1090,7 +1090,7 @@ header {
 }
 
 .create-thread-content-group {
-    flex: 1 1 auto;
+    flex: 1 1 0;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -1099,6 +1099,7 @@ header {
     border: 1px solid rgba(50, 50, 50, 0.5);
     flex: 1 1 auto;
     width: 95%;
+    overflow: auto;
     border-radius: 5px;
     padding: 5px;
     display: flex;
@@ -1107,22 +1108,31 @@ header {
 
 .create-content-state {
     margin: -5px;
-    padding: 5px;
+    padding: 10px;
     border-bottom: 1px solid rgba(50, 50, 50, 0.5);
     border-radius: 0 0 5px 5px;
 }
 
 .create-content-state-component {
     display: inline;
-    padding: 5px;
+    padding: 10px;
     border-right: 1px solid rgba(50, 50, 50, 0.5);
     border-bottom: 1px solid rgba(50, 50, 50, 0.5);
     border-radius: 0 0 0 5px;
     cursor: pointer;
 }
 
+.create-content-state-component.active {
+    color: #6C63FF;
+}
+
+.create-content-state-component:hover {
+    background: #6C63FF;
+    color: white;
+}
+
 #create-content-state-component-write {
-    margin-left: -5px;
+    margin-left: -10px;
 }
 
 #create-content-state-component-read {
@@ -1131,7 +1141,7 @@ header {
 
 .create-content-input-container {
     margin-top: 5px;
-    flex: 1 1 auto
+    flex: 1 0 auto;
 }
 
 .create-content-input {
@@ -1172,6 +1182,14 @@ header {
     transition: background-color 200ms ease;
     background: #6C63FF;
     color: white
+}
+
+.create-thread-container .preview-container {
+    width: calc(100% - 30px);
+    height: 288px;
+    overflow: auto;
+    padding: 10px;
+    border: none !important;
 }
 
 

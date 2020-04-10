@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
-import CreateThread from '../../create/create-thread'
+import CreateContent from '../../create/create-content'
 
 class Create extends React.Component {
 
@@ -90,7 +90,7 @@ class Create extends React.Component {
               </div>
             </div>
             <div className='create-thread-group create-thread-content-group'>
-              <CreateThread content='new contente' />
+              <CreateContent content='' />
             </div>
             <div className='create-thread-button-group'>
               <button className='create-thread-button'>Publish</button>
