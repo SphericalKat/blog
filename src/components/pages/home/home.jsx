@@ -30,7 +30,9 @@ class Discussion extends React.Component {
       },
       likes: 420,
       issues: 69,
-      issuesSolved: 0
+      issuesSolved: 0,
+      photo : '',
+      emailId : 'example@gmail.com'
     }
 
     // Component Lifecycle
@@ -65,7 +67,7 @@ class Discussion extends React.Component {
     const ret =
       <div className='center' style={{ height: '100%', paddingBottom: '20px' }}>
         <Navbar onToggleClick={this.handleToggleClick} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
+        <SideDrawer show={this.state.sideDrawerOpen} user = {this.user}/>
         {backdrop}
         <div className='render-user'>
           <div className='side-left'>
