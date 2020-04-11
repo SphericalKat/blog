@@ -17,17 +17,17 @@ class CreateContent extends React.Component {
     }
 
     this.handleStateClick = (e) => {
-      if (e.target.id === 'create-content-state-component-write') {
+      if (e.target.classList.contains('create-content-state-component-write')) {
         if (this.state.state !== 'write') {
           e.target.classList.add('active')
-          const read = document.getElementById('create-content-state-component-read')
+          const read = e.target.parentNode.querySelector('.create-content-state-component-read')
           read.classList.remove('active')
           this.setState({ state: 'write' })
         }
       } else {
         if (this.state.state !== 'read') {
           e.target.classList.add('active')
-          const write = document.getElementById('create-content-state-component-write')
+          const write = e.target.parentNode.querySelector('.create-content-state-component-write')
           write.classList.remove('active')
           this.setState({ state: 'read' })
         }
@@ -53,15 +53,13 @@ class CreateContent extends React.Component {
       <div className='create-content-container'>
         <div className='create-content-state'>
           <div
-            className='create-content-state-component active'
-            id='create-content-state-component-write'
+            className='create-content-state-component active create-content-state-component-write'
             onClick={this.handleStateClick}
           >
             Write
           </div>
           <div
-            className='create-content-state-component'
-            id='create-content-state-component-read'
+            className='create-content-state-component create-content-state-component-read'
             onClick={this.handleStateClick}
           >
             Preview
