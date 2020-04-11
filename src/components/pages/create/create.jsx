@@ -5,7 +5,6 @@ import Backdrop from '../../backdrop/backdrop'
 import CreateContent from '../../create/create-content'
 
 class Create extends React.Component {
-
   /**
    *
    * @param {{tags,title}}props
