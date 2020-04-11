@@ -28,7 +28,7 @@ class SideDrawer extends React.Component {
     return (
       <nav className={drawerClasses}>
         <div className='user-profile'>
-          <img className='user-circle-profile' src=''/*insest photo*/ />
+          <img className='user-circle-profile' src=''/* insest photo */ />
           <div className='user-name-profile'>
             {this.user.name}
             <div className='userId'>
