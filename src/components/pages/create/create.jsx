@@ -9,7 +9,7 @@ class Create extends React.Component {
    *
    * @param {{tags,title}}props
    */
-  constructor(props) {
+  constructor (props) {
     super(props)
     let tags = ''
     let title = ''
@@ -49,7 +49,7 @@ class Create extends React.Component {
     }
   }
 
-  render() {
+  render () {
     let backdrop
 
     if (this.state.sideDrawerOpen) {
