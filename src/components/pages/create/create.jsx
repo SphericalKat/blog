@@ -9,7 +9,7 @@ class Create extends React.Component {
    *
    * @param {{tags,title}}props
    */
-  constructor (props) {
+  constructor(props) {
     super(props)
     let tags = ''
     let title = ''
@@ -49,7 +49,7 @@ class Create extends React.Component {
     }
   }
 
-  render () {
+  render() {
     let backdrop
 
     if (this.state.sideDrawerOpen) {
@@ -92,9 +92,11 @@ class Create extends React.Component {
               <CreateContent content='' />
             </div>
             <div className='create-thread-button-group'>
-              <button className='create-thread-button'>Publish</button>
-              <button className='create-thread-button'>Discard</button>
-              <button className='create-thread-button'>Save</button>
+              <div className='create-width'>
+                <button className='create-thread-button'>Publish</button>
+                <button className='create-thread-button'>Discard</button>
+                <button className='create-thread-button'>Save</button>
+              </div>
             </div>
           </div>
         </div>

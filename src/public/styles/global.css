@@ -1016,7 +1016,7 @@ header {
 .previous-heading {
     position: relative;
     font-size: 3rem;
-    color: rgb(58, 51, 185);
+    color: var(--main-color-lay);
     text-align: center;
 }
 
@@ -1110,7 +1110,6 @@ header {
     flex: 1 0 auto;
     width: 95%;
     overflow: auto;
-    border-radius: 5px;
     padding: 5px;
     display: flex;
     flex-flow: column nowrap;
@@ -1120,24 +1119,20 @@ header {
     margin: -5px;
     padding: 10px;
     border-bottom: 1px solid rgba(50, 50, 50, 0.5);
-    border-radius: 0 0 5px 5px;
 }
 
 .create-content-state-component {
     display: inline;
     padding: 10px;
-    border-right: 1px solid rgba(50, 50, 50, 0.5);
-    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
-    border-radius: 0 0 0 5px;
     cursor: pointer;
 }
 
 .create-content-state-component.active {
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .create-content-state-component:hover {
-    background: #6C63FF;
+    background: var(--main-color);
     color: white;
 }
 
@@ -1146,7 +1141,8 @@ header {
 }
 
 .create-content-state-component-read {
-    border-radius: 0 5px 5px 0;
+    border-radius: none;
+    outline: none;
 }
 
 .create-content-input-container {
@@ -1169,31 +1165,35 @@ header {
 
 .create-thread-button-group {
     display: flex;
-    flex-flow: row-reverse wrap;
     width: 100%;
 }
 
 .create-thread-button {
-    margin: 10px 20px 0 20px;
+    margin-top: 10px;
     background: white;
     padding: 5px 10px;
     outline: none;
     cursor: pointer;
     width: 92px;
+    height: 46px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    border: 2px solid #6C63FF;
-    color: #6C63FF;
-    border-radius: 10px;
+    color: var(--main-color);
     font-weight: bold;
+    border: none;
+}
+
+.create-width{
+    width: 95%;
+    display: flex;
+    flex-flow: row-reverse wrap;
 }
 
 .create-thread-button:hover {
     transition: background-color 200ms ease;
-    background: #6C63FF;
-    color: white
+    background: var(--main-color);
+    color: white;
 }
 
 .create-thread-container .preview-container {
@@ -1861,6 +1861,7 @@ header {
 }
 
 .card-top {
+    margin-bottom: 26px;
     width: 90%;
     padding: 0 5%;
     height: 44px;
