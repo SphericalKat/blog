@@ -1016,7 +1016,7 @@ header {
 .previous-heading {
     position: relative;
     font-size: 3rem;
-    color: rgb(58, 51, 185);
+    color: var(--main-color-lay);
     text-align: center;
 }
 
@@ -1110,7 +1110,6 @@ header {
     flex: 1 0 auto;
     width: 95%;
     overflow: auto;
-    border-radius: 5px;
     padding: 5px;
     display: flex;
     flex-flow: column nowrap;
@@ -1120,24 +1119,20 @@ header {
     margin: -5px;
     padding: 10px;
     border-bottom: 1px solid rgba(50, 50, 50, 0.5);
-    border-radius: 0 0 5px 5px;
 }
 
 .create-content-state-component {
     display: inline;
     padding: 10px;
-    border-right: 1px solid rgba(50, 50, 50, 0.5);
-    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
-    border-radius: 0 0 0 5px;
     cursor: pointer;
 }
 
 .create-content-state-component.active {
-    color: #6C63FF;
+    color: var(--main-color);
 }
 
 .create-content-state-component:hover {
-    background: #6C63FF;
+    background: var(--main-color);
     color: white;
 }
 
@@ -1146,7 +1141,8 @@ header {
 }
 
 .create-content-state-component-read {
-    border-radius: 0 5px 5px 0;
+    border-radius: none;
+    outline: none;
 }
 
 .create-content-input-container {
@@ -1861,6 +1857,7 @@ header {
 }
 
 .card-top {
+    margin-bottom: 26px;
     width: 90%;
     padding: 0 5%;
     height: 44px;
