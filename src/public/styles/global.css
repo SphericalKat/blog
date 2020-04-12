@@ -1165,31 +1165,35 @@ header {
 
 .create-thread-button-group {
     display: flex;
-    flex-flow: row-reverse wrap;
     width: 100%;
 }
 
 .create-thread-button {
-    margin: 10px 20px 0 20px;
+    margin-top: 10px;
     background: white;
     padding: 5px 10px;
     outline: none;
     cursor: pointer;
     width: 92px;
+    height: 46px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    border: 2px solid #6C63FF;
-    color: #6C63FF;
-    border-radius: 10px;
+    color: var(--main-color);
     font-weight: bold;
+    border: none;
+}
+
+.create-width{
+    width: 95%;
+    display: flex;
+    flex-flow: row-reverse wrap;
 }
 
 .create-thread-button:hover {
     transition: background-color 200ms ease;
-    background: #6C63FF;
-    color: white
+    background: var(--main-color);
+    color: white;
 }
 
 .create-thread-container .preview-container {
