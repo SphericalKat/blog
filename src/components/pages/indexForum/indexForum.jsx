@@ -64,9 +64,28 @@ class IndexForum extends React.Component {
         <SideDrawer show={this.state.sideDrawerOpen} user={this.user} />
         {backdrop}
         <div className='indexforum-container'>
-          C4 Forum
+          <div className='indexforum-header'>
+            C4 Forum
+          </div>
           <div className='indexforum-message'>
-            Hello! We build! We share! We solve!
+            Hello! We build! We share! We solve! BLa bla bla
+          </div>
+          <div className='indexforum-sec-container'>
+            <div className='component-box'>
+              <div className='indexforum-first'>
+                <div className='indexforum-boxes'>
+                  <div className='indexforum-first-header'>
+                    Latest Queries
+                  </div>
+                  <div className='indexforum-first-box'>
+                    Hello
+                  </div>
+                </div>
+              </div>
+              <div className='indexforum-second'>
+                check
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,11 +1,13 @@
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    --main-color: #D83131;
-    --main-color-lay: rgba(216, 49, 49, 0.5);
+    --main-color: #B830E0;
+    --main-color-lay: rgba(183, 48, 224, 0.5);
     --sec-color: whitesmoke;
     --sec-color-lay: #FFFFFF;
-    --third-color: #818181;
+    --third-color: rgb(41, 95, 211);
+
+    --secondary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
@@ -2342,15 +2344,51 @@ textarea:focus {
 .indexforum-container{
     position: relative;
     width: 100%;
-    font-size: 88px;
-    font-weight: lighter;
+    display: block;
+    top: 100px;
+}
+
+.indexforum-header{
     text-align: center;
-    top: 56px;
+    position: relative;
+    font-size: 54px;
+    font-weight: 300;
+    font-family: var(--secondary-font);
 }
 
 .indexforum-message{
+    text-align: center;
+    top: 26px;
     position: relative;
     font-size: 26px;
-    font-style: oblique;
-    color: var(--third-color);
+}
+
+.indexforum-sec-container{
+    position: relative;
+    width: 60%;
+    margin: auto;
+    top: 60px;
+}
+
+.component-box{
+    top: 56px;
+    width: 100%;
+    display: flex;
+}
+
+.indexforum-first{
+    width: 80%;
+}
+
+.indexforum-second{
+    width: 20%;
+}
+
+.indexforum-first-header{
+    font-size: 32px;
+    color: var(--main-color);
+}
+
+.indexforum-first-box{
+    padding: 1rem 0;
 }
