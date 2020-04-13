@@ -5,6 +5,7 @@ body, html {
     --main-color-lay: rgba(216, 49, 49, 0.5);
     --sec-color: whitesmoke;
     --sec-color-lay: #FFFFFF;
+    --third-color: #818181;
 }
 
 * {
@@ -2337,3 +2338,19 @@ textarea:focus {
 }
 
 /*index-forum.jsx*/
+
+.indexforum-container{
+    position: relative;
+    width: 100%;
+    font-size: 88px;
+    font-weight: lighter;
+    text-align: center;
+    top: 56px;
+}
+
+.indexforum-message{
+    position: relative;
+    font-size: 26px;
+    font-style: oblique;
+    color: var(--third-color);
+}
