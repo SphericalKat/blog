@@ -26,7 +26,8 @@ class IndexForum extends React.Component {
       issues: 69,
       issuesSolved: 0,
       photo: '',
-      emailId: 'example@gmail.com'
+      emailId: 'example@gmail.com',
+      time: '4 hrs ago'
     }
 
     // Component Lifecycle
@@ -78,12 +79,37 @@ class IndexForum extends React.Component {
                     Latest Queries
                   </div>
                   <div className='indexforum-first-box'>
-                    Hello
+                    <div className='indexforum-question'>
+                      <div className='indexforum-first-box-header'>
+                        What is dev?
+                      </div>
+                      <div className='indexforum-first-box-details'>
+                        I need to know this!!
+                      </div>
+                    </div>
+                    <div className='indexforum-user'>
+                      <div className='indexforum-user-name'>
+                        {this.user.name}
+                      </div>
+                      <div className='indexforum-user-des'>
+                        {this.user.descriptionUser}
+                      </div>
+                    </div>
+                    <div className='indexforum-time'>
+                      {this.user.time}
+                    </div>
                   </div>
                 </div>
               </div>
               <div className='indexforum-second'>
-                check
+                <div className='indexforum-second-box'>
+                  <ul>
+                    <li>#DEV</li>
+                    <li>#</li>
+                    <li>#</li>
+                    <li>#</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

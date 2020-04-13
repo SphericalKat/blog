@@ -1,8 +1,8 @@
 body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    --main-color: #B830E0;
-    --main-color-lay: rgba(183, 48, 224, 0.5);
+    --main-color: #1976d2;
+    --main-color-lay: #1976d2af;
     --sec-color: whitesmoke;
     --sec-color-lay: #FFFFFF;
     --third-color: rgb(41, 95, 211);
@@ -2381,14 +2381,72 @@ textarea:focus {
 }
 
 .indexforum-second{
+    margin-left: 5%;
+    width: 15%;
+    margin-top: 56px;
+}
+
+.indexforum-question{
+    width: 60%;
+}
+
+.indexforum-user{
     width: 20%;
+    font-size: 16px;
+    color: var(--main-color-lay);
+}
+
+.indexforum-user-name{
+    font-weight: bold;
+}
+
+.indexforum-time{
+    color: var(--main-color);
+    width: 20%;
+    font-size: 16px;
+    text-align: center;
 }
 
 .indexforum-first-header{
     font-size: 32px;
     color: var(--main-color);
+    margin-bottom: 16px;
+    font-weight: bold;
 }
 
 .indexforum-first-box{
-    padding: 1rem 0;
+    display: flex;
+    padding: 1rem 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-left: none;
+    border-right: none;
+}
+
+.indexforum-first-box-header{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.indexforum-first-box-details{
+    font-size: 16px;
+    margin-top: 8px;
+    color: #999;
+}
+
+.indexforum-second-box{
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    height: 100px;
+    position: fixed;
+}
+
+.indexforum-second-box ul{
+    list-style: none;
+    padding-left: 10px;
+    font-family: var(--secondary-font);
+    color: var(--main-color);
+}
+
+.indexforum-second-box ul li{
+    padding: 3px 0;
 }
