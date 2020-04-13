@@ -7,7 +7,8 @@ const config = [{
     signUp: ['./src/components/entrypoints/signUp.jsx'],
     create: ['./src/components/entrypoints/create.jsx'],
     blog: ['./src/components/entrypoints/blog.jsx'],
-    createBlog: ['./src/components/entrypoints/createBlog.jsx']
+    createBlog: ['./src/components/entrypoints/createBlog.jsx'],
+    indexForum: ['./src/components/entrypoints/indexForum']
   },
   output: {
     path: path.resolve(__dirname, 'src', 'public', 'js'),
@@ -29,7 +30,7 @@ const config = [{
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.wasm', '.mjs', '*']
-  },
+  }
   // optimization: {
   //   splitChunks: {
   //     automaticNameDelimiter: '.',
