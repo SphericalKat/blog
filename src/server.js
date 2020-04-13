@@ -6,6 +6,7 @@ import signup from './routes/signUp'
 import create from './routes/create'
 import blog from './routes/blog'
 import createBlog from './routes/createBlog'
+import indexForum from './routes/indexForum'
 import path from 'path'
 
 // Server var
@@ -30,6 +31,7 @@ app.use('/signup', signup)
 app.use('/create', create)
 app.use('/blog', blog)
 app.use('/createBlog', createBlog)
+app.use('/indexForum', indexForum)
 
 const port = process.env.PORT || 3000
 
