@@ -1,13 +1,16 @@
-body, html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+body,
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100%;
     /* #2fd219 */
     --main-color: #1976d2;
     --main-color-lay: #639fdb;
     --sec-color: whitesmoke;
-    --sec-color-lay: #FFFFFF;
+    --sec-color-lay: #ffffff;
     --third-color: rgb(41, 95, 211);
-    --secondary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --secondary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 * {
@@ -94,7 +97,7 @@ body {
 
 .markdown hr {
     margin: 0.5em auto;
-    border-top: 1px solid black
+    border-top: 1px solid black;
 }
 
 .markdown menu {
@@ -111,9 +114,9 @@ body {
 
 .markdown pre {
     margin: 0 0 1em 0;
-    padding: .5em;
+    padding: 0.5em;
     background: #282c34;
-    color: #abb2bf
+    color: #abb2bf;
 }
 
 .markdown ul {
@@ -164,7 +167,7 @@ form h2 {
     font-size: 2.9rem;
     text-transform: uppercase;
     margin-top: 15px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
     color: var(--main-color);
 }
 
@@ -176,7 +179,8 @@ form h2 {
     width: 100%;
 }
 
-.input-div:after, .input-div:before {
+.input-div:after,
+.input-div:before {
     content: '';
     position: absolute;
     z-index: 1;
@@ -206,7 +210,8 @@ input:-webkit-autofill {
     color: var(--main-color);
 }
 
-.input-div.focus:after, .input-div:before {
+.input-div.focus:after,
+.input-div:before {
     width: 50%;
 }
 
@@ -215,7 +220,7 @@ input:-webkit-autofill {
 }
 
 .input-div.one {
-    margin-top: 0
+    margin-top: 0;
 }
 
 .input-div.two {
@@ -233,7 +238,7 @@ input:-webkit-autofill {
     top: 50%;
     color: #999;
     font-size: 18px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .input {
@@ -258,7 +263,6 @@ a {
     text-decoration: none;
 }
 
-
 .btn {
     display: block;
     width: 100%;
@@ -274,8 +278,7 @@ a {
 .btn:hover {
     background-color: var(--main-color);
     color: var(--sec-color);
-    transition: background-color 0.3s ease-in,
-    color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 .sign-btn {
@@ -297,8 +300,7 @@ a {
 .sign-btn:hover {
     background-color: var(--main-color);
     color: var(--sec-color);
-    transition: background-color 0.3s ease-in,
-    color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 @media screen and (max-width: 1050px) {
@@ -345,7 +347,6 @@ a {
 }
 
 /*user-profile.jsx*/
-
 
 .center {
     width: 100%;
@@ -519,7 +520,7 @@ header {
 }
 
 .nav-logo {
-    margin: .5rem;
+    margin: 0.5rem;
 }
 
 .logo {
@@ -573,7 +574,6 @@ header {
     transform: translateX(-150%);
     transition: transform 0.6s ease-out;
 }
-
 
 .user-profile {
     height: fit-content;
@@ -691,7 +691,6 @@ header {
 
 /*signup.jsx*/
 
-
 .main-container {
     height: 100%;
     width: 100%;
@@ -709,13 +708,10 @@ header {
     grid-template-columns: repeat(2, 1fr);
 }
 
-
 @media (max-width: 1024px) {
     .navigation {
         padding: 0 4rem;
     }
-
-
 }
 
 @media (max-width: 768px) {
@@ -890,8 +886,6 @@ header {
 }
 
 @media (max-width: 1024px) {
-
-
     .topic-description {
         font-size: 1rem;
     }
@@ -914,7 +908,6 @@ header {
 }
 
 @media (max-width: 768px) {
-
     .topic-logo {
         width: 17px;
     }
@@ -950,7 +943,6 @@ header {
 }
 
 @media (max-width: 426px) {
-
     .rendered-values {
         margin-top: 4rem;
         margin-left: 3rem;
@@ -996,11 +988,9 @@ header {
         clear: both;
         display: none;
     }
-
 }
 
 @media (max-width: 375px) {
-
     .rendered-values {
         margin-top: 3rem;
         margin-left: 3rem;
@@ -1026,7 +1016,6 @@ header {
 }
 
 @media (max-width: 320px) {
-
     .rendered-values {
         margin-top: 4rem;
         margin-left: 3rem;
@@ -1075,16 +1064,13 @@ header {
 .create-btn:hover {
     background-color: var(--main-color);
     color: var(--sec-color);
-    transition: background-color 0.3s ease-in,
-    color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 @media (max-width: 426px) {
-
     .previous-heading {
         font-size: 2rem;
     }
-
 }
 
 @media (max-width: 375px) {
@@ -1092,7 +1078,6 @@ header {
         font-size: 2rem;
     }
 }
-
 
 /*create-thread.jsx*/
 :read-only {
@@ -1122,7 +1107,6 @@ header {
     .create-thread-container {
         height: 630px;
     }
-
 }
 
 .create-thread-input {
@@ -1180,7 +1164,7 @@ header {
 }
 
 .create-content-state-component-read {
-    border-radius: none;
+    border-radius: 0;
     outline: none;
 }
 
@@ -1199,7 +1183,7 @@ header {
 }
 
 .create-content-input:focus {
-    outline: #FFFFFF;
+    outline: #ffffff;
 }
 
 .create-thread-button-group {
@@ -1246,7 +1230,6 @@ header {
 
 
 /*index.jsx*/
-
 
 .heading-blog {
     width: fit-content;
@@ -1333,7 +1316,6 @@ header {
 }
 
 @media (max-width: 425px) {
-
     .heading-blog h1 {
         font-size: 500%;
     }
@@ -1440,8 +1422,7 @@ header {
 .explore-btn:hover {
     background-color: var(--main-color);
     color: var(--sec-color);
-    transition: background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .explore-btn-alt {
@@ -1461,8 +1442,7 @@ header {
 .explore-btn-alt:hover {
     background-color: var(--sec-color);
     color: var(--main-color);
-    transition: background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .div-svg {
@@ -1476,7 +1456,6 @@ header {
 }
 
 @media (max-width: 1024px) {
-
     .dev-div {
         height: 400px;
     }
@@ -1518,7 +1497,6 @@ header {
 }
 
 @media (max-width: 425px) {
-
     .dev-div {
         height: 400px;
     }
@@ -1819,7 +1797,6 @@ header {
     border-radius: 4px;
     padding: 0 5%;
     margin-bottom: 10px;
-
 }
 
 .create-post-head {
@@ -1915,7 +1892,6 @@ header {
     position: relative;
     color: var(--main-color);
     font-weight: bold;
-
 }
 
 .card-top-details-dev {
@@ -1928,7 +1904,6 @@ header {
     display: flex;
     width: fit-content;
     height: 44px;
-
 }
 
 .photo {
@@ -1976,14 +1951,12 @@ header {
     z-index: 0;
 }
 
-
 .writeup .content {
     font-size: 14px;
     line-height: 150%;
     max-height: 93px;
     overflow: hidden;
 }
-
 
 .read-more {
     z-index: 2;
@@ -2062,14 +2035,12 @@ button {
 }
 
 @media (max-width: 1024px) {
-
 }
 
 @media (max-width: 786px) {
     .i .i-text {
         display: none;
     }
-
 }
 
 @media (max-width: 425px) {
@@ -2241,7 +2212,6 @@ button {
     width: 100%;
 }
 
-
 .add-comment-div .preview-container {
     width: 100%;
     margin-top: 5px;
@@ -2277,8 +2247,7 @@ button {
 .add-btn:hover {
     background-color: var(--main-color);
     color: white;
-    transition: background-color 0.3s ease-in,
-    color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 /*create-index.jsx*/
@@ -2337,8 +2306,7 @@ textarea:focus {
 .create-blog-btn:hover {
     background-color: var(--main-color);
     color: var(--sec-color);
-    transition: background-color 0.3s ease-in,
-    color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 .side {
@@ -2371,6 +2339,42 @@ textarea:focus {
 
 .indexforum-container {
     position: relative;
+    width: 100%;
+    display: block;
+    top: 100px;
+}
+
+.indexforum-header {
+    text-align: center;
+    position: relative;
+    font-size: 54px;
+    font-weight: 300;
+    font-family: var(--secondary-font);
+}
+
+.indexforum-message {
+    text-align: center;
+    top: 26px;
+    position: relative;
+    font-size: 26px;
+}
+
+.indexforum-sec-container {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    top: 60px;
+}
+
+.component-box {
+    top: 56px;
+    width: 100%;
+    display: flex;
+}
+
+.indexforum-first {
+    width: 100%;
+= = = = = = = position: relative;
     width: 100%;
     display: block;
     top: 100px;
@@ -2452,6 +2456,30 @@ textarea:focus {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-left: none;
     border-right: none;
+}
+
+@media (max-width: 768px) {
+    .indexforum-first-box {
+        flex-direction: column;
+    }
+
+    .indexforum-question {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .indexforum-user {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .indexforum-time {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 12px;
+    }
 }
 
 .indexforum-first-box-header {
