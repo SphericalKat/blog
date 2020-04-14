@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../sideDrawer/sideDrawer'
 import Backdrop from '../../backdrop/backdrop'
+import IndexForumCard from '../../cardh/indexForum'
 
 class IndexForum extends React.Component {
   constructor (props) {
@@ -73,33 +74,8 @@ class IndexForum extends React.Component {
           </div>
           <div className='indexforum-sec-container'>
             <div className='component-box'>
-              <div className='indexforum-first'>
-                <div className='indexforum-boxes'>
-                  <div className='indexforum-first-header'>
-                    Latest Queries
-                  </div>
-                  <div className='indexforum-first-box'>
-                    <div className='indexforum-question'>
-                      <div className='indexforum-first-box-header'>
-                        What is dev?
-                      </div>
-                      <div className='indexforum-first-box-details'>
-                        I need to know this!!
-                      </div>
-                    </div>
-                    <div className='indexforum-user'>
-                      <div className='indexforum-user-name'>
-                        {this.user.name}
-                      </div>
-                      <div className='indexforum-user-des'>
-                        {this.user.descriptionUser}
-                      </div>
-                    </div>
-                    <div className='indexforum-time'>
-                      {this.user.time}
-                    </div>
-                  </div>
-                </div>
+              <div className='post-box'>
+                <IndexForumCard user={this.user} />
               </div>
               <div className='indexforum-second'>
                 <div className='indexforum-second-box'>
