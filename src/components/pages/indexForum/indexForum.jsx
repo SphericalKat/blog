@@ -127,4 +127,4 @@ class IndexForum extends React.Component {
   }
 }
 
-export default IndexForum 
+export default IndexForum
