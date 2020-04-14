@@ -14,6 +14,10 @@ body, html {
     margin: 0;
 }
 
+button{
+    font: var(--secondary-font);
+}
+
 body {
     background: var(--sec-color);
 }
@@ -2422,7 +2426,7 @@ textarea:focus {
 .indexforum-user{
     width: 20%;
     font-size: 16px;
-    color: var(--main-color-lay);
+    color: var(--main-color);
 }
 
 .indexforum-user-name{
