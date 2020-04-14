@@ -15,6 +15,8 @@ class IndexForumCard extends React.Component {
             Latest Queries
           </div>
           <Post user={this.user} />
+          <Post user={this.user} />
+          <Post user={this.user} />
         </div>
       </div>
     )

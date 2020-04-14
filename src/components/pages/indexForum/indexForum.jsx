@@ -74,7 +74,9 @@ class IndexForum extends React.Component {
           </div>
           <div className='indexforum-sec-container'>
             <div className='component-box'>
-              <IndexForumCard user={this.user} />
+              <div className='post-box'>
+                <IndexForumCard user={this.user} />
+              </div>
               <div className='indexforum-second'>
                 <div className='indexforum-second-box'>
                   <ul>
