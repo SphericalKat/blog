@@ -61,7 +61,7 @@ class IndexForum extends React.Component {
 
     const ret =
       <div className='center' style={{ height: '100%', paddingBottom: '20px' }}>
-        <Navbar onToggleClick={this.handleToggleClick} />
+        <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
         <SideDrawer show={this.state.sideDrawerOpen} user={this.user} />
         {backdrop}
         <div className='indexforum-container'>
@@ -127,4 +127,4 @@ class IndexForum extends React.Component {
   }
 }
 
-export default IndexForum 
+export default IndexForum

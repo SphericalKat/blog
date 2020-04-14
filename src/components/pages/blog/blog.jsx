@@ -24,6 +24,20 @@ class Blog extends React.Component {
       this.setState({ loading: true })
     }
 
+    this.user = {
+      name: 'Shizuka',
+      descriptionUser: 'FullStackDev',
+      Hash: {
+        number: 1,
+        arrayHash: ['#Dev']
+      },
+      likes: 420,
+      issues: 69,
+      issuesSolved: 0,
+      photo: '',
+      emailId: 'example@gmail.com'
+    }
+
     // Event Handlers
     this.handleToggleClick = () => {
       this.setState((pevState) => {
@@ -45,7 +59,7 @@ class Blog extends React.Component {
 
     const ret =
       <div className='center' style={{ height: '100%' }}>
-        <Navbar onToggleClick={this.handleToggleClick} />
+        <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='align'>

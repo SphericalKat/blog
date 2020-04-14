@@ -1,8 +1,6 @@
 import React from 'react'
 import ToggleButton from '../sideDrawer/toggle'
 
-import Search from '../cardh/search'
-
 const Navbar = (props) => {
   const onToggleClick = props.onToggleClick
   return (
@@ -22,11 +20,12 @@ const Navbar = (props) => {
         <div className='nav-items'>
           <ul>
             <li><a href='/'>Home</a></li>
+            <li><a href='/'>Forum</a></li>
             <li><a href='/discussion'>Blog</a></li>
           </ul>
         </div>
-        <div className='space'><Search /></div>
-        <div className='nav-user'><a href='/'>user</a></div>
+        <div className='space' />
+        <div className='nav-user'><img className='photo' src={props.user.photoLink} /><a className='nav-user-name' href='/'>{props.user.name}</a></div>
       </nav>
     </header>
   )
