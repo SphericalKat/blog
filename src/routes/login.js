@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.get('/', async (req, res) => {
   const reactComp = renderToString(<Login />)
-  res.status(200).render('pages/index', { reactApp: reactComp })
+  res.status(200).render('pages/login', { reactApp: reactComp })
 })
 
 module.exports = router
