@@ -5,7 +5,7 @@ import emoji from 'node-emoji'
 marked.setOptions({
   renderer: new marked.Renderer(),
   highlight: function (code) {
-    return require('../../highlight').highlightAuto(code).value
+    return require('./highlight').highlightAuto(code).value
   },
   pedantic: false,
   gfm: true,
