@@ -40,10 +40,10 @@ class SideDrawer extends React.Component {
           <li><a href='/home'>Home</a></li>
         </ul>
         <div className='hash'>
-          <Hashes numberHash={this.user.Hash.number} arrayHash={this.user.Hash.arrayHash}/>
-          <Activity likes={this.user.likes} issuesSolved={this.user.issuesSolved} issues={this.user.issues}/>
+          <Hashes numberHash={this.user.Hash.number} arrayHash={this.user.Hash.arrayHash} />
+          <Activity likes={this.user.likes} issuesSolved={this.user.issuesSolved} issues={this.user.issues} />
         </div>
-        <div className='activity-side'/>
+        <div className='activity-side' />
       </nav>
     )
   }

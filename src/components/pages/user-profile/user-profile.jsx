@@ -61,20 +61,20 @@ class UserProfile extends React.Component {
     let backdrop
 
     if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop handleOnClick={this.onBackdropClick}/>
+      backdrop = <Backdrop handleOnClick={this.onBackdropClick} />
     }
 
     const ret =
       <div className='center' style={{ height: '100%', paddingBottom: '20px' }}>
-        <Navbar onToggleClick={this.handleToggleClick} user={this.user}/>
-        <SideDrawer show={this.state.sideDrawerOpen} user={this.user}/>
+        <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
+        <SideDrawer show={this.state.sideDrawerOpen} user={this.user} />
         {backdrop}
         <div className='render-user'>
           <div className='side-left'>
-            <UserCard name={this.user.name} descriptionUser={this.user.descriptionUser}/>
-            <Create/>
-            <Hashtag numberHash={this.user.Hash.number} arrayHash={this.user.Hash.arrayHash}/>
-            <Activity likes={this.user.likes} issues={this.user.issues} issuesSolved={this.user.issuesSolved}/>
+            <UserCard name={this.user.name} descriptionUser={this.user.descriptionUser} />
+            <Create />
+            <Hashtag numberHash={this.user.Hash.number} arrayHash={this.user.Hash.arrayHash} />
+            <Activity likes={this.user.likes} issues={this.user.issues} issuesSolved={this.user.issuesSolved} />
           </div>
           <div className='side-middle'>
             {/* The cards for the user profile goes here */}
@@ -83,7 +83,7 @@ class UserProfile extends React.Component {
             />
           </div>
           <div className='side-right'>
-            <Advertisement/>
+            <Advertisement />
           </div>
         </div>
       </div>

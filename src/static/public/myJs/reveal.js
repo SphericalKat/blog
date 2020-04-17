@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $('.read-more .button').click(function (event) {
-
     const card = event.target.parentNode.parentNode
     const content = card.querySelector('.writeup .content')
     const writeup = card.querySelector('.writeup')

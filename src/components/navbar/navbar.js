@@ -7,7 +7,7 @@ const Navbar = (props) => {
     <header className='navbar'>
       <nav className='navigation'>
         <div>
-          <ToggleButton handleOnClick={onToggleClick}/>
+          <ToggleButton handleOnClick={onToggleClick} />
         </div>
         <div className='nav-logo' style={{ fontWeight: 'bold' }}>
           <img
@@ -24,9 +24,14 @@ const Navbar = (props) => {
             <li><a href='/discussion'>Blog</a></li>
           </ul>
         </div>
-        <div className='space'/>
-        <div className='nav-user'><img className='photo' src={props.user.photoLink}/><a className='nav-user-name'
-                                                                                        href='/'>{props.user.name}</a>
+        <div className='space' />
+        <div className='nav-user'><img className='photo' src={props.user.photoLink} />
+          <a
+            className='nav-user-name'
+            href='/'
+          >
+            {props.user.name}
+          </a>
         </div>
       </nav>
     </header>

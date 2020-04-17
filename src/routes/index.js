@@ -6,7 +6,7 @@ import Index from '../components/pages/index'
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-  const reactComp = renderToString(<Index/>)
+  const reactComp = renderToString(<Index />)
   res.status(200).render('pages/index', { reactApp: reactComp, url: req.app.locals.url })
 })
 

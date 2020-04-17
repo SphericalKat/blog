@@ -48,11 +48,11 @@ class SignUp extends React.Component {
   render () {
     return (
       <div style={{ height: '100%' }}>
-        <Navbar user={{}}/>
+        <Navbar user={{}} />
         <div className='main-container'>
           <div className='index-container'>
             <div className='programmer'>
-              <img src='http://localhost:3000/svg/good_team.svg' alt='good-team'/>
+              <img src='http://localhost:3000/svg/good_team.svg' alt='good-team' />
             </div>
             <div className='login-container'>
               <form onSubmit={this.handleSubmit}>
@@ -77,13 +77,13 @@ class SignUp extends React.Component {
                 <div className='input-div'>
                   <div>
                     <h5>Email ID</h5>
-                    <input onChange={this.handleEmailChange} type='' value={this.state.emailID} className='input'/>
+                    <input onChange={this.handleEmailChange} type='' value={this.state.emailID} className='input' />
                   </div>
                 </div>
                 <div className='input-div'>
                   <div>
                     <h5>Password</h5>
-                    <input onChange={this.handlePasswordChange} type='' value={this.state.password} className='input'/>
+                    <input onChange={this.handlePasswordChange} type='' value={this.state.password} className='input' />
                   </div>
                 </div>
                 <div className='input-div two'>

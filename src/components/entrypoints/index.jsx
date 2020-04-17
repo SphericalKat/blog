@@ -4,4 +4,4 @@ import { hydrate } from 'react-dom'
 
 import Index from '../pages/index/index'
 
-hydrate(<Index/>, document.getElementById('root'))
+hydrate(<Index />, document.getElementById('root'))

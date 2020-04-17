@@ -14,7 +14,7 @@ body, html {
     margin: 0;
 }
 
-button{
+button {
     font: var(--secondary-font);
 }
 
@@ -25,19 +25,19 @@ body {
 ::-webkit-scrollbar {
     width: 3px;
 }
-  
-  
+
+
 ::-webkit-scrollbar-track {
-    background: white; 
+    background: white;
 }
-   
-  
+
+
 ::-webkit-scrollbar-thumb {
-    background: var(--main-color); 
+    background: var(--main-color);
 }
-  
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 /* markdown */
@@ -491,7 +491,7 @@ header {
     padding-right: 10px;
 }
 
-.nav-user{
+.nav-user {
     display: flex;
     height: 56px;
 }
@@ -504,7 +504,7 @@ header {
     color: var(--sec-color);
     font-weight: bold;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
 }
 
 .nav-items ul {
@@ -1223,7 +1223,7 @@ header {
     border: none;
 }
 
-.create-width{
+.create-width {
     width: 95%;
     display: flex;
     flex-flow: row-reverse wrap;
@@ -1782,11 +1782,6 @@ header {
     width: fit-content;
     height: fit-content;
     padding-bottom: 2%;
-}
-
-.number {
-    font-size: 44px;
-    color: var(--main-color);
 }
 
 .number-detail {
@@ -2374,14 +2369,14 @@ textarea:focus {
 
 /*index-forum.jsx*/
 
-.indexforum-container{
+.indexforum-container {
     position: relative;
     width: 100%;
     display: block;
     top: 100px;
 }
 
-.indexforum-header{
+.indexforum-header {
     text-align: center;
     position: relative;
     font-size: 54px;
@@ -2389,27 +2384,27 @@ textarea:focus {
     font-family: var(--secondary-font);
 }
 
-.indexforum-message{
+.indexforum-message {
     text-align: center;
     top: 26px;
     position: relative;
     font-size: 26px;
 }
 
-.indexforum-sec-container{
+.indexforum-sec-container {
     position: relative;
     width: 60%;
     margin: auto;
     top: 60px;
 }
 
-.component-box{
+.component-box {
     top: 56px;
     width: 100%;
     display: flex;
 }
 
-.indexforum-first{
+.indexforum-first {
     width: 100%;
 }
 
@@ -2417,73 +2412,73 @@ textarea:focus {
     width: 80%;
 }
 
-.indexforum-second{
+.indexforum-second {
     margin-left: 5%;
     width: 15%;
     margin-top: 56px;
 }
 
-.indexforum-question{
+.indexforum-question {
     width: 60%;
 }
 
-.indexforum-user{
+.indexforum-user {
     width: 20%;
     font-size: 16px;
     color: var(--main-color);
 }
 
-.indexforum-user-name{
+.indexforum-user-name {
     font-weight: bold;
 }
 
-.indexforum-time{
+.indexforum-time {
     color: var(--main-color);
     width: 20%;
     font-size: 16px;
     text-align: center;
 }
 
-.indexforum-first-header{
+.indexforum-first-header {
     font-size: 32px;
     color: var(--main-color);
     margin-bottom: 16px;
     font-weight: bold;
 }
 
-.indexforum-first-box{
+.indexforum-first-box {
     display: flex;
     padding: 1rem 1rem;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-left: none;
     border-right: none;
 }
 
-.indexforum-first-box-header{
+.indexforum-first-box-header {
     font-size: 16px;
     font-weight: bold;
     color: var(--main-color);
 }
 
-.indexforum-first-box-details{
+.indexforum-first-box-details {
     font-size: 16px;
     margin-top: 8px;
     color: #999;
 }
 
-.indexforum-second-box{
+.indexforum-second-box {
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     height: 100px;
     position: fixed;
 }
 
-.indexforum-second-box ul{
+.indexforum-second-box ul {
     list-style: none;
     padding-left: 10px;
     font-family: var(--secondary-font);
     color: var(--main-color);
 }
 
-.indexforum-second-box ul li{
+.indexforum-second-box ul li {
     padding: 3px 0;
 }

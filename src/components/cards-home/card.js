@@ -16,7 +16,6 @@ class Card extends React.Component {
       descriptionName: 'Enginner', // What Job description does he give, ex. FullStackDev
       photoLink: ''
     }
-
   }
 
   render () {
@@ -27,14 +26,14 @@ class Card extends React.Component {
             <div className='card-top-details-head'>
               {this.card.head}
             </div>
-            <div className='space'/>
+            <div className='space' />
             <div className='card-top-details-dev'>
               {this.card.tag}
             </div>
           </div>
         </div>
         <div className='writeup'>
-          <Preview content={this.props.content}/>
+          <Preview content={this.props.content} />
         </div>
         <div className='read-more'>
           <div className='button'>...Read More</div>
@@ -42,13 +41,13 @@ class Card extends React.Component {
         <div className='functions'>
           <div className='like-box'>
             <div className='like'>
-              <img src='http://localhost:3000/svg/thumbs-up.svg'/>
+              <img src='http://localhost:3000/svg/thumbs-up.svg' />
               <div className='i'>
                 {this.card.likes}
               </div>
             </div>
             <div className='like'>
-              <img src='http://localhost:3000/svg/message-circle.svg' alt='fuck you'/>
+              <img src='http://localhost:3000/svg/message-circle.svg' alt='fuck you' />
               <div className='i'>
                 {this.card.comments}
               </div>
@@ -63,11 +62,11 @@ class Card extends React.Component {
                 {this.card.descriptionName}
               </div>
             </div>
-            <img className='photo' src={this.photoLink}/>
+            <img className='photo' src={this.photoLink} />
           </div>
-          <div/>
+          <div />
         </div>
-        <CommentContainer/>
+        <CommentContainer />
       </div>
     )
   }

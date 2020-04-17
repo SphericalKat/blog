@@ -61,8 +61,8 @@ class CreateThread extends React.Component {
 
     const ret =
       <div className='center' style={{ height: '100%' }}>
-        <Navbar onToggleClick={this.handleToggleClick} user={{}}/>
-        <SideDrawer show={this.state.sideDrawerOpen}/>
+        <Navbar onToggleClick={this.handleToggleClick} user={{}} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values'>
           <div className='create-thread-container'>
@@ -89,7 +89,7 @@ class CreateThread extends React.Component {
               </div>
             </div>
             <div className='create-thread-group create-thread-content-group'>
-              <CreateContent content=''/>
+              <CreateContent content='' />
             </div>
             <div className='create-thread-button-group'>
               <div className='create-width'>

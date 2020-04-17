@@ -39,13 +39,13 @@ class CreateBlog extends React.Component {
     let backdrop
 
     if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop handleOnClick={this.onBackdropClick}/>
+      backdrop = <Backdrop handleOnClick={this.onBackdropClick} />
     }
 
     const ret =
       <div className='center' style={{ height: '100%' }}>
-        <Navbar onToggleClick={this.handleToggleClick} user={{}}/>
-        <SideDrawer show={this.state.sideDrawerOpen}/>
+        <Navbar onToggleClick={this.handleToggleClick} user={{}} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values-blog'>
           <form className='create-input' onSubmit={this.handleSubmit}>
@@ -55,14 +55,14 @@ class CreateBlog extends React.Component {
               </h5>
               <div className='textarea'>
                 <div className='side'>
-                  <Adds/>
+                  <Adds />
                 </div>
                 <textarea
                   className='create-blog-text' onChange={this.handleInputChange}
                   value={this.state.input}
                 />
                 <div className='side'>
-                  <Adds/>
+                  <Adds />
                 </div>
               </div>
             </div>
