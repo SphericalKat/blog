@@ -1,3 +1,5 @@
+src/static/public/js/
+src/static/views/
 # Logs
 logs
 *.log
