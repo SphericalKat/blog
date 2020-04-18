@@ -1,13 +1,13 @@
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import Index from '../components/pages/index'
+import Signup from '../components/pages/signup/signup'
 
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-  const reactComp = renderToString(<Index />)
-  res.status(200).render('pages/index', { reactApp: reactComp, url: req.app.locals.url })
+  const reactComp = renderToString(<Signup />)
+  res.status(200).render('pages/signup', { reactApp: reactComp })
 })
 
 module.exports = router

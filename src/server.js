@@ -1,19 +1,12 @@
 import express from 'express'
 import compression from 'compression'
-import index from './routes/index'
-import home from './routes/home'
-import signup from './routes/signUp'
-import create from './routes/create'
-import blog from './routes/blog'
-import createBlog from './routes/createBlog'
-import indexForum from './routes/indexForum'
 import path from 'path'
 
 // Server var
 const app = express()
 
 // View engine setup
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'static', 'views'))
 app.set('view engine', 'ejs')
 
 // set url
@@ -22,16 +15,16 @@ app.locals.url = 'http://localhost:3000'
 // Middleware
 app.use(compression())
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'static', 'public')))
 
 // Routes
-app.use('/', index)
-app.use('/home', home)
-app.use('/signup', signup)
-app.use('/create', create)
-app.use('/blog', blog)
-app.use('/createBlog', createBlog)
-app.use('/indexForum', indexForum)
+app.use('/', require('./routes/index'))
+app.use('/user', require('./routes/user-profile'))
+app.use('/signup', require('./routes/sign-up'))
+app.use('/createThread', require('./routes/create-thread'))
+app.use('/createBlog', require('./routes/create-blog'))
+app.use('/indexForum', require('./routes/index-forum'))
+app.use('/login', require('./routes/login'))
 
 const port = process.env.PORT || 3000
 

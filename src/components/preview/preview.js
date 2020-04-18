@@ -4,8 +4,14 @@ import emoji from 'node-emoji'
 
 marked.setOptions({
   renderer: new marked.Renderer(),
-  highlight: function (code) {
-    return require('../../highlight').highlightAuto(code).value
+  highlight: function (code, lang) {
+    try {
+      console.log(lang)
+      return require('./prism').highlight(code, require('./prism').languages[lang], lang)
+    } catch (e) {
+      console.log(e)
+      return code
+    }
   },
   pedantic: false,
   gfm: true,

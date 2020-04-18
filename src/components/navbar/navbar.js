@@ -1,5 +1,5 @@
 import React from 'react'
-import ToggleButton from '../sideDrawer/toggle'
+import ToggleButton from '../side-drawer/toggle'
 
 const Navbar = (props) => {
   const onToggleClick = props.onToggleClick
@@ -25,7 +25,14 @@ const Navbar = (props) => {
           </ul>
         </div>
         <div className='space' />
-        <div className='nav-user'><img className='photo' src={props.user.photoLink} /><a className='nav-user-name' href='/'>{props.user.name}</a></div>
+        <div className='nav-user'><img className='photo' src={props.user.photoLink} />
+          <a
+            className='nav-user-name'
+            href='/'
+          >
+            {props.user.name}
+          </a>
+        </div>
       </nav>
     </header>
   )
