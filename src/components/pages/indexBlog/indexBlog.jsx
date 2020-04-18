@@ -1,5 +1,7 @@
 import React from 'react'
 import Carousel from '../../cards-home/carousel'
+import MainCard from '../../cards-home/main-blogcard'
+import SecondBlog from '../../cards-home/second-blog'
 
 class Blogs extends React.Component {
   // constructor (props) {
@@ -47,7 +49,6 @@ class Blogs extends React.Component {
       </div>
     )
   }
-
 }
 
 export default Blogs
