@@ -1,14 +1,19 @@
 $(document).ready(function () {
   $('.read-more .button').click(function (event) {
-    const card = event.target.parentNode.parentNode
-    const content = card.querySelector('.writeup .content')
-    const writeup = card.querySelector('.writeup')
-    const readMore = card.querySelector('.read-more')
+    let writeup
+    let readMore
+    if (event.target.tagName === 'SPAN') {
+      writeup = event.target.parentNode.parentNode.parentNode.querySelector('.writeup')
+      readMore = event.target.parentNode
+    } else {
+      writeup = event.target.parentNode.parentNode.querySelector('.writeup')
+      readMore = event.target
+    }
+    const writeupDots = writeup.querySelector('.writeup-dots')
+    const writeupHidden = writeup.querySelector('.writeup-hidden')
 
+    writeupDots.style.display = 'none'
+    writeupHidden.style.display = 'contents'
     readMore.style.display = 'none'
-    content.style.maxHeight = 'none'
-    content.style.overflow = 'unset'
-    card.style.height = 'auto'
-    writeup.style.paddingBottom = '5%'
   })
 })
