@@ -3,7 +3,7 @@ import Carousel from '../../cards-home/carousel'
 import MainCard from '../../cards-home/main-blogcard'
 import SecondBlog from '../../cards-home/second-blog'
 
-class Blogs extends React.Component {
+class IndexBlogs extends React.Component {
   // constructor (props) {
   //   super (props)
   // }
@@ -51,4 +51,4 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs
+export default IndexBlogs

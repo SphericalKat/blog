@@ -8,7 +8,7 @@ class Carousel extends React.Component {
       currentImgIndex: 0
     }
 
-    this.nextSlide = this.nextSlide.bind(this)
+    this.handleNextSlide = this.handleNextSlide.bind(this)
 
     this.imgUrl = [
       'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
