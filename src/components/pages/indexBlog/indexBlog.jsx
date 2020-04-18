@@ -1,11 +1,12 @@
 import React from 'react'
+import Carousel from '../../cards-home/carousel'
 
 class Blogs extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor (props) {
+  //   super (props)
+  // }
 
-  render() {
+  render () {
     return (
       <div>
         <div className='c4-blog'>
@@ -26,10 +27,10 @@ class Blogs extends React.Component {
           <div className='footer-container'>
             <div className='paragraph'>
               <h3>PARAGRAPH</h3>
-              <img src="https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328" />
+              <img src='https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328' />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.
-                    </p>
+              </p>
             </div>
             <div className='latest'>
               <div className='latest-posts'>
