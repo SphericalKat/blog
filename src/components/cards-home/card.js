@@ -7,7 +7,7 @@ class Card extends React.Component {
     super(props)
 
     // states
-    this.card = {
+    this.userCard = {
       head: 'HEAD', // Topic name needs to passed in here
       tag: '#DEV', // Top tag ie #DEV
       likes: 5, // Number of likes calculated dynamically
@@ -16,6 +16,8 @@ class Card extends React.Component {
       descriptionName: 'Enginner', // What Job description does he give, ex. FullStackDev
       photoLink: ''
     }
+
+    this.content = props.content
   }
 
   render () {
@@ -24,45 +26,42 @@ class Card extends React.Component {
         <div className='card-top'>
           <div className='card-top-details'>
             <div className='card-top-details-head'>
-              {this.card.head}
+              {this.userCard.head}
             </div>
             <div className='space' />
             <div className='card-top-details-dev'>
-              {this.card.tag}
+              {this.userCard.tag}
             </div>
           </div>
         </div>
         <div className='writeup'>
-          <Preview content={this.props.content} />
-        </div>
-        <div className='read-more'>
-          <div className='button'>...Read More</div>
+          <Preview content={this.content} />
         </div>
         <div className='functions'>
           <div className='like-box'>
             <div className='like'>
               <img src='http://localhost:3000/svg/thumbs-up.svg' />
               <div className='i'>
-                {this.card.likes}
+                {this.userCard.likes}
               </div>
             </div>
             <div className='like'>
               <img src='http://localhost:3000/svg/message-circle.svg' alt='fuck you' />
               <div className='i'>
-                {this.card.comments}
+                {this.userCard.comments}
               </div>
             </div>
           </div>
           <div className='head-card'>
             <div className='photo-details'>
               <div className='photo-name'>
-                {this.card.name}
+                {this.userCard.name}
               </div>
               <div className='des'>
-                {this.card.descriptionName}
+                {this.userCard.descriptionName}
               </div>
             </div>
-            <img className='photo' src={this.photoLink} />
+            <img className='head-card-photo' src={this.photoLink} />
           </div>
           <div />
         </div>

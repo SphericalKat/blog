@@ -18,11 +18,11 @@ class CommentBox extends React.Component {
       <div className='comment-box'>
         <div className='comment-box-header' style={{ display: 'flex' }}>
           <img className='comment-photo' />
-          <div className='user-comment'>
-            <div className='user-comment-name'>
+          <div className='comment-user'>
+            <div className='comment-user-name'>
               {this.commentCard.name}
             </div>
-            <div className='user-des'>
+            <div className='comment-user-des'>
               {this.commentCard.descriptionUser}
             </div>
           </div>
