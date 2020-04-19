@@ -25,7 +25,9 @@ const Navbar = (props) => {
           </ul>
         </div>
         <div className='space' />
-        <div className='nav-user'><img className='photo' src={props.user.photoLink} />
+
+        <div className='nav-user'>
+          <img className='nav-user-photo' src={props.user.photoLink} />
           <a
             className='nav-user-name'
             href='/'
