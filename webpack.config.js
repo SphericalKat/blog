@@ -90,6 +90,11 @@ const config = [{
       chunks: ['userProfile'],
       filename: '../../views/pages/user-profile.ejs',
       template: path.join('src', 'views', 'pages', 'template.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['indexBlog'],
+      filename: '../../views/pages/indexBlog.ejs',
+      template: path.join('src', 'views', 'pages', 'template.ejs')
     })
   ]
 }]
