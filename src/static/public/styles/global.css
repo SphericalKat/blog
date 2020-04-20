@@ -594,6 +594,10 @@ header {
     transition: transform 0.6s ease-out;
 }
 
+.side-drawer-ul li{
+    padding: 1rem auto;
+}
+
 .user-profile {
     height: fit-content;
 }
@@ -650,7 +654,13 @@ header {
 }
 
 .side-drawer li {
-    margin: 0 0;
+    margin: 0.1rem 0;
+}
+
+.side-drawer a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .hash {
@@ -701,13 +711,6 @@ header {
 .hash .activity .activity-detail .number {
     font-size: 20px;
 }
-
-.side-drawer a {
-    color: var(--main-color);
-    text-decoration: none;
-    font-size: 16px;
-}
-
 
 /*signup.jsx*/
 

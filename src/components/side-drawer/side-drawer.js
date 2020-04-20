@@ -36,8 +36,11 @@ class SideDrawer extends React.Component {
             </div>
           </div>
         </div>
-        <ul>
+        <ul className='side-drawer-ul'>
           <li><a href='/home'>Home</a></li>
+          <li><a href='/'>Forum</a></li>
+          <li><a href='/'>Blog</a></li>
+          <li><a href='/'>Blog</a></li>
         </ul>
         <div className='hash'>
           <Hashes numberHash={this.user.Hash.number} arrayHash={this.user.Hash.arrayHash} />
