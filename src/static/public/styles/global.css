@@ -2896,6 +2896,7 @@ textarea:focus {
     position: relative;
     font-weight: lighter;
     width: fit-content;
+    color: var(--main-color);
 }
 
 .search-page-flex{
@@ -2909,7 +2910,7 @@ textarea:focus {
     position: relative;
     margin: .5em 0;
     width: fit-content;
-    height: 100px;
+    height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1em 1em;
 }

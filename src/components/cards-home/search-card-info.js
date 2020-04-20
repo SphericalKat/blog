@@ -14,6 +14,9 @@ class SearchCardInfo extends React.Component {
         <div className='sub-heading'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.
         </div>
+        <div className='search-name'>
+          Shizuka
+        </div>
       </div>
     )
   }
