@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from '../../cards-home/carousel'
 import MainCard from '../../cards-home/main-blogcard'
 import SecondBlog from '../../cards-home/second-blog'
+import LatestPost from '../../cards-home/latestPost'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
@@ -93,10 +94,20 @@ class IndexBlogs extends React.Component {
             <div className='latest-footer'>
               <div className='latest-posts'>
                 <h3>LATEST POSTS</h3>
+                <LatestPost />
+                <LatestPost />
+                <LatestPost />
               </div>
               <div className='links-social'>
                 <div className='links'>
                   <h3>QUICK LINKS</h3>
+                  <ul className='list-unstyled'>
+                    <li><a href='#'>About Us</a></li>
+                    <li><a href='#'>Travel</a></li>
+                    <li><a href='#'>Adventure</a></li>
+                    <li><a href='#'>Courses</a></li>
+                    <li><a href='#'>Categories</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
