@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from '../../cards-home/carousel'
-import MainCard from '../../cards-home/main-blogcard'
 import SecondBlog from '../../cards-home/second-blog'
 import LatestPost from '../../cards-home/latestPost'
 import Navbar from '../../navbar/navbar'
@@ -75,11 +74,6 @@ class IndexBlogs extends React.Component {
             </p>
           </div>
           <Carousel />
-          <div className='c4-main-card'>
-            <MainCard />
-            <MainCard />
-            <MainCard />
-          </div>
           <SecondBlog />
         </div>
         <div className='c4-footer'>
