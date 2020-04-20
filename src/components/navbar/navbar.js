@@ -1,5 +1,7 @@
 import React from 'react'
 import ToggleButton from '../side-drawer/toggle'
+// import { search } from 'node-emoji'
+import Search from '../search/search'
 
 const Navbar = (props) => {
   const onToggleClick = props.onToggleClick
@@ -21,11 +23,12 @@ const Navbar = (props) => {
           <ul>
             <li><a href='/'>Home</a></li>
             <li><a href='/'>Forum</a></li>
-            <li><a href='/discussion'>Blog</a></li>
+            <li><a href='/'>Blog</a></li>
+            <li><a href='/'>Blog</a></li>
           </ul>
         </div>
         <div className='space' />
-
+        <Search />
         <div className='nav-user'>
           <img className='nav-user-photo' src={props.user.photoLink} />
           <a

@@ -4,8 +4,8 @@ html {
     height: 100%;
     width: 100%;
     /* #2fd219 */
-    --main-color: #1976d2;
-    --main-color-lay: #639fdb;
+    --main-color: blue;
+    --main-color-lay: rgb(79, 79, 214);
     --sec-color: whitesmoke;
     --sec-color-lay: #ffffff;
     --third-color: rgb(41, 95, 211);
@@ -475,7 +475,7 @@ header {
     left: 0;
     height: 56px;
     /*box-shadow: 0 1px 0 var(--main-color);*/
-    box-shadow: 0 1px 1px rgba(50, 50, 50, 1);
+    box-shadow: 0 0px 1px rgba(50, 50, 50, 1);
 }
 
 .navigation {
@@ -533,7 +533,14 @@ header {
 }
 
 .nav-items li {
-    padding: 0 2.5rem;
+    padding: 0 1rem;
+}
+
+
+.nav-items a {
+    color: var(--main-color);
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .nav-logo {
@@ -548,12 +555,6 @@ header {
     color: var(--main-color);
     text-decoration: none;
     font-size: 1.5rem;
-}
-
-.nav-items a {
-    color: var(--main-color);
-    font-size: 1.2rem;
-    text-decoration: none;
 }
 
 .toggle-button {
@@ -593,6 +594,10 @@ header {
     transition: transform 0.6s ease-out;
 }
 
+.side-drawer-ul li{
+    padding: 1rem auto;
+}
+
 .user-profile {
     height: fit-content;
 }
@@ -620,6 +625,10 @@ header {
     width: 208px;
 }
 
+.search{
+    padding: 0 1rem;
+}
+
 .userId {
     font-size: 12px;
 }
@@ -628,7 +637,7 @@ header {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 100;
     top: 0;
     left: 0;
@@ -649,7 +658,13 @@ header {
 }
 
 .side-drawer li {
-    margin: 0 0;
+    margin: 0.1rem 0;
+}
+
+.side-drawer a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .hash {
@@ -701,12 +716,35 @@ header {
     font-size: 20px;
 }
 
-.side-drawer a {
-    color: var(--main-color);
-    text-decoration: none;
-    font-size: 16px;
+.search-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 56px;
+    background-color: whitesmoke;
+    z-index: 100;
+    border: 2px solid var(--main-color);
+    border-radius: 16px;
 }
 
+.search-input{
+    width: 90%;
+    margin: 0 1rem;
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+.search-box-svg{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    transform: translate(0,-50%);
+    float: right;
+    margin: 0 2rem;
+}
 
 /*signup.jsx*/
 
@@ -2038,52 +2076,7 @@ button {
     border-radius: 4px;
 }
 
-.home-search {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    border: 1px solid var(--main-color);
-    border-radius: 4px;
-    top: 3%;
-    display: flex;
-}
 
-.search-svg {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    left: 7px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.search-text {
-    position: relative;
-    width: 80%;
-    height: 32px;
-    font-size: 18px;
-    line-height: 180%;
-    color: var(--main-color);
-    left: 52px;
-    margin: 0 0;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-
-.search-svg button {
-    outline: none;
-    background: none;
-    border: none;
-}
-
-@media (max-width: 425px) {
-    .home-search {
-        border: none;
-    }
-    .search-text {
-        left: 16px;
-    }
-}
 
 
 /*comment-container.js*/
@@ -2505,6 +2498,7 @@ textarea:focus {
     position: relative;
     text-align: center;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .c4-blog-heading p {
@@ -2801,13 +2795,15 @@ textarea:focus {
 }
 
 .popular-head {
+    width: 100%;
     font-weight: lighter;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .pop-post-card-h {
+    padding: 10px 0;
     position: relative;
     font-size: 1rem;
     font-weight: lighter;
@@ -2858,6 +2854,7 @@ textarea:focus {
 
 .latest-posts {
     width: 50%;
+    margin-right: 20px;
 }
 
 .links-social {
@@ -2878,4 +2875,132 @@ textarea:focus {
 
 .app {
     text-align: center;
+}
+
+/*Search-page.jsx*/
+
+.search-page{
+    width: 75%;
+    margin: 100px auto;
+}
+
+.heading-search{
+    width: 75%;
+    position: relative;
+    margin: auto;
+}
+
+.heading{
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+.heading h1,h2,h3{
+    position: relative;
+    font-weight: lighter;
+    width: fit-content;
+    color: var(--main-color);
+}
+
+.search-page-flex{
+    margin: auto;
+    width: 75%;
+    position: relative;
+    display: flex;
+}
+
+.search-card{
+    position: relative;
+    margin: .5em 0;
+    width: fit-content;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1em 1em;
+}
+
+.sub-heading{
+    margin: 1em 0;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    font-weight: lighter;
+}
+
+.search-right{
+    width: 75%;
+}
+
+.search-hash{
+    width: fit-content;
+    border-radius: 4px;
+    padding: 2px 10px;
+    color: white;
+    background: var(--main-color);
+}
+
+.categories-comp{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tags {
+    font: var(--secondary-font);
+    padding: 0;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.tags li {
+    padding: 0;
+    margin: 0 4px 4px 0;
+    float: left;
+    display: inline-block;
+}
+.tags li a {
+    float: left;
+    display: block;
+    border-radius: 4px;
+    padding: 2px 10px;
+    color: gray;
+    background: rgba(0, 0, 0, 0.05);
+}
+.tags li a:hover {
+    color: #fff;
+    background: var(--main-color);
+}
+.list-unstyled li a{
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.list-unstyled{
+    list-style: none;
+    padding: 0 0;
+}
+.list-unstyled li{
+    padding: 5px;
+}
+.latest-post-card{
+    width: 100%;
+    height: 70px;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    display: flex;
+    margin-bottom: 28px;
+}
+.latest-post-card img {
+    width: 33.3333%;
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.latest-post-card-details {
+    position: relative;
+    width: 66.6666%;
+}
+
+.latest-post-card:hover {
+    box-shadow: 0 0 4px rgba(0, 174, 255, 0.4);
+}
+
+.latest-post-card-h {
+    margin: auto;
+    font-weight: lighter;
 }
