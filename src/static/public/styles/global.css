@@ -2615,10 +2615,16 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
 }
+@media (max-width: 768px) {
+    .c4-main-card {
+        flex-direction: column;
+    }
+}
 
 .c4-blog-main-card {
+    flex: 1;
     position: relative;
-    width: 31%;
+    margin: 5px 5px;
     height: 300px;
 }
 
@@ -2668,10 +2674,20 @@ textarea:focus {
     height: 100%;
     margin-bottom: 7rem;
 }
+@media (max-width: 768px) {
+    .c4-second-blog-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .c4-second-blog-left{
+        margin-bottom: 100px;
+    }
+}
 
 .c4-second-blog-left {
-    width: 66.66666%;
+    flex: 2;
     height: 100%;
+    display: flex;
 }
 
 .left {
@@ -2684,7 +2700,7 @@ textarea:focus {
 }
 
 .c4-second-blog-right {
-    width: 33.33333%;
+    flex: 1;
     height: 100%;
 }
 
@@ -2763,8 +2779,8 @@ textarea:focus {
 }
 
 .c4-more-blog-post {
-    margin-bottom: 3rem;
-    width: 66.6666%;
+    flex: 2;
+    align-items: center;
 }
 
 .more-post-card {
@@ -2774,13 +2790,23 @@ textarea:focus {
     display: flex;
     margin-bottom: 28px;
 }
+@media (max-width: 768px) {
+    .more-post-card {
+        flex-direction: column;
+        height: auto;
+    }
+    .more-post-card img{
+        width: 100%;
+    }
+}
 
 .more-post-card:hover {
     box-shadow: 0 0 4px rgba(0, 174, 255, 0.4);
 }
 
 .more-post-card img {
-    width: 33.3333%;
+    flex: 1;
+    /* width: 33.3333%; */
     position: relative;
     float: left;
     height: 100%;
@@ -2789,7 +2815,8 @@ textarea:focus {
 .post-card-details {
     position: relative;
     padding: 30px 20px;
-    width: 66.6666%;
+    flex: 2;
+    /* width: 66.6666%; */
 }
 
 .more-post-card-h {
@@ -2816,7 +2843,7 @@ textarea:focus {
 .c4-footer {
     position: relative;
     background-color: black;
-    height: 650px;
+    height: auto;
     top: 7rem;
     padding: 5rem;
 }
@@ -2827,9 +2854,17 @@ textarea:focus {
     display: flex;
     width: 75%;
 }
+@media (max-width: 768px) { /*breakpoint*/
+    .footer-container {
+        flex-direction: column;
+    }
+    .paragraph{
+        margin-bottom: 20px;
+    }
+}
 
 .paragraph {
-    width: 40%;
+    flex: 1;
 }
 
 .paragraph h3 {
@@ -2851,18 +2886,26 @@ textarea:focus {
 }
 
 .latest-footer {
+    flex: 1;
     margin-left: 10%;
-    width: 50%;
+    /* width: 50%; */
     display: flex;
 }
-
+@media (max-width: 768px) { /*breakpoint*/
+    .latest-footer {
+        flex-direction: column;
+    }
+}
 .latest-posts {
-    width: 50%;
-    margin-right: 20px;
+    flex: 1;
+    /* width: 50%; */
+    /* margin-right: 20px; */
 }
 
 .links-social {
-    width: 50%;
+    flex: 1;
+    margin-left: 20px;
+    /* width: 50%; */
 }
 
 .latest-posts h3 {
