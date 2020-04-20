@@ -607,7 +607,7 @@ header {
 }
 
 .side-drawer-ul li {
-    padding: 1rem auto;
+    padding: 1rem 0;
 }
 
 .user-profile {
@@ -1354,7 +1354,6 @@ header {
 .blog-container {
     padding: 10px;
     background: white;
-    width: 80%;
     box-sizing: border-box;
     margin-top: 10px;
     min-height: 800px;
@@ -1387,6 +1386,28 @@ header {
     text-wrap: none;
 }
 
+.create-blog-input-tags textarea {
+    font-size: 1.3em;
+}
+
+.create-blog-input-content {
+    flex: 1 0 auto;
+}
+
+.create-blog-input-content textarea {
+    font-size: 1.1em;
+}
+
+.create-blog-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.create-blog-preview {
+    width: 100%;
+}
+
 
 @media (max-width: 1024px) {
     .heading-blog {
@@ -1398,7 +1419,6 @@ header {
     }
 
     .blog-container {
-        width: 90%
     }
 
     .heading-blog h1 {
@@ -2434,7 +2454,7 @@ textarea:focus {
     margin: 1% 1%;
     display: block;
     padding: 10px 10px;
-    border-radius: 100px 100px;
+    border-radius: 5px;
     cursor: pointer;
     outline: none;
     border-color: var(--main-color);
