@@ -26,6 +26,7 @@ app.use('/createBlog', require('./routes/create-blog'))
 app.use('/indexForum', require('./routes/index-forum'))
 app.use('/login', require('./routes/login'))
 app.use('/indexBlog', require('./routes/index-blog'))
+app.use('/searchPage', require('./routes/search-page'))
 
 const port = process.env.PORT || 3000
 

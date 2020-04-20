@@ -1,14 +1,32 @@
 import React from 'react'
 
-const Search = (props) => {
-  return (
-    <div className='home-search'>
-      <div className='search-svg'>
-        <button><img src='http://localhost:3000/svg/search.svg' /></button>
+class SearchCard extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      click: false
+    }
+    this.onClick = (event) => {
+      this.setState({ click: true})
+    }
+  }
+
+  render () {
+    return (
+      <div className='search-card'>
+        <div className='heading'>
+          <h3>Why does that do this?</h3>
+          <div className='space' />
+          <div className='search-hash'>
+            #dev
+          </div>
+        </div>
+        <div className='sub-heading'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.
+        </div>
       </div>
-      <input className='search-text' placeholder='Search' />
-    </div>
-  )
+    )
+  }
 }
 
-export default Search
+export default SearchCard

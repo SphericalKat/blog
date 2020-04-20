@@ -1,6 +1,6 @@
 import React from 'react'
 import ToggleButton from '../side-drawer/toggle'
-import { search } from 'node-emoji'
+// import { search } from 'node-emoji'
 import Search from '../search/search'
 
 const Navbar = (props) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { search } from 'node-emoji'
+// import { search } from 'node-emoji'
 import Backdrop from '../backdrop/backdrop'
 import SearchBox from './search-box'
 

@@ -2872,3 +2872,42 @@ textarea:focus {
 .app {
     text-align: center;
 }
+
+/*Search-page.jsx*/
+
+.search-page{
+    width: 75%;
+    margin: 100px auto;
+}
+
+.heading{
+    position: relative;
+    display: flex;
+}
+
+.heading h1,h2,h3{
+    position: relative;
+    font-weight: lighter;
+    width: fit-content;
+}
+
+.search-card{
+    position: relative;
+    margin: .5em 0;
+    width: 60%;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1em 1em;
+}
+
+.sub-heading{
+    margin: 1em 0;
+}
+
+.search-hash{
+    width: fit-content;
+    background-color: var(--main-color);
+    padding: 2px 4px;
+    color: white;
+    border-radius: 2px;
+}
