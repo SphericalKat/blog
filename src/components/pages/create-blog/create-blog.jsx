@@ -2,18 +2,34 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
-import Adds from '../../cards-home/advertisement'
+import Preview from '../../preview/preview'
 
 class CreateBlog extends React.Component {
   constructor (props) {
     super(props)
+
+    this.title = props.title
+    this.content = props.content
+    this.tags = props.tags
+    if (this.title) {
+      this.title = ''
+    }
+    if (this.content) {
+      this.content = ''
+    }
+    if (this.tags) {
+      this.tags = []
+    }
 
     // States
     this.state = {
       navbarOpen: false,
       sideDrawerOpen: false,
       input: '',
-      display: 'none'
+      display: 'none',
+      title: this.title,
+      tags: this.tags,
+      content: this.content
     }
 
     // Event Handlers
@@ -42,36 +58,55 @@ class CreateBlog extends React.Component {
       backdrop = <Backdrop handleOnClick={this.onBackdropClick} />
     }
 
+    const preview =
+      <div className='create-blog-preview'>
+        <Preview content={this.state.content} />
+      </div>
+
+    const edit =
+      <div>
+        <div className='create-blog-edit-container'>
+
+        </div>
+      </div>
+
     const ret =
       <div className='center' style={{ height: '100%' }}>
         <Navbar onToggleClick={this.handleToggleClick} user={{}} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values-blog'>
-          <form className='create-input' onSubmit={this.handleSubmit}>
-            <div className='blog-form'>
-              <h5>
-                Create Blog
-              </h5>
-              <div className='textarea'>
-                <div className='side'>
-                  <Adds />
-                </div>
-                <textarea
-                  className='create-blog-text' onChange={this.handleInputChange}
-                  value={this.state.input}
-                />
-                <div className='side'>
-                  <Adds />
-                </div>
+          <div className='create-blog-button-group'>
+            <button className='create-blog-button'>
+              Preview
+            </button>
+            <button className='create-blog-button'>
+              Edit
+            </button>
+            <button className='create-blog-button'>
+              Save
+            </button>
+            <button className='create-blog-button'>
+              Publish
+            </button>
+          </div>
+          <div className='create-blog-card'>
+            <div className='blog-container'>
+              <div className='create-blog-input create-blog-input-title'>
+                <textarea placeholder='Title (in 50 characters)' />
+              </div>
+              <div className='create-blog-input create-blog-input-tags'>
+                <textarea placeholder='Tags (separated by a comma `,`)' />
+              </div>
+              <div className='create-blog-input create-blog-input-content'>
+                <textarea placeholder='Type the content of the blog here....' />
               </div>
             </div>
-            <button className='create-blog-btn' onSubmit={this.handleSubmit}>Submit</button>
-          </form>
+          </div>
         </div>
       </div>
     return (
-      <div>
+      <div className='react-root'>
         {
           ret
         }
