@@ -8,7 +8,7 @@ class SearchCardInfo extends React.Component {
           <h3>Why does that do this?</h3>
           <div className='space' />
           <div className='search-hash'>
-            #dev
+            dev
           </div>
         </div>
         <div className='sub-heading'>
