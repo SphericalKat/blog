@@ -4,8 +4,8 @@ html {
     height: 100%;
     width: 100%;
     /* #2fd219 */
-    --main-color: #1976d2;
-    --main-color-lay: #639fdb;
+    --main-color: blue;
+    --main-color-lay: rgb(79, 79, 214);
     --sec-color: whitesmoke;
     --sec-color-lay: #ffffff;
     --third-color: rgb(41, 95, 211);
@@ -2880,7 +2880,14 @@ textarea:focus {
     margin: 100px auto;
 }
 
+.heading-search{
+    width: 75%;
+    position: relative;
+    margin: auto;
+}
+
 .heading{
+    margin: auto;
     position: relative;
     display: flex;
 }
@@ -2891,17 +2898,31 @@ textarea:focus {
     width: fit-content;
 }
 
+.search-page-flex{
+    margin: auto;
+    width: 75%;
+    position: relative;
+    display: flex;
+}
+
 .search-card{
     position: relative;
     margin: .5em 0;
-    width: 60%;
+    width: fit-content;
     height: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1em 1em;
 }
 
 .sub-heading{
     margin: 1em 0;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    font-weight: lighter;
+}
+
+.search-right{
+    width: 75%;
 }
 
 .search-hash{

@@ -1,4 +1,7 @@
 import React from 'react'
+import InfoBox from './c4-bio-box'
+import Popular from './popular-post'
+import SearchCardInfo from './search-card-info'
 
 class SearchCard extends React.Component {
   constructor (props) {
@@ -7,22 +10,21 @@ class SearchCard extends React.Component {
       click: false
     }
     this.onClick = (event) => {
-      this.setState({ click: true})
+      this.setState({ click: true })
     }
   }
 
   render () {
     return (
-      <div className='search-card'>
-        <div className='heading'>
-          <h3>Why does that do this?</h3>
-          <div className='space' />
-          <div className='search-hash'>
-            #dev
-          </div>
+      <div className='search-page-flex'>
+        <div className='c4-second-blog-left'>
+          <SearchCardInfo />
+          <SearchCardInfo />
+          <SearchCardInfo />
         </div>
-        <div className='sub-heading'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.
+        <div className='c4-second-blog-right'>
+          <InfoBox />
+          <Popular />
         </div>
       </div>
     )

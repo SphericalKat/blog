@@ -63,7 +63,7 @@ class Search extends React.Component {
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='search-page'>
-          <div className='heading'>
+          <div className='heading-search'>
             <h1>We found these related to your search!!</h1>
           </div>
           <SearchCard />
