@@ -21,7 +21,8 @@ const Navbar = (props) => {
           <ul>
             <li><a href='/'>Home</a></li>
             <li><a href='/'>Forum</a></li>
-            <li><a href='/discussion'>Blog</a></li>
+            <li><a href='/'>Blog</a></li>
+            <li><a href='/'>Blog</a></li>
           </ul>
         </div>
         <div className='space' />

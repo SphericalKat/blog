@@ -475,7 +475,7 @@ header {
     left: 0;
     height: 56px;
     /*box-shadow: 0 1px 0 var(--main-color);*/
-    box-shadow: 0 1px 1px rgba(50, 50, 50, 1);
+    box-shadow: 0 0px 1px rgba(50, 50, 50, 1);
 }
 
 .navigation {
@@ -533,7 +533,14 @@ header {
 }
 
 .nav-items li {
-    padding: 0 2.5rem;
+    padding: 0 1rem;
+}
+
+
+.nav-items a {
+    color: var(--main-color);
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .nav-logo {
@@ -548,12 +555,6 @@ header {
     color: var(--main-color);
     text-decoration: none;
     font-size: 1.5rem;
-}
-
-.nav-items a {
-    color: var(--main-color);
-    font-size: 1.2rem;
-    text-decoration: none;
 }
 
 .toggle-button {
