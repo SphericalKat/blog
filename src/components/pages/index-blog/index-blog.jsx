@@ -18,9 +18,13 @@ class IndexBlogs extends React.Component {
       isLoggedIn: false
     }
 
+    this.tags = [
+      'CATS'
+    ]
+
     this.user = {
       name: 'Shizuka',
-      descriptionUser: 'FullStackDev',
+      descriptionUser: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa',
       Hash: {
         number: 1,
         arrayHash: ['#Dev']
@@ -28,9 +32,54 @@ class IndexBlogs extends React.Component {
       likes: 420,
       issues: 69,
       issuesSolved: 0,
-      photo: '',
+      photo: 'https://colorlib.com/preview/theme/balita/images/person_1.jpg',
       emailId: 'example@gmail.com',
       time: '4 hrs ago'
+    }
+
+    this.carousel = {
+      imgUrl: [
+        'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
+        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+        'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328'
+      ],
+      trendingTag: ['CATS'],
+      datePost: ['APRIL 17,2020'],
+      trendingPost: ['Why isnt my cat using the litter box?'],
+      description: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!']
+    }
+
+    this.category = { // number of post per catergory is 10 so nX10 matrix will be formed
+      numberOfCategory: 1,
+      categoryName: ['Developer Category'],
+      img: [[
+        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900'
+      ]],
+      dev: [[
+        'CATS'
+      ]],
+      date: [[
+        'APRIL 17,2020'
+      ]],
+      question: [[
+        'Why isn’t my cat using the litter box?'
+      ]]
+    }
+
+    this.morePosts = { // number of post is 3
+      categoryName: ['Developer Category'],
+      img: [[
+        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900'
+      ]],
+      dev: [[
+        'CATS'
+      ]],
+      date: [[
+        'APRIL 17,2020'
+      ]],
+      question: [[
+        'Why isn’t my cat using the litter box?'
+      ]]
     }
 
     // Component Lifecycle
@@ -73,8 +122,8 @@ class IndexBlogs extends React.Component {
               C4-Blogs
             </p>
           </div>
-          <Carousel />
-          <SecondBlog />
+          <Carousel url={this.carousel.imgUrl} trendingTag={this.carousel.trendingTag} trendingPost={this.carousel.trendingPost} datePost={this.carousel.datePost} description={this.carousel.description} />
+          <SecondBlog category={this.category} info={this.user} popular={this.carousel} tags={this.tags} morePosts={this.morePosts} />
         </div>
         <div className='c4-footer'>
           <div className='footer-container'>
@@ -86,12 +135,6 @@ class IndexBlogs extends React.Component {
               </p>
             </div>
             <div className='latest-footer'>
-              <div className='latest-posts'>
-                <h3>LATEST POSTS</h3>
-                <LatestPost />
-                <LatestPost />
-                <LatestPost />
-              </div>
               <div className='links-social'>
                 <div className='links'>
                   <h3>QUICK LINKS</h3>

@@ -8,18 +8,18 @@ class MorePost extends React.Component {
   render () {
     return (
       <div className='more-post-card'>
-        <img src='https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328' />
+        <img src={this.props.morePosts.img} />
         <div className='post-card-details'>
           <div className='c4-blog-tag'>
             <div className='dev-head'>
-              CATS
+              {this.props.morePosts.dev}
             </div>
             <div className='dev-date' style={{ color: 'rgba(0,0,0,0.5)' }}>
-              APRIL 17,2020
+              {this.props.morePosts.date}
             </div>
           </div>
           <div className='h blog-card-h more-post-card-h'>
-            Why isn’t my cat using the litter box? Poops on me!! Need to bath again!
+            {this.props.morePosts.question}
           </div>
         </div>
       </div>

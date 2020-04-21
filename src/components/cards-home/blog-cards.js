@@ -1,9 +1,11 @@
 import React from 'react'
 
 class BlogCard extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+
+    this.numberofPost = props.post.number
+  }
 
   render () {
     return (
@@ -12,14 +14,14 @@ class BlogCard extends React.Component {
         <div className='blog-card-details'>
           <div className='c4-blog-tag '>
             <div className='dev-head'>
-              CATS
+              {this.props.post.dev}
             </div>
             <div className='dev-date' style={{ color: 'rgba(0,0,0,0.5)' }}>
-              APRIL 17,2020
+              {this.props.post.date}
             </div>
           </div>
           <div className='h blog-card-h'>
-            Why isn’t my cat using the litter box?
+            {this.props.post.question}
           </div>
         </div>
       </div>

@@ -10,14 +10,7 @@ class SecondBlogLeft extends React.Component {
     return (
       <div className='c4-second-blog-left'>
         <div className='left'>
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
-          <BlogCard />
+          <BlogCard post={this.props.posts} />
         </div>
       </div>
 

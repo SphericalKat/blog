@@ -8,11 +8,11 @@ class InfoBox extends React.Component {
   render () {
     return (
       <div className='c4-bio-box'>
-        <img src='https://colorlib.com/preview/theme/balita/images/person_1.jpg' alt='Image Placeholder' />
+        <img src={this.props.info.photo} alt='Image Placeholder' />
         <div className='bio'>
-          <h2>Hinata Hyuga</h2>
+          <h2>{this.props.info.name}</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.
+            {this.props.info.descriptionUser}
           </p>
           <p>
             <button className='explore-bio'>Read my bio</button>
