@@ -3288,6 +3288,15 @@ button {
 }
 
 @media(max-width: 768px){
+    .side-left{
+        display: none;
+    }
+    .side-right{
+        display: none;
+    }
+    .side-middle{
+        width: 100%;
+    }
     .c4-blog{
         width: 100%;
     }
