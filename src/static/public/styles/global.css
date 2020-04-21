@@ -1184,13 +1184,14 @@ header {
 
 @media (max-width: 615px) {
     .create-thread-container {
-        height: 600px;
+        height: 100%;
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 500px) {
     .create-thread-container {
-        height: 630px;
+        height: 100%;
     }
 }
 
