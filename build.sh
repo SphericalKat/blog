@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-npm install
+rm -r build/
 
+npm install
 
 NODE_ENV=production webpack -p
 

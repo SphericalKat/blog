@@ -2,7 +2,6 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-console.log(process.env.NODE_ENV === 'production')
 const templatePath = process.env.NODE_ENV === 'production' ? path.join('src', 'views', 'pages', 'templateP.ejs') : path.join('src', 'views', 'pages', 'template.ejs')
 
 const config = [{
@@ -96,7 +95,7 @@ const config = [{
       template: templatePath
     }),
     new HtmlWebpackPlugin({
-      chunks: ['index-blog'],
+      chunks: ['indexBlog'],
       filename: '../../views/pages/index-blog.ejs',
       template: templatePath
     }),
