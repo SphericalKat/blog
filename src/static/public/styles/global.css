@@ -2500,6 +2500,11 @@ textarea:focus {
     width: 75%;
     margin: 100px auto;
 }
+@media (max-width: 768px) {
+    .c4-blog {
+        width: 100%;
+    }
+}
 
 .c4-blog-heading {
     position: relative;
@@ -2703,6 +2708,12 @@ textarea:focus {
     flex: 1;
     height: 100%;
 }
+@media (max-width: 768px) {
+    .c4-second-blog-right {
+        align-items: center;
+        margin-right: 25px;
+    }
+}
 
 .blog-card {
     width: 100%;
@@ -2856,6 +2867,7 @@ textarea:focus {
 }
 @media (max-width: 768px) { /*breakpoint*/
     .footer-container {
+        width: 100%;
         flex-direction: column;
     }
     .paragraph{
