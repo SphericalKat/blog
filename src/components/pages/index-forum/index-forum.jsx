@@ -1,10 +1,11 @@
 import React from 'react'
+import SecondBlog from '../../cards-home/second-blog'
+import LatestPost from '../../cards-home/latestPost'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
-import IndexForumCard from '../../cards-home/index-forum'
 
-class IndexForum extends React.Component {
+class IndexBlogs extends React.Component {
   constructor (props) {
     super(props)
 
@@ -60,30 +61,46 @@ class IndexForum extends React.Component {
       backdrop = <Backdrop handleOnClick={this.onBackdropClick} />
     }
 
-    const ret =
-      <div className='center' style={{ height: '100%', paddingBottom: '20px' }}>
+    return (
+      <div className='center'>
         <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
         <SideDrawer show={this.state.sideDrawerOpen} user={this.user} />
         {backdrop}
-        <div className='indexforum-container'>
-          <div className='indexforum-header'>
-            C4 Forum
+        <div className='c4-blog'>
+          <div className='c4-blog-heading'>
+            <p>
+              C4-Forum
+            </p>
           </div>
-          <div className='indexforum-message'>
-            Hello! We build! We share! We solve! BLa bla bla
+          <div className='c4-forum'>
+            <SecondBlog />
           </div>
-          <div className='indexforum-sec-container'>
-            <div className='component-box'>
-              <div className='post-box'>
-                <IndexForumCard user={this.user} />
+        </div>
+        <div className='c4-footer'>
+          <div className='footer-container'>
+            <div className='paragraph'>
+              <h3>PARAGRAPH</h3>
+              <img src='https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328' />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.
+              </p>
+            </div>
+            <div className='latest-footer'>
+              <div className='latest-posts'>
+                <h3>LATEST POSTS</h3>
+                <LatestPost />
+                <LatestPost />
+                <LatestPost />
               </div>
-              <div className='indexforum-second'>
-                <div className='indexforum-second-box'>
-                  <ul>
-                    <li>#DEV</li>
-                    <li>#</li>
-                    <li>#</li>
-                    <li>#</li>
+              <div className='links-social'>
+                <div className='links'>
+                  <h3>QUICK LINKS</h3>
+                  <ul className='list-unstyled'>
+                    <li><a href='#'>About Us</a></li>
+                    <li><a href='#'>Travel</a></li>
+                    <li><a href='#'>Adventure</a></li>
+                    <li><a href='#'>Courses</a></li>
+                    <li><a href='#'>Categories</a></li>
                   </ul>
                 </div>
               </div>
@@ -91,15 +108,8 @@ class IndexForum extends React.Component {
           </div>
         </div>
       </div>
-    return (
-      <div>
-        {
-          // this.state.loading ?<div className='main'> <Cube color="blue"/></div> :
-          ret
-        }
-      </div>
     )
   }
 }
 
-export default IndexForum
+export default IndexBlogs

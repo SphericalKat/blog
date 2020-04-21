@@ -1182,6 +1182,10 @@ header {
     padding: 10px 20px 10px 20px;
 }
 
+.c4-forum .c4-second-blog-details .c4-second-blog-left .left .blog-card img{
+    display: none;
+}
+
 @media (max-width: 615px) {
     .create-thread-container {
         height: 100%;
