@@ -2727,14 +2727,10 @@ button {
 
 
 .c4-blog {
+    display: block;
     position: relative;
     width: 75%;
     margin: 100px auto;
-}
-@media (max-width: 768px) {
-    .c4-blog {
-        width: 100%;
-    }
 }
 
 .c4-blog-heading {
@@ -2797,7 +2793,7 @@ button {
 .dev-head {
     position: relative;
     background-color: blue;
-    padding: 0.1rem 0.5rem;
+    padding: 3px;
     border-radius: 4px;
     color: white;
     font-weight: lighter;
@@ -2851,11 +2847,6 @@ button {
     margin: 2rem auto;
     display: flex;
     justify-content: space-between;
-}
-@media (max-width: 768px) {
-    .c4-main-card {
-        flex-direction: column;
-    }
 }
 
 .c4-blog-main-card {
@@ -2911,15 +2902,6 @@ button {
     height: 100%;
     margin-bottom: 7rem;
 }
-@media (max-width: 768px) {
-    .c4-second-blog-details {
-        flex-direction: column;
-        align-items: center;
-    }
-    .c4-second-blog-left{
-        margin-bottom: 100px;
-    }
-}
 
 .c4-second-blog-left {
     flex: 2;
@@ -2939,12 +2921,6 @@ button {
 .c4-second-blog-right {
     flex: 1;
     height: 100%;
-}
-@media (max-width: 768px) {
-    .c4-second-blog-right {
-        align-items: center;
-        margin-right: 25px;
-    }
 }
 
 .blog-card {
@@ -3033,15 +3009,6 @@ button {
     display: flex;
     margin-bottom: 28px;
 }
-@media (max-width: 768px) {
-    .more-post-card {
-        flex-direction: column;
-        height: auto;
-    }
-    .more-post-card img{
-        width: 100%;
-    }
-}
 
 .more-post-card:hover {
     box-shadow: 0 0 4px rgba(0, 174, 255, 0.4);
@@ -3090,7 +3057,7 @@ button {
     background-color: black;
     height: auto;
     top: 7rem;
-    padding: 5rem;
+    padding: 5rem 0;
 }
 
 .footer-container {
@@ -3098,15 +3065,6 @@ button {
     margin: 0 auto;
     display: flex;
     width: 75%;
-}
-@media (max-width: 768px) { /*breakpoint*/
-    .footer-container {
-        width: 100%;
-        flex-direction: column;
-    }
-    .paragraph{
-        margin-bottom: 20px;
-    }
 }
 
 .paragraph {
@@ -3137,11 +3095,7 @@ button {
     /* width: 50%; */
     display: flex;
 }
-@media (max-width: 768px) { /*breakpoint*/
-    .latest-footer {
-        flex-direction: column;
-    }
-}
+
 .latest-posts {
     flex: 1;
     /* width: 50%; */
@@ -3263,10 +3217,14 @@ button {
     background: var(--main-color);
 }
 
+.list-unstyled{
+    margin-top: 20px;
+}
+
 .list-unstyled li a {
     color: #ffffff;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .list-unstyled {
@@ -3284,6 +3242,7 @@ button {
     border: 1px solid rgba(100, 100, 100, 0.5);
     display: flex;
     margin-bottom: 28px;
+    color: white;
 }
 
 .latest-post-card img {
@@ -3298,11 +3257,85 @@ button {
     width: 66.6666%;
 }
 
+.latest-posts .latest-post-card{
+    margin: 20px 0;
+    border: none;
+}
+
 .latest-post-card:hover {
-    box-shadow: 0 0 4px rgba(0, 174, 255, 0.4);
+    color: rgba(255, 255, 255, 0.404);
 }
 
 .latest-post-card-h {
     margin: auto;
     font-weight: lighter;
+}
+
+@media(max-width: 1024px){
+    .carousel{
+        width: 90%;
+    }
+    .c4-second-blog{
+        width: 100%;
+    }
+    .blog-card-details{
+        padding-bottom: 0;
+    }
+    .footer-container{
+        width: 90%;
+    }
+}
+
+@media(max-width: 768px){
+    .c4-blog{
+        width: 100%;
+    }
+    .left{
+        grid-template-columns: auto;
+        width: 90%;
+        margin: auto;
+    }
+    .latest-post-card-h{
+        font-size: 12px;
+    }
+    .latest-post-card img{
+        width: 50px;
+        height: 50px;
+    }
+    .list-unstyled li a{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 425px){
+    .carousel{
+        width: 100%;
+    }
+    .c4-blog-img-details{
+        width: 75%;
+    }
+    .c4-second-blog-right{
+        display: none;
+    }
+    .c4-second-blog-head{
+        display: none;
+    }
+    .c4-footer{
+        top: 0;
+    }
+    .latest-posts{
+        display: none;
+    }
+    .paragraph p{
+        line-height: 1.2rem;
+    }
+    .footer-container{
+        display: block;
+    }
+    .latest-footer{
+        margin: 16px 0;
+    }
+    .links-social{
+        margin: 16px 0;
+    }
 }
