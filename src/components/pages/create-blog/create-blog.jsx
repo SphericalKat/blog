@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
-import Preview from '../../preview/preview'
+import Blog from '../../blog/blog'
+import TextareaAutosize from 'react-autosize-textarea'
 
 class CreateBlog extends React.Component {
   constructor (props) {
@@ -54,6 +55,22 @@ class CreateBlog extends React.Component {
         e.preventDefault()
       }
     }
+    this.handleSpaceAndEnterKeyPress = (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault()
+      }
+      if (e.key === 'Backspace') {
+        const tagLength = this.state.tags.length
+        if (tagLength) {
+          if (this.state.tags[tagLength - 1].length === 1) {
+            e.preventDefault()
+            const tags = this.state.tags
+            tags.pop()
+            this.setState({ tags: tags })
+          }
+        }
+      }
+    }
 
     this.handleTitleChange = (e) => {
       this.setState({ title: e.target.value })
@@ -66,8 +83,17 @@ class CreateBlog extends React.Component {
 
     this.handleTagChange = (e) => {
       const tags = e.target.value.split(',')
+      tags.forEach((ele, i) => {
+        if (ele[0] !== '#') {
+          ele = '#' + ele
+        }
+        tags[i] = ele
+      })
       this.setState({ tags: tags })
-      console.log(tags)
+    }
+
+    this.createTagString = () => {
+      return this.state.tags
     }
 
     this.handleCoverChange = (e) => {
@@ -81,14 +107,14 @@ class CreateBlog extends React.Component {
     this.handlePreviewClick = (e) => {
       this.setState({ currentContent: 1 })
       e.target.style.display = 'none'
-      const edit = e.target.parentNode.querySelector('.create-blog-button-edit')
+      const edit = e.target.parentNode.querySelector('.single-blog-button-edit')
       edit.style.display = 'block'
     }
 
     this.handleEditClick = (e) => {
       this.setState({ currentContent: 0 })
       e.target.style.display = 'none'
-      const preview = e.target.parentNode.querySelector('.create-blog-button-preview')
+      const preview = e.target.parentNode.querySelector('.single-blog-button-preview')
       preview.style.display = 'block'
     }
   }
@@ -100,48 +126,66 @@ class CreateBlog extends React.Component {
       backdrop = <Backdrop handleOnClick={this.onBackdropClick} />
     }
 
+    // Preview defined
     const preview =
-      <div className='create-blog-preview'>
+      <div className='single-blog-container'>
         <div className='blog-container'>
           <div className='preview-container'>
-            <Preview content={this.state.content} />
+            <Blog
+              content={this.state.content}
+              title={this.state.title}
+              coverImage={this.state.coverImage}
+              tags={this.state.tags}
+            />
           </div>
         </div>
       </div>
 
+    // edit defined
     const edit =
-      <div className='create-blog-container'>
+      <div className='single-blog-container'>
         <div className='blog-container'>
-          <div className='create-blog-input create-blog-input-title'>
-            <textarea
+          <div className='single-blog-input single-blog-input-title'>
+            <TextareaAutosize
               onKeyDown={this.handleEnterKeyPress}
               onChange={this.handleTitleChange}
               placeholder='Title (in 50 characters)'
+              value={this.state.title}
             />
           </div>
           <div
-            className='create-blog-input create-blog-input-cover-image'
-            onKeyDown={this.handleEnterKeyPress}
-            onChange={this.handleCoverChange}
+            className='single-blog-input single-blog-input-cover-image'
           >
-            <textarea placeholder='Link for cover image' />
+            <TextareaAutosize
+              placeholder='Link for cover image'
+              onKeyDown={this.handleEnterKeyPress}
+              onChange={this.handleCoverChange}
+              value={this.state.coverImage}
+            />
           </div>
           <div
-            className='create-blog-input create-blog-input-tags'
-            onKeyDown={this.handleEnterKeyPress}
-            onChange={this.handleTagChange}
+            className='single-blog-input single-blog-input-tags'
           >
-            <textarea placeholder='Tags (separated by a comma `,`)' />
+            <TextareaAutosize
+              placeholder='Tags (separated by a comma `,`)'
+              onKeyDown={this.handleSpaceAndEnterKeyPress}
+              onChange={this.handleTagChange}
+              value={this.createTagString()}
+            />
           </div>
           <div
-            className='create-blog-input create-blog-input-content'
-            onChange={this.handleContentChange}
+            className='single-blog-input single-blog-input-content'
           >
-            <textarea placeholder='Type the content of the blog here....' />
+            <TextareaAutosize
+              placeholder='Type the content of the blog here....'
+              onChange={this.handleContentChange}
+              value={this.state.content}
+            />
           </div>
         </div>
       </div>
 
+    // Current content condition
     let currentContent
     if (this.state.currentContent === 0) {
       currentContent = edit
@@ -149,38 +193,41 @@ class CreateBlog extends React.Component {
       currentContent = preview
     }
 
+    // Rendered
     const ret =
       <div className='center' style={{ height: '100%' }}>
         <Navbar onToggleClick={this.handleToggleClick} user={{}} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values-blog'>
-          <div className='create-blog-button-group'>
+          <div className='single-blog-button-group'>
             <button
-              className='create-blog-button create-blog-button-preview'
+              className='single-blog-button single-blog-button-preview'
               onClick={this.handlePreviewClick}
             >
               Preview
             </button>
             <button
-              className='create-blog-button create-blog-button-edit'
+              className='single-blog-button single-blog-button-edit'
               style={{ display: 'none' }}
               onClick={this.handleEditClick}
             >
               Edit
             </button>
-            <button className='create-blog-button'>
+            <button className='single-blog-button'>
               Save
             </button>
-            <button className='create-blog-button'>
+            <button className='single-blog-button'>
               Publish
             </button>
           </div>
-          <div className='create-blog-card'>
+          <div className='single-blog-card'>
             {currentContent}
           </div>
         </div>
       </div>
+
+    // Return
     return (
       <div className='react-root'>
         {
