@@ -2,7 +2,10 @@ import React from 'react'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
-import PostForumCard from '../../cards-home/post-forum'
+import PostForumProfileHeader from '../../cards-home/post-forum-profile-header'
+import PostForumPostBody from '../../cards-home/post-forum-body'
+import Popular from '../../cards-home/popular-post'
+import Tags from '../../cards-home/tags'
 
 class PostForum extends React.Component {
   constructor (props) {
@@ -26,9 +29,14 @@ class PostForum extends React.Component {
       likes: 420,
       issues: 69,
       issuesSolved: 0,
-      photo: '',
+      photo: 'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg',
       emailId: 'example@gmail.com',
       time: '4 hrs ago'
+    }
+
+    this.post = {
+      title: 'Why do Cats Meow and not bark ?',
+      body: 'something of a decent size goes in here'
     }
 
     // Component Lifecycle
@@ -65,25 +73,14 @@ class PostForum extends React.Component {
         <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
         <SideDrawer show={this.state.sideDrawerOpen} user={this.user} />
         {backdrop}
-        <div className='indexforum-container'>
-          <div className='indexforum-header'>Some Fancy Title</div>
-          <div className='indexforum-message'>Testing Template</div>
-          <div className='indexforum-sec-container'>
-            <div className='component-box'>
-              <div className='post-box'>
-                <PostForumCard user={this.user} />
-              </div>
-              <div className='indexforum-second'>
-                <div className='indexforum-second-box'>
-                  <ul>
-                    <li>#DEV</li>
-                    <li>#</li>
-                    <li>#</li>
-                    <li>#</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <div className='post-forum-container'>
+          <div className='post-forum-left-column'>
+            <Popular />
+            <Tags />
+          </div>
+          <div className='post-forum-right-column'>
+            <PostForumProfileHeader user={this.user} />
+            <PostForumPostBody post={this.post} />
           </div>
         </div>
       </div>
