@@ -6,6 +6,7 @@ import PostForumProfileHeader from '../../cards-home/post-forum-profile-header'
 import PostForumPostBody from '../../cards-home/post-forum-body'
 import Popular from '../../cards-home/popular-post'
 import Tags from '../../cards-home/tags'
+import InfoBox from '../../cards-home/c4-bio-box'
 
 class PostForum extends React.Component {
   constructor (props) {
@@ -38,6 +39,22 @@ class PostForum extends React.Component {
       title: 'Why do Cats Meow and not bark ?',
       body: 'something of a decent size goes in here'
     }
+
+    this.carousel = {
+      imgUrl: [
+        'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
+        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+        'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328'
+      ],
+      trendingTag: ['CATS'],
+      datePost: ['APRIL 17,2020'],
+      trendingPost: ['Why isnt my cat using the litter box?'],
+      description: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!']
+    }
+
+    this.tags = [
+      'CATS'
+    ]
 
     // Component Lifecycle
     this.componentDidMount = () => {
@@ -73,14 +90,17 @@ class PostForum extends React.Component {
         <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
         <SideDrawer show={this.state.sideDrawerOpen} user={this.user} />
         {backdrop}
-        <div className='post-forum-container'>
-          <div className='post-forum-left-column'>
-            <Popular />
-            <Tags />
-          </div>
-          <div className='post-forum-right-column'>
-            <PostForumProfileHeader user={this.user} />
-            <PostForumPostBody post={this.post} />
+        <div className='c4-second-blog'>
+          <div className='c4-second-blog-details'>
+            <div className='c4-second-blog-left'>
+              <PostForumProfileHeader user={this.user} />
+              <PostForumPostBody post={this.post} />
+            </div>
+            <div className='c4-second-blog-right'>
+              <InfoBox info={this.user} />
+              <Popular popular={this.carousel} />
+              <Tags tags={this.tags} />
+            </div>
           </div>
         </div>
       </div>

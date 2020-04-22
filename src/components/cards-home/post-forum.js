@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./index-forum-user";
 
 class IndexForumCard extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.user = props.user;
   }
