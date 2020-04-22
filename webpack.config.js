@@ -14,6 +14,7 @@ const config = [{
     signUp: [path.resolve('src', 'components', 'entrypoints', 'sign-up.jsx')],
     userProfile: [path.resolve('src', 'components', 'entrypoints', 'user-profile.jsx')],
     searchPage: [path.resolve('src', 'components', 'entrypoints', 'search-page.jsx')],
+    postForum: [path.resolve('src', 'components', 'entrypoints', 'post-forum.jsx')],
     indexBlog: [path.resolve('src', 'components', 'entrypoints', 'index-blog.jsx')]
   },
 
@@ -102,7 +103,12 @@ const config = [{
     new HtmlWebpackPlugin({
       chunks: ['searchPage'],
       filename: '../../views/pages/searchPage.ejs',
-      template: templatePath
+      template: path.join('src', 'views', 'pages', 'template.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['postForum'],
+      filename: '../../views/pages/post-forum.ejs',
+      template: path.join('src', 'views', 'pages', 'template.ejs')
     })
   ]
 }]
