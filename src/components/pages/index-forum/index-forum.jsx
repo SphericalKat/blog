@@ -1,6 +1,5 @@
 import React from 'react'
 import SecondBlog from '../../cards-home/second-blog'
-import LatestPost from '../../cards-home/latestPost'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
@@ -86,12 +85,6 @@ class IndexBlogs extends React.Component {
               </p>
             </div>
             <div className='latest-footer'>
-              <div className='latest-posts'>
-                <h3>LATEST POSTS</h3>
-                <LatestPost />
-                <LatestPost />
-                <LatestPost />
-              </div>
               <div className='links-social'>
                 <div className='links'>
                   <h3>QUICK LINKS</h3>

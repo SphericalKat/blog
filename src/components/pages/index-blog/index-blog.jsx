@@ -1,13 +1,12 @@
 import React from 'react'
 import Carousel from '../../cards-home/carousel'
 import SecondBlog from '../../cards-home/second-blog'
-import LatestPost from '../../cards-home/latestPost'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
 
 class IndexBlogs extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
 
     // States
@@ -49,37 +48,66 @@ class IndexBlogs extends React.Component {
       description: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!']
     }
 
-    this.category = { // number of post per catergory is 10 so nX10 matrix will be formed
-      numberOfCategory: 1,
-      categoryName: ['Developer Category'],
-      img: [[
-        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900'
-      ]],
-      dev: [[
-        'CATS'
-      ]],
-      date: [[
-        'APRIL 17,2020'
-      ]],
-      question: [[
-        'Why isn’t my cat using the litter box?'
-      ]]
-    }
+    this.category = [ // number of post per catergory is 10 so nX10 matrix will be formed
+      {
+        categoryName: 'Developer',
+        posts: [
+          {
+            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+            dev: 'CATS',
+            date: 'APRIL 17,2020',
+            question: 'Why isn’t my cat using the litter box?'
+          },
+          {
+            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+            dev: 'CATS',
+            date: 'APRIL 17,2020',
+            question: 'Why isn’t my cat using the litter box?'
+          }
+        ]
+      },
+      {
+        categoryName: 'Micro',
+        posts: [
+          {
+            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+            dev: 'CATS',
+            date: 'APRIL 17,2020',
+            question: 'Why isn’t my cat using the litter box?'
+          },
+          {
+            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+            dev: 'CATS',
+            date: 'APRIL 17,2020',
+            question: 'Why isn’t my cat using the litter box?'
+          }
+        ]
+      }
+    ]
 
-    this.morePosts = { // number of post is 3
-      categoryName: ['Developer Category'],
-      img: [[
-        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900'
-      ]],
-      dev: [[
-        'CATS'
-      ]],
-      date: [[
-        'APRIL 17,2020'
-      ]],
-      question: [[
-        'Why isn’t my cat using the litter box?'
-      ]]
+    this.morePosts = [ // number of post is 3
+      {
+        img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+        dev: 'CATS',
+        date: 'APRIL 17,2020',
+        question: 'Why isn’t my cat using the litter box?'
+      },
+      {
+        img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+        dev: 'CATS',
+        date: 'APRIL 17,2020',
+        question: 'Why isn’t my cat using the litter box?'
+      }
+    ]
+
+    this.footer = {
+      head: 'PARAGRAPH',
+      img: 'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.',
+      links: [
+        { link: 'AboutUs', id: '#' },
+        { link: 'ContactUs', id: '#' }
+      ]
     }
 
     // Component Lifecycle
@@ -105,6 +133,11 @@ class IndexBlogs extends React.Component {
   }
 
   render () {
+    const renderLinks =
+      this.footer.links.map(function (links, index) {
+        return <li key={index}><a href={links.id}>{links.link}</a></li>
+      })
+
     let backdrop
 
     if (this.state.sideDrawerOpen) {
@@ -129,9 +162,9 @@ class IndexBlogs extends React.Component {
           <div className='footer-container'>
             <div className='paragraph'>
               <h3>PARAGRAPH</h3>
-              <img src='https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328' />
+              <img src={this.footer.img} />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.
+                {this.footer.description}
               </p>
             </div>
             <div className='latest-footer'>
@@ -139,11 +172,7 @@ class IndexBlogs extends React.Component {
                 <div className='links'>
                   <h3>QUICK LINKS</h3>
                   <ul className='list-unstyled'>
-                    <li><a href='#'>About Us</a></li>
-                    <li><a href='#'>Travel</a></li>
-                    <li><a href='#'>Adventure</a></li>
-                    <li><a href='#'>Courses</a></li>
-                    <li><a href='#'>Categories</a></li>
+                    {renderLinks}
                   </ul>
                 </div>
               </div>

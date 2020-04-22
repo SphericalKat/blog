@@ -7,14 +7,19 @@ class SecondBlogLeft extends React.Component {
   // }
 
   render () {
-    return (
-      <div className='c4-second-blog-left'>
-        <div className='left'>
-          <BlogCard post={this.props.posts} />
+    const category = this.props.category.map(function (head, index) {
+      return (
+        <div key={index}>
+          <div className='c4-second-blog-head'>
+            <h1>{head.categoryName}</h1>
+          </div>
+          <div className='left'>
+            <BlogCard posts={head.posts} />
+          </div>
         </div>
-      </div>
-
-    )
+      )
+    })
+    return <div className='c4-second-blog-left'>{category}</div>
   }
 }
 
