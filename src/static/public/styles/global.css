@@ -1186,6 +1186,10 @@ header {
     display: none;
 }
 
+.c4-forum-blog{
+    display: none;
+}
+
 @media (max-width: 615px) {
     .create-thread-container {
         height: 100%;
@@ -3339,7 +3343,7 @@ button {
         display: none;
     }
     .c4-second-blog-head{
-        display: none;
+        margin-left: 16px;
     }
     .c4-footer{
         top: 0;

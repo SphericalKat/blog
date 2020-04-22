@@ -6,7 +6,7 @@ import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
 
 class IndexBlogs extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     // States

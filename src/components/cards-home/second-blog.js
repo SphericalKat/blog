@@ -23,7 +23,7 @@ class SecondBlog extends React.Component {
             <Tags tags={this.props.tags} />
           </div>
         </div>
-        <div className='c4-second-blog-head'>
+        <div className='c4-second-blog-head c4-forum-blog'>
           <h1>More Blog Posts</h1>
           <div className='c4-more-blog-post'>
             {ret}
