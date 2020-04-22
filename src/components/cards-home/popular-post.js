@@ -11,13 +11,13 @@ class Popular extends React.Component {
         <h3 className='popular-head'>Popular Posts</h3>
         <div className='pop-post'>
           <div className='h blog-card-h pop-post-card-h'>
-            Why isn’t my cat using the litter box?
+            {this.props.popular.trendingPost}
           </div>
           <div className='h blog-card-h pop-post-card-h'>
-            Why isn’t my cat using the litter box?
+            {this.props.popular.trendingPost}
           </div>
           <div className='h blog-card-h pop-post-card-h'>
-            Why isn’t my cat using the litter box?
+            {this.props.popular.trendingPost}
           </div>
         </div>
       </div>

@@ -11,20 +11,16 @@ class Categories extends React.Component {
         <h3 className='popular-head'>Categories</h3>
         <div className='pop-post'>
           <div className='h blog-card-h pop-post-card-h categories-comp'>
-            <a href='#'>Html</a>
-            <span style={{ float: 'right' }}>(132)</span>
+            <a href='#'>{this.props.category.categoryName}</a>
           </div>
           <div className=' blog-card-h pop-post-card-h categories-comp'>
-            <a href='#'>C/C++</a>
-            <span style={{ float: 'right' }}>(69)</span>
+            <a href='#'>{this.props.category.categoryName}</a>
           </div>
           <div className='h blog-card-h pop-post-card-h categories-comp'>
-            <a href='#'>Pyhton</a>
-            <span style={{ float: 'right' }}>(420)</span>
+            <a href='#'>{this.props.category.categoryName}</a>
           </div>
           <div className='h blog-card-h pop-post-card-h categories-comp'>
-            <a href='#'>VIT</a>
-            <span style={{ float: 'right' }}>(420)</span>
+            <a href='#'>{this.props.category.categoryName}</a>
           </div>
         </div>
       </div>

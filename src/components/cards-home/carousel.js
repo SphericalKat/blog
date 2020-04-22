@@ -8,12 +8,6 @@ class Carousel extends React.Component {
       currentImgIndex: 0
     }
 
-    this.imgUrl = [
-      'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
-      'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-      'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328'
-    ]
-
     this.handleNextSlide = () => {
       const lastIndex = this.imgUrl.length - 1
       const { currentImgIndex } = this.state
@@ -33,17 +27,17 @@ class Carousel extends React.Component {
           <div className='c4-blog-img-details'>
             <div className='c4-blog-tag'>
               <div className='dev-head'>
-                CATS
+                {this.props.trendingTag}
               </div>
               <div className='dev-date'>
-                APRIL 17,2020
+                {this.props.datePost}
               </div>
             </div>
             <div className='h'>
-              Why isn’t my cat using the litter box?
+              {this.props.trendingPost}
             </div>
             <div className='d'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!
+              {this.props.description}
             </div>
             <button className='c4-carousel-button'>Expore</button>
           </div>
@@ -55,7 +49,7 @@ class Carousel extends React.Component {
   render () {
     return (
       <div className='carousel'>
-        {this.imageSlide(this.imgUrl[this.state.currentImgIndex])}
+        {this.imageSlide(this.props.url[this.state.currentImgIndex])}
       </div>
     )
   }
