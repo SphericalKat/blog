@@ -37,7 +37,14 @@ const Navbar = (props) => {
           >
             {props.user.name}
           </a>
-          <a href='/'>Logout</a>
+        </div>
+        <div className='logout nav-user'>
+          <a
+            className='nav-user-name'
+            href='/' style={{ fontWeight: 'lighter',margin: '0 10px' }}
+          >
+            Logout
+          </a>
         </div>
       </nav>
     </header>
