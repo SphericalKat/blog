@@ -17,7 +17,7 @@ class SearchCard extends React.Component {
   }
 
   loadItems () {
-    /* just simulating a load of more items from an api here */
+    /* just simulating a load of more items */
     setTimeout(() => {
       let items = this.state.items.slice()
       items = items.concat(this.getItems())
@@ -51,7 +51,7 @@ class SearchCard extends React.Component {
   }
 
   render () {
-    let visitStyle = { position: 'absolute', width: '100%', bottom: '10rem' }
+    const visitStyle = { position: 'absolute', width: '100%', bottom: '10rem' }
     return (
       <div className='search-page-flex'>
         <div className='c4-second-blog-left'>

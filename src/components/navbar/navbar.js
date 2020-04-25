@@ -37,6 +37,7 @@ const Navbar = (props) => {
           >
             {props.user.name}
           </a>
+          <a href='/'>Logout</a>
         </div>
       </nav>
     </header>
