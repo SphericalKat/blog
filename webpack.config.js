@@ -73,7 +73,7 @@ const config = [{
       template: templatePath
     }),
     new HtmlWebpackPlugin({
-      chunks: ['signUP'],
+      chunks: ['signUp'],
       filename: '../../views/pages/signup.ejs',
       template: templatePath
     }),

@@ -1,6 +1,10 @@
 import express from 'express'
 import compression from 'compression'
 import path from 'path'
+import dotenv from 'dotenv'
+
+dotenv.config()
+console.log(process.env.USER_MANAGEMENT_URL)
 
 // Server var
 const app = express()
@@ -14,6 +18,9 @@ app.locals.url = 'http://localhost:3000'
 
 // Middleware
 app.use(compression())
+app.use(express.text())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static(path.join(__dirname, 'static', 'public')))
 
@@ -23,7 +30,7 @@ app.use('/user', require('./routes/user-profile'))
 app.use('/signup', require('./routes/sign-up'))
 app.use('/createBlog', require('./routes/create-blog'))
 app.use('/login', require('./routes/login'))
-app.use('/indexBlog', require('./routes/index-blog'))
+app.use('/blogs', require('./routes/index-blog'))
 app.use('/searchPage', require('./routes/search-page'))
 
 const port = process.env.PORT || 3000

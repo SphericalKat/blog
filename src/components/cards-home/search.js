@@ -30,7 +30,7 @@ class SearchCard extends React.Component {
   }
 
   getItems () {
-    let items = []
+    const items = []
     for (var i = 0; i < 5; i++) {
       items.push({ card: <SearchCardInfo /> })
     }
