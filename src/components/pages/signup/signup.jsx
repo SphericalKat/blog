@@ -15,12 +15,21 @@ class SignUp extends React.Component {
     }
 
     // Event handler
-    this.handleSubmit = () => {
-      if (this.firstName === '' || this.lastName === '' || this.forumName === '' ||
-        this.emailID === '' || this.password === '' || this.reEnterPassword === '') {
+    this.handleSubmit = (e) => {
+      if (this.state.firstName === '' || this.state.lastName === '' ||
+        this.state.emailID === '' || this.state.password === '' || this.state.reEnterPassword === '') {
         window.alert('Fill the all the fields of the form')
-      } else {
-        this.setState({ submit: true })
+        e.preventDefault()
+        return
+      }
+      if (this.state.password !== this.state.reEnterPassword) {
+        window.alert('Passwords doesn\'t match')
+        e.preventDefault()
+        return
+      }
+      if (this.state.password.length < 8 || this.state.password.length > 30) {
+        window.alert('Password must be between length 8-30.')
+        e.preventDefault()
       }
     }
 
@@ -55,13 +64,13 @@ class SignUp extends React.Component {
               <img src='http://localhost:3000/svg/good_team.svg' alt='good-team' />
             </div>
             <div className='login-container'>
-              <form onSubmit={this.handleSubmit}>
+              <form method='POST' onSubmit={this.handleSubmit} id='signupForm'>
                 <div className='input-div one'>
                   <div>
                     <h5>First Name</h5>
                     <input
                       onChange={this.handleFirstNameChange} type='text' value={this.state.firstName}
-                      className='input'
+                      className='input' name='firstName'
                     />
                   </div>
                 </div>
@@ -70,20 +79,27 @@ class SignUp extends React.Component {
                     <h5>Last Name</h5>
                     <input
                       onChange={this.handleLastNameChange} type='text' value={this.state.lastName}
-                      className='input'
+                      className='input' name='lastName'
                     />
                   </div>
                 </div>
                 <div className='input-div'>
                   <div>
                     <h5>Email ID</h5>
-                    <input onChange={this.handleEmailChange} type='' value={this.state.emailID} className='input' />
+                    <input
+                      onChange={this.handleEmailChange} form='signupForm' type='email' value={this.state.emailID}
+                      className='input' name='email'
+                    />
                   </div>
                 </div>
                 <div className='input-div'>
                   <div>
                     <h5>Password</h5>
-                    <input onChange={this.handlePasswordChange} type='' value={this.state.password} className='input' />
+                    <input
+                      onChange={this.handlePasswordChange}
+                      type='password' value={this.state.password}
+                      className='input' name='password'
+                    />
                   </div>
                 </div>
                 <div className='input-div two'>
@@ -91,12 +107,11 @@ class SignUp extends React.Component {
                     <h5>Confirm Password</h5>
                     <input
                       onChange={this.handlePasswordCheck}
-                      type='' value={this.state.reEnterPassword}
-                      className='input'
+                      type='password' value={this.state.reEnterPassword}
+                      className='input' name='confirmPassword'
                     />
                   </div>
                 </div>
-                <a className='forgotPassword' href='#'>Forgot Password</a>
                 <button type='submit' className='btn' value=''>SIGNUP</button>
               </form>
             </div>

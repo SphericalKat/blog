@@ -1,5 +1,5 @@
 {
-  "name": "forum",
+  "name": "blog",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smoke-trees/forum.git"
+    "url": "git+https://github.com/smoke-trees/blog.git"
   },
   "keywords": [
     "forum",
@@ -25,9 +25,9 @@
   "author": "smoketrees",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smoke-trees/forum/issues"
+    "url": "https://github.com/smoke-trees/blog/issues"
   },
-  "homepage": "https://github.com/smoke-trees/forum#readme",
+  "homepage": "https://github.com/smoke-trees/blog#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -48,9 +48,11 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "@c4-smoketrees/user-management-client": "^1.0.5",
     "autosize": "^4.0.2",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "highlight.js": "^9.18.1",

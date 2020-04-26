@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const PostForumProfileHeader = ({ user }) => (
   <div className='post-forum-profile-header'>
