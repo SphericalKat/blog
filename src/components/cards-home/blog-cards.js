@@ -20,9 +20,11 @@ class BlogCard extends React.Component {
         })
       }
       return (
-        <div key={index} className='blog-card' style={{ cursor: 'pointer' }} onClick={() => {
-          window.location = `${this.url}/blogs/${posts._id}`
-        }}
+        <div
+          key={index} className='blog-card' style={{ cursor: 'pointer' }}
+          onClick={
+            () => { window.location = `${this.url}/blogs/id/${posts._id}` }
+          }
         >
           <img src={posts.coverImage} />
           <div className='blog-card-details'>

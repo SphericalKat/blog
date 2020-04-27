@@ -24,7 +24,7 @@ class Blog extends React.Component {
     return (
       <div className='single-blog'>
         <div className='single-blog-cover-image'>
-          <img src={this.coverImage} alt='dsaf' onError={this.handleImageError} />
+          <img src={this.coverImage} onError={this.handleImageError} />
         </div>
         <div className='single-blog-heading'>
           <h1>{this.title}</h1>

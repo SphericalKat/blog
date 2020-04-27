@@ -1,5 +1,4 @@
 import React from 'react'
-import Carousel from '../../cards-home/carousel'
 import SecondBlog from '../../cards-home/second-blog'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'

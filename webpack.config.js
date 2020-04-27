@@ -7,6 +7,8 @@ const templatePath = process.env.NODE_ENV === 'production' ? path.join('src', 'v
 const config = [{
   entry: {
     createBlog: [path.resolve('src', 'components', 'entrypoints', 'create-blog.jsx')],
+    blogId: [path.resolve('src', 'components', 'entrypoints', 'blog-id.jsx')],
+    blogEdit: [path.resolve('src', 'components', 'entrypoints', 'blog-edit.jsx')],
     index: [path.resolve('src', 'components', 'entrypoints', 'index.jsx')],
     login: [path.resolve('src', 'components', 'entrypoints', 'login.jsx')],
     signUp: [path.resolve('src', 'components', 'entrypoints', 'sign-up.jsx')],
@@ -61,6 +63,16 @@ const config = [{
       chunks: ['createBlog'],
       filename: '../../views/pages/create-blog.ejs',
       template: templatePath
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['blogId'],
+      filename: '../../views/pages/blog-id.ejs',
+      template: path.resolve('src', 'views', 'pages', 'blog-id.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['blogEdit'],
+      filename: '../../views/pages/blog-edit.ejs',
+      template: path.resolve('src', 'views', 'pages', 'blog-edit.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['index'],
