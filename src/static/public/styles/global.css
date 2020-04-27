@@ -2919,6 +2919,10 @@ button {
 }
 
 .dev-head {
+    font-size: 20px;
+}
+
+.dev-tag {
     position: relative;
     background-color: blue;
     padding: 3px;

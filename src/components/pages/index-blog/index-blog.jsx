@@ -4,6 +4,7 @@ import SecondBlog from '../../cards-home/second-blog'
 import Navbar from '../../navbar/navbar'
 import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
+import Footer from '../../footer/footer'
 
 class IndexBlogs extends React.Component {
   constructor (props) {
@@ -22,53 +23,11 @@ class IndexBlogs extends React.Component {
     ]
 
     this.user = this.props.user
-
-    this.carousel = {
-      imgUrl: [
-        'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
-        'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-        'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328'
-      ],
-      trendingTag: ['CATS'],
-      datePost: ['APRIL 17,2020'],
-      trendingPost: ['Why isnt my cat using the litter box?'],
-      description: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa laudantium!']
-    }
-
+    this.blogs = this.props.blogs
     this.category = [ // number of post per catergory is 10 so nX10 matrix will be formed
       {
-        categoryName: 'Developer',
-        posts: [
-          {
-            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-            dev: 'CATS',
-            date: 'APRIL 17,2020',
-            question: 'Why isn’t my cat using the litter box?'
-          },
-          {
-            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-            dev: 'CATS',
-            date: 'APRIL 17,2020',
-            question: 'Why isn’t my cat using the litter box?'
-          }
-        ]
-      },
-      {
-        categoryName: 'Micro',
-        posts: [
-          {
-            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-            dev: 'CATS',
-            date: 'APRIL 17,2020',
-            question: 'Why isn’t my cat using the litter box?'
-          },
-          {
-            img: 'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-            dev: 'CATS',
-            date: 'APRIL 17,2020',
-            question: 'Why isn’t my cat using the litter box?'
-          }
-        ]
+        categoryName: 'Latest',
+        posts: this.blogs
       }
     ]
 
@@ -86,17 +45,6 @@ class IndexBlogs extends React.Component {
         question: 'Why isn’t my cat using the litter box?'
       }
     ]
-
-    this.footer = {
-      head: 'PARAGRAPH',
-      img: 'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.',
-      links: [
-        { link: 'AboutUs', id: '#' },
-        { link: 'ContactUs', id: '#' }
-      ]
-    }
-
     // Component Lifecycle
     this.componentDidMount = () => {
       setTimeout(() => {
@@ -120,10 +68,6 @@ class IndexBlogs extends React.Component {
   }
 
   render () {
-    const renderLinks =
-      this.footer.links.map(function (links, index) {
-        return <li key={index}><a href={links.id}>{links.link}</a></li>
-      })
 
     let backdrop
 
@@ -143,30 +87,10 @@ class IndexBlogs extends React.Component {
             </p>
           </div>
           <SecondBlog
-            category={this.category} info={this.user} popular={this.carousel} tags={this.tags}
-            morePosts={this.morePosts} />
+            category={this.category} tags={this.tags}
+          />
         </div>
-        <div className='c4-footer'>
-          <div className='footer-container'>
-            <div className='paragraph'>
-              <h3>PARAGRAPH</h3>
-              <img src={this.footer.img} />
-              <p>
-                {this.footer.description}
-              </p>
-            </div>
-            <div className='latest-footer'>
-              <div className='links-social'>
-                <div className='links'>
-                  <h3>QUICK LINKS</h3>
-                  <ul className='list-unstyled'>
-                    {renderLinks}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
     )
   }

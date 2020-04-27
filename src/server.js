@@ -29,9 +29,9 @@ app.use(express.static(path.join(__dirname, 'static', 'public')))
 app.use('/', require('./routes/index'))
 app.use('/user', require('./routes/user-profile'))
 app.use('/signup', require('./routes/sign-up'))
-app.use('/createBlog', require('./routes/create-blog'))
 app.use('/login', require('./routes/login'))
 app.use('/blogs', require('./routes/index-blog'))
+app.use('/blogs/create', require('./routes/create-blog'))
 app.use('/searchPage', require('./routes/search-page'))
 
 const port = process.env.PORT || 3000
