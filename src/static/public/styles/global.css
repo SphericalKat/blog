@@ -542,7 +542,7 @@ header {
 .nav-user {
     display: flex;
     height: 56px;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-content: center;
 }
 

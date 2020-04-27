@@ -15,28 +15,8 @@ class Index extends React.Component {
     }
 
     // Component Activity
-    this.componentDidMount = () => {
-      setTimeout(() => {
-        this.setState({
-          loading: false
-        })
-      }, 3000)
-      this.setState({ loading: true })
-    }
 
-    this.user = {
-      name: 'Shizuka',
-      descriptionUser: 'FullStackDev',
-      Hash: {
-        number: 1,
-        arrayHash: ['#Dev']
-      },
-      likes: 420,
-      issues: 69,
-      issuesSolved: 0,
-      photo: '',
-      emailId: 'example@gmail.com'
-    }
+    this.user = this.props.user
 
     // Event Handlers
     this.handleToggleClick = () => {
@@ -48,6 +28,15 @@ class Index extends React.Component {
     this.backdropClickHandle = () => {
       this.setState({ sideDrawerOpen: false })
     }
+  }
+
+  componentDidMount () {
+    setTimeout(() => {
+      this.setState({
+        loading: false
+      })
+    }, 3000)
+    this.setState({ loading: true })
   }
 
   render () {
