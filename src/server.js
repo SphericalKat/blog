@@ -2,9 +2,9 @@ import express from 'express'
 import compression from 'compression'
 import path from 'path'
 import dotenv from 'dotenv'
+import CookieParser from 'cookie-parser'
 
 dotenv.config()
-console.log(process.env.USER_MANAGEMENT_URL)
 
 // Server var
 const app = express()
@@ -18,6 +18,7 @@ app.locals.url = 'http://localhost:3000'
 
 // Middleware
 app.use(compression())
+app.use(CookieParser())
 app.use(express.text())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))

@@ -65,7 +65,7 @@ const config = [{
     new HtmlWebpackPlugin({
       chunks: ['index'],
       filename: '../../views/pages/index.ejs',
-      template: templatePath
+      template: path.resolve('src', 'views', 'pages', 'index.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['login'],
@@ -85,7 +85,7 @@ const config = [{
     new HtmlWebpackPlugin({
       chunks: ['indexBlog'],
       filename: '../../views/pages/index-blog.ejs',
-      template: templatePath
+      template: path.resolve('src', 'views', 'pages', 'index-blog.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['searchPage'],

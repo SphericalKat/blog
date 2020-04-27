@@ -4,4 +4,4 @@ import { hydrate } from 'react-dom'
 
 import IndexBlog from '../pages/index-blog/index-blog.jsx'
 
-hydrate(<IndexBlog />, document.getElementById('root'))
+hydrate(<IndexBlog user={window.InitialData.user} />, document.getElementById('root'))

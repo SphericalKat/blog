@@ -21,20 +21,7 @@ class IndexBlogs extends React.Component {
       'CATS'
     ]
 
-    this.user = {
-      name: 'Shizuka',
-      descriptionUser: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nobis, ut dicta eaque ipsa',
-      Hash: {
-        number: 1,
-        arrayHash: ['#Dev']
-      },
-      likes: 420,
-      issues: 69,
-      issuesSolved: 0,
-      photo: 'https://colorlib.com/preview/theme/balita/images/person_1.jpg',
-      emailId: 'example@gmail.com',
-      time: '4 hrs ago'
-    }
+    this.user = this.props.user
 
     this.carousel = {
       imgUrl: [
@@ -155,8 +142,9 @@ class IndexBlogs extends React.Component {
               C4-Blogs
             </p>
           </div>
-          <Carousel url={this.carousel.imgUrl} trendingTag={this.carousel.trendingTag} trendingPost={this.carousel.trendingPost} datePost={this.carousel.datePost} description={this.carousel.description} />
-          <SecondBlog category={this.category} info={this.user} popular={this.carousel} tags={this.tags} morePosts={this.morePosts} />
+          <SecondBlog
+            category={this.category} info={this.user} popular={this.carousel} tags={this.tags}
+            morePosts={this.morePosts} />
         </div>
         <div className='c4-footer'>
           <div className='footer-container'>

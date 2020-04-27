@@ -27,11 +27,15 @@ class Login extends React.Component {
 
   componentDidMount () {
     const param = new URLSearchParams(window.location.search)
-    if (param.get('err') === '1010') {
+    const err = param.get('err')
+    if (err === '1010') {
       document.querySelector('#user-already').style.display = 'block'
     }
-    if (param.get('err') === '1011') {
+    if (err === '1011') {
       document.querySelector('#invalid-cred').style.display = 'block'
+    }
+    if (err === '1012') {
+      document.querySelector('#service-down').style.display = 'block'
     }
   }
 
@@ -40,6 +44,7 @@ class Login extends React.Component {
       <div>
         <div className='login-error-text' id='user-already'>ERR1010: User Already exists</div>
         <div className='login-error-text' id='invalid-cred'>ERR1011: Invalid email or password</div>
+        <div className='login-error-text' id='service-down'>ERR1012: Service Down</div>
         <button
           type='submit' style={{ cursor: 'pointer' }}
           className='sign-btn' onClick={this.handleSignUpClick} value=''

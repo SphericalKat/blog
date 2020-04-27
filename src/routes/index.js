@@ -2,12 +2,13 @@ import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import Index from '../components/pages/index'
+import JwtDecrypt from '../middleware/jwt-decrypt'
 
 const router = express.Router()
 
-router.get('/', async (req, res) => {
-  const reactComp = renderToString(<Index />)
-  res.status(200).render('pages/index', { reactApp: reactComp, url: req.app.locals.url })
+router.get('/', JwtDecrypt(false), async (req, res) => {
+  const reactComp = renderToString(<Index user={req.user} />)
+  res.status(200).render('pages/index', { reactApp: reactComp, url: req.app.locals.url, user: req.user })
 })
 
 module.exports = router
