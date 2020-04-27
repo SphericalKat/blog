@@ -19,13 +19,18 @@ router.get('/', [JwtDecrypt(false)], async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
+    let redirectPath = `${'http://localhost:3000'}/blogs`
+    if (req.query.callback) {
+      redirectPath = Buffer.from(req.query.callback, 'base64').toString('ascii')
+      console.log(redirectPath)
+    }
     const resp = await UserManagementClient.login({
       email: req.body.email,
       password: req.body.password,
       username: req.body.username
     })
     if (resp.status) {
-      res.status(200).cookie('c4pin', encrypter.encrypt(resp.token)).redirect(`${'http://localhost:3000'}/blogs`)
+      res.status(200).cookie('c4pin', encrypter.encrypt(resp.token)).redirect(redirectPath)
     } else {
       res.status(200).redirect(`${'http://localhost:3000'}/login?err=1011`)
     }

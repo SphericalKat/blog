@@ -15,7 +15,10 @@
 <script src="/myJs/animate-input.js" charset="utf-8"></script>
 <script src="/myJs/reveal.js" charset="utf-8"></script>
 <script charset="utf-8">
-  window.InitialData = { user:<%- JSON.stringify(user) %>}
+  window.InitialData = {
+    user:<%- JSON.stringify(user) %>,
+    blogs:<%- JSON.stringify(blogs) %>
+  }
 </script>
 </body>
 </html>
