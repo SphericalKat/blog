@@ -38,6 +38,9 @@ class BlogCard extends React.Component {
               <div className='dev-date' style={{ color: 'rgba(0,0,0,0.5)' }}>
                 {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
               </div>
+              <div className='dev-name'>
+                {posts.authorName}
+              </div>
             </div>
           </div>
         </div>

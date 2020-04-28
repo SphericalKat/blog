@@ -24,6 +24,7 @@ router.get('/', [JwtDecrypt(false)], async (req, res) => {
   try {
     const response = await BlogClient.getAllBlog()
     blogs = response.blogs
+    console.log(blogs)
   } catch (e) {
     console.log(e)
     res.redirect(`${process.env.BLOG_FRONTEND_URL}`)

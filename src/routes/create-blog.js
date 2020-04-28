@@ -13,6 +13,7 @@ router.get('/', JwtDecrypt(true), async (req, res) => {
   if (draftId) {
     try {
       const response = await BlogClient.getOneDraft(draftId, req.jwt)
+      blog = response.draft
       console.log(response)
     } catch (e) {
 

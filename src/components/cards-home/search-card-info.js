@@ -2,20 +2,21 @@ import React from 'react'
 
 class SearchCardInfo extends React.Component {
   render () {
+    const date = new Date(this.props.date)
     return (
       <div className='search-card'>
         <div className='heading'>
-          <h3>Why does that do this?</h3>
+          <h3>{this.props.title}</h3>
           <div className='space' />
           <div className='search-hash'>
-            dev
+            {this.props.tags}
           </div>
         </div>
         <div className='sub-heading'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.
+          {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
         </div>
         <div className='search-name'>
-          Shizuka
+          {this.props.author}
         </div>
       </div>
     )
