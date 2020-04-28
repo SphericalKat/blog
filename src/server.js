@@ -33,7 +33,7 @@ app.use('/login', require('./routes/login'))
 app.use('/blogs', require('./routes/index-blog'))
 app.use('/blogs/create', require('./routes/create-blog'))
 app.use('/blogs/id', require('./routes/blog-id'))
-app.use('/searchPage', require('./routes/search-page'))
+app.use('/blogs/search', require('./routes/search-page'))
 
 const port = process.env.PORT || 3000
 

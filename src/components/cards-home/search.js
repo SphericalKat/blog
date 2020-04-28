@@ -7,8 +7,11 @@ import InfiniteLoader from 'react-infinite-loader'
 class SearchCard extends React.Component {
   constructor (props) {
     super(props)
+    this.query = this.props.query
+    this.lastDate = this.props.lastDate
     this.state = {
-      items: []
+      items: [],
+      lastDate: this.lastDate
     }
   }
 
@@ -18,11 +21,22 @@ class SearchCard extends React.Component {
 
   loadItems () {
     /* just simulating a load of more items */
-    setTimeout(() => {
-      let items = this.state.items.slice()
-      items = items.concat(this.getItems())
-      this.setState({ items: items })
-    }, 1000)
+    // setTimeout(() => {
+    //   let items = this.state.items.slice()
+    //   items = items.concat(this.getItems())
+    //   this.setState({ items: items })
+    // }, 1000)
+    this.getItems()
+      .then((body) => {
+        const items = this.state.items
+        body.forEach((e) => {
+          items.push({ card: <SearchCardInfo /> })
+        })
+        this.setState({ item: items })
+      })
+      .catch(e => {
+        // TODO redirect
+      })
   }
 
   handleVisit () {
@@ -30,11 +44,15 @@ class SearchCard extends React.Component {
   }
 
   getItems () {
-    const items = []
-    for (var i = 0; i < 5; i++) {
-      items.push({ card: <SearchCardInfo /> })
-    }
-    return items
+    return window.fetch(`${window.location.origin}/blogs/search/search?q=${encodeURIComponent(this.query)}&ld=${this.state.lastDate}`)
+      .then((res) => res.json())
+      .then(body => {
+        this.setState({ lastDate: body.lastDate })
+        return body.blogs
+      })
+      .catch((e) => {
+        throw e
+      })
   }
 
   renderCards () {
@@ -58,10 +76,10 @@ class SearchCard extends React.Component {
           {this.renderCards()}
           <InfiniteLoader visitStyle={visitStyle} onVisited={() => this.handleVisit()} />
         </div>
-        <div className='c4-second-blog-right'>
-          <InfoBox />
-          <Popular />
-        </div>
+        {/*<div className='c4-second-blog-right'>*/}
+        {/*  <InfoBox />*/}
+        {/*  <Popular />*/}
+        {/*</div>*/}
       </div>
     )
   }

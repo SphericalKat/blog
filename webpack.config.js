@@ -101,8 +101,8 @@ const config = [{
     }),
     new HtmlWebpackPlugin({
       chunks: ['searchPage'],
-      filename: '../../views/pages/searchPage.ejs',
-      template: path.join('src', 'views', 'pages', 'template.ejs')
+      filename: '../../views/pages/search-page.ejs',
+      template: path.resolve('src', 'views', 'pages', 'search-page.ejs')
     })
   ]
 }]
