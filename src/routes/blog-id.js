@@ -2,7 +2,7 @@ import { Router } from 'express'
 import { renderToString } from 'react-dom/server'
 import React from 'react'
 import JwtDecrypt from '../middleware/jwt-decrypt'
-import BlogId from '../components/pages/blog-id/create-blog'
+import BlogId from '../components/pages/blog-id/blog-id'
 import BlogClient from '@c4-smoketrees/blog-client'
 import BlogEdit from '../components/pages/blog-edit/blog-edit'
 
@@ -13,6 +13,7 @@ router.get('/:blogId', JwtDecrypt(true), async (req, res) => {
   try {
     const response = await BlogClient.getOneBlog(req.params.blogId, req.jwt)
     blog = response.blog
+    console.log(blog)
   } catch (e) {
   }
   const reactComp = renderToString(<BlogId user={req.user} blog={blog} />)

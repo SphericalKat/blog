@@ -13,6 +13,8 @@ class BlogId extends React.Component {
     this.tags = props.blog.tags
     this.coverImage = props.blog.coverImage
     this.user = props.user
+    this.author = props.blog.authorName
+    console.log(this.props)
 
     if (!this.title) {
       this.title = ''
@@ -52,6 +54,7 @@ class BlogId extends React.Component {
   }
 
   render () {
+    const date = new Date(this.props.blog.dateTime)
     let backdrop
 
     if (this.state.sideDrawerOpen) {
@@ -68,6 +71,8 @@ class BlogId extends React.Component {
               title={this.state.title}
               coverImage={this.state.coverImage}
               tags={this.state.tags}
+              author={this.author}
+              date={`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
             />
           </div>
         </div>

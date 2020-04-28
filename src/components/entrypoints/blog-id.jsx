@@ -2,7 +2,7 @@ import React from 'react'
 
 import { hydrate } from 'react-dom'
 
-import BlogId from '../pages/blog-id/create-blog'
+import BlogId from '../pages/blog-id/blog-id'
 
 hydrate(
   <BlogId

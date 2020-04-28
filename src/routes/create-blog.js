@@ -45,7 +45,7 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
       }
     } else {
       try {
-        const response = await BlogClient.newDraft(draft.content, draft.title, draft.tags, req.jwt)
+        const response = await BlogClient.newDraft(draft.content, draft.title, draft.tags, draft.coverImage, req.jwt)
         if (response.status) {
           res.status(200).json(response)
           return

@@ -48,7 +48,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "@c4-smoketrees/blog-client": "^1.0.0",
+    "@c4-smoketrees/blog-client": "^1.0.1",
     "@c4-smoketrees/user-management-client": "^1.0.5",
     "aes-psswd": "^1.0.1",
     "autosize": "^4.0.2",

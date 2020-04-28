@@ -8,6 +8,8 @@ class Blog extends React.Component {
     this.title = props.title
     this.tags = props.tags
     this.coverImage = props.coverImage
+    this.author = props.author
+    this.date = props.date
 
     this.handleImageError = (e) => {
       if (e.target.src !== 'https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg') {
@@ -21,13 +23,18 @@ class Blog extends React.Component {
     this.tags.forEach((e, i) => {
       tags.push(<div key={i} className='single-blog-single-tag'>{e}</div>)
     })
+    console.log(this.coverImage)
     return (
       <div className='single-blog'>
         <div className='single-blog-cover-image'>
-          <img src={this.coverImage} onError={this.handleImageError} />
+          <img src={this.coverImage} onError={this.handleImageError} style={{ width: '100%' }} />
         </div>
         <div className='single-blog-heading'>
           <h1>{this.title}</h1>
+        </div>
+        <div className='single-blog-secondary-heading'>
+          <h4>{this.author}</h4>
+          <h4>{this.date}</h4>
         </div>
         <div className='single-blog-tags'>
           {tags}
