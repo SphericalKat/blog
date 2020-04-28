@@ -9,7 +9,7 @@ class Blog extends React.Component {
     this.tags = props.tags
     this.coverImage = props.coverImage
     this.author = props.author
-    this.date = props.date
+    this.date = new Date(props.date)
 
     this.handleImageError = (e) => {
       if (e.target.src !== 'https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg') {
@@ -34,7 +34,7 @@ class Blog extends React.Component {
         </div>
         <div className='single-blog-secondary-heading'>
           <h4>{this.author}</h4>
-          <h4>{this.date}</h4>
+          <h4>{`${this.date.getDate()}/${this.date.getMonth() + 1}/${this.date.getFullYear()}`}</h4>
         </div>
         <div className='single-blog-tags'>
           {tags}

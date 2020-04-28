@@ -54,7 +54,7 @@ class BlogId extends React.Component {
   }
 
   render () {
-    const date = new Date(this.props.blog.dateTime)
+    const date = this.props.blog.dateTime
     let backdrop
 
     if (this.state.sideDrawerOpen) {
@@ -72,7 +72,7 @@ class BlogId extends React.Component {
               coverImage={this.state.coverImage}
               tags={this.state.tags}
               author={this.author}
-              date={`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}
+              date={date}
             />
           </div>
         </div>

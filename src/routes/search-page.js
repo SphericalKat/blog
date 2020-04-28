@@ -15,6 +15,7 @@ router.get('/', JwtDecrypt(false), async (req, res) => {
 })
 
 router.get('/search', JwtDecrypt(false), async (req, res) => {
+  console.log(req.query)
   const query = decodeURIComponent(req.query.q)
   const ld = req.query.ld
   let response

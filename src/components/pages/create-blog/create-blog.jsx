@@ -145,7 +145,6 @@ class CreateBlog extends React.Component {
           console.log(this.setState({ draftId: body.draftId, saveDisabled: false }))
         })
         .catch(() => {
-          //location
           window.location = '/blogs'// TODO
         })
     }
@@ -167,13 +166,15 @@ class CreateBlog extends React.Component {
       })
         .then(res => res.json())
         .then(body => {
-          console.log(body)
-          window.location = `${window.location.origin}/blogs/id/${body.blogId}`  //TODO to weburl
+          if (body.status) {
+            window.location = `${window.location.origin}/blogs/id/${body.blogId}` // TODO to weburl
+          }
         })
         .catch(() => {
-          //location
+          // location
           window.location = '/blogs'// TODO
         })
+      this.setState({ publishDisabled: false })
     }
   }
 
@@ -194,6 +195,8 @@ class CreateBlog extends React.Component {
               title={this.state.title}
               coverImage={this.state.coverImage}
               tags={this.state.tags}
+              author={`${this.user.firstName} ${this.user.lastName}`}
+              date={Date.now()}
             />
           </div>
         </div>

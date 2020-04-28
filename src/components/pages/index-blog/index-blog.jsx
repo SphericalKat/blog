@@ -67,7 +67,6 @@ class IndexBlogs extends React.Component {
   }
 
   render () {
-
     let backdrop
 
     if (this.state.sideDrawerOpen) {

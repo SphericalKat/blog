@@ -11,7 +11,8 @@ class SearchCard extends React.Component {
     this.lastDate = this.props.lastDate
     this.state = {
       items: [],
-      lastDate: this.lastDate
+      lastDate: this.lastDate,
+      isEnd: false
     }
   }
 
@@ -51,15 +52,21 @@ class SearchCard extends React.Component {
   }
 
   getItems () {
-    return window.fetch(`${window.location.origin}/blogs/search/search?q=${encodeURIComponent(this.query)}&ld=${this.state.lastDate}`)
-      .then((res) => res.json())
-      .then(body => {
-        this.setState({ lastDate: body.lastDate })
-        return body.blogs
-      })
-      .catch((e) => {
-        throw e
-      })
+    if (!this.state.isEnd) {
+      return window.fetch(`${window.location.origin}/blogs/search/search?q=${encodeURIComponent(this.query)}&ld=${this.state.lastDate}`)
+        .then((res) => res.json())
+        .then(body => {
+          if (body.blogs.length < 4) {
+            this.setState({ isEnd: true })
+            document.querySelector('.loader').style.display = 'none'
+          }
+          this.setState({ lastDate: body.lastDate })
+          return body.blogs
+        })
+        .catch((e) => {
+          throw e
+        })
+    }
   }
 
   renderCards () {
@@ -83,10 +90,10 @@ class SearchCard extends React.Component {
           {this.renderCards()}
           <InfiniteLoader visitStyle={visitStyle} onVisited={() => this.handleVisit()} />
         </div>
-        {/*<div className='c4-second-blog-right'>*/}
-        {/*  <InfoBox />*/}
-        {/*  <Popular />*/}
-        {/*</div>*/}
+        {/* <div className='c4-second-blog-right'> */}
+        {/*  <InfoBox /> */}
+        {/*  <Popular /> */}
+        {/* </div> */}
       </div>
     )
   }

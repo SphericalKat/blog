@@ -30,6 +30,7 @@ router.get('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
   try {
     const response = await BlogClient.getOneBlog(req.params.blogId, req.jwt)
     blog = response.blog
+    console.log(blog)
     // if (blog.authorId !== req.user._id) {
     //   res.redirect('http://google.com')
     //   return
@@ -47,6 +48,7 @@ router.get('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
 
 router.post('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
   try {
+    console.log(req.body)
     const response = await BlogClient.updateBlog(req.params.blogId, req.body, req.jwt)
     console.log(response)
     res.status(200).json(response)

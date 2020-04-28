@@ -31,6 +31,7 @@ router.get('/', JwtDecrypt(true), async (req, res) => {
 router.post('/', JwtDecrypt(true), async (req, res) => {
   const draft = req.body.draft
   const action = req.body.action
+  console.log(req.body)
   if (action === 'save') {
     if (draft.draftId) {
       try {
@@ -39,7 +40,7 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
           res.status(200).json(response)
           return
         }
-        res.status(500).json(response)
+        res.status(200).json(response)
       } catch (e) {
         // TODO
       }
@@ -50,7 +51,7 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
           res.status(200).json(response)
           return
         }
-        res.status(500).json(response)
+        res.status(200).json(response)
       } catch (e) {
         // TODO
       }
@@ -69,10 +70,14 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
       }
     } else {
       try {
-        const response = await BlogClient.newDraft(draft.content, draft.title, draft.tags, req.jwt)
+        const response = await BlogClient.newDraft(draft.content, draft.title, draft.tags, draft.coverImage, req.jwt)
+        console.log(response)
         if (response.status) {
-          res.status(200).json(response)
-          return
+          const response1 = await BlogClient.publishDraft(response.draftId, req.jwt)
+          if (response1.status) {
+            res.status(200).json(response1)
+            return
+          }
         }
         res.status(500).json(response)
       } catch (e) {

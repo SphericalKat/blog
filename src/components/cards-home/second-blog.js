@@ -11,15 +11,14 @@ class SecondBlog extends React.Component {
   // }
 
   render () {
-
     return (
       <div className='c4-second-blog'>
         <div className='c4-second-blog-details'>
           <SecondBlogLeft category={this.props.category} />
           <div className='c4-second-blog-right'>
-            {/*<InfoBox info={this.props.info} />*/}
-            {/*<Popular popular={this.props.popular} />*/}
-            {/*<Tags tags={this.props.tags} />*/}
+            {/* <InfoBox info={this.props.info} /> */}
+            {/* <Popular popular={this.props.popular} /> */}
+            {/* <Tags tags={this.props.tags} /> */}
           </div>
         </div>
       </div>

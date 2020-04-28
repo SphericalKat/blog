@@ -3294,6 +3294,7 @@ header {
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1em 1em;
+    cursor: pointer
 }
 
 .sub-heading {

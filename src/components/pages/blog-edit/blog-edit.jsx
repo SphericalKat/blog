@@ -13,6 +13,8 @@ class BlogEdit extends React.Component {
     this.content = props.blog.content
     this.tags = props.blog.tags
     this.coverImage = props.blog.coverImage
+    this.author = props.blog.authorName
+    this.date = props.blog.dateTime
     this.user = props.user
 
     if (!this.title) {
@@ -153,6 +155,8 @@ class BlogEdit extends React.Component {
               title={this.state.title}
               coverImage={this.state.coverImage}
               tags={this.state.tags}
+              author={this.author}
+              date={this.date}
             />
           </div>
         </div>
