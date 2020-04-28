@@ -62,7 +62,7 @@ const config = [{
     new HtmlWebpackPlugin({
       chunks: ['createBlog'],
       filename: '../../views/pages/create-blog.ejs',
-      template: templatePath
+      template: path.resolve('src', 'views', 'pages', 'create-blog.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['blogId'],
