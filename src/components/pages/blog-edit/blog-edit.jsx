@@ -27,7 +27,7 @@ class BlogEdit extends React.Component {
       this.tags = []
     }
     if (!this.coverImage) {
-      this.coverImage = '' // TODO add a blank image
+      this.coverImage = ''
     }
 
     // States
@@ -133,8 +133,8 @@ class BlogEdit extends React.Component {
         })
       })
         .then(res => res.json())
-        .then(res => { console.log(res) })
-        .catch(err => { console.log(err) })
+        .then(res => { /* TODO handle Save display */ })
+        .catch(() => { window.location = `${window.location.origin}/error` })
     }
   }
 

@@ -13,8 +13,9 @@ router.get('/:blogId', JwtDecrypt(true), async (req, res) => {
   try {
     const response = await BlogClient.getOneBlog(req.params.blogId, req.jwt)
     blog = response.blog
-    console.log(blog)
   } catch (e) {
+    res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+    return
   }
   const reactComp = renderToString(<BlogId user={req.user} blog={blog} />)
   res.status(200).render('pages/blog-id', {
@@ -30,12 +31,14 @@ router.get('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
   try {
     const response = await BlogClient.getOneBlog(req.params.blogId, req.jwt)
     blog = response.blog
-    console.log(blog)
-    // if (blog.authorId !== req.user._id) {
-    //   res.redirect('http://google.com')
-    //   return
-    // }
+
+    if (blog.authorId !== req.user._id) {
+      res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+      return
+    }
   } catch (e) {
+    res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+    return
   }
   const reactComp = renderToString(<BlogEdit user={req.user} blog={blog} />)
   res.status(200).render('pages/blog-edit', {
@@ -48,12 +51,10 @@ router.get('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
 
 router.post('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
   try {
-    console.log(req.body)
     const response = await BlogClient.updateBlog(req.params.blogId, req.body, req.jwt)
-    console.log(response)
+
     res.status(200).json(response)
   } catch (e) {
-    console.log(e)
     res.status(500).json({ status: false })
   }
 })

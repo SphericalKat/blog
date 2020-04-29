@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
     let redirectPath = `${'http://localhost:3000'}/blogs`
     if (req.query.callback) {
       redirectPath = Buffer.from(req.query.callback, 'base64').toString('ascii')
-      console.log(redirectPath)
     }
     const resp = await UserManagementClient.login({
       email: req.body.email,

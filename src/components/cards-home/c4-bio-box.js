@@ -1,10 +1,6 @@
 import React from 'react'
 
 class InfoBox extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
   render () {
     return (
       <div className='c4-bio-box'>

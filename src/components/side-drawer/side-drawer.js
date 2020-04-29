@@ -1,6 +1,6 @@
 import React from 'react'
-import Hashes from '../cards-home/user-hashtag'
-import Activity from '../cards-home/activity'
+// import Hashes from '../cards-home/user-hashtag'
+// import Activity from '../cards-home/activity'
 
 class SideDrawer extends React.Component {
   constructor (props) {
@@ -14,7 +14,6 @@ class SideDrawer extends React.Component {
       drawerClasses = 'side-drawer open'
     }
     let userProfile
-    (this.user)
     if (this.user) {
       userProfile =
         <div className='user-profile'>

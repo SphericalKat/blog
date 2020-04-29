@@ -1,6 +1,6 @@
 import React from 'react'
-import InfoBox from './c4-bio-box'
-import Popular from './popular-post'
+// import InfoBox from './c4-bio-box'
+// import Popular from './popular-post'
 import SearchCardInfo from './search-card-info'
 import InfiniteLoader from 'react-infinite-loader'
 
@@ -31,19 +31,19 @@ class SearchCard extends React.Component {
       .then((body) => {
         const items = this.state.items
         body.forEach((e) => {
-          items.push({
-            card: <SearchCardInfo
+          const card =
+            <SearchCardInfo
               title={e.title}
               author={e.authorName}
               tags={e.tags}
               date={e.dateTime}
             />
-          })
+          items.push({ card })
         })
         this.setState({ item: items })
       })
       .catch(e => {
-        // TODO redirect
+        window.location = `${window.location.origin}/error`
       })
   }
 

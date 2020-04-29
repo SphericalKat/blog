@@ -3526,3 +3526,24 @@ header {
         width: 100%;
     }
 }
+
+.error {
+    width: fit-content;
+    margin: 100px auto;
+}
+
+.error img {
+    width: 500px;
+}
+
+@media (max-width: 425px) {
+    .error img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .error img {
+        width: 300px;
+    }
+}

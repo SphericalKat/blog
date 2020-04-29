@@ -26,7 +26,7 @@ class CreateBlog extends React.Component {
       this.tags = []
     }
     if (!this.coverImage) {
-      this.coverImage = '' // TODO add a blank image
+      this.coverImage = ''
     }
 
     // States
@@ -141,11 +141,10 @@ class CreateBlog extends React.Component {
       })
         .then(res => res.json())
         .then(body => {
-          console.log(body)
-          console.log(this.setState({ draftId: body.draftId, saveDisabled: false }))
+          this.setState({ draftId: body.draftId, saveDisabled: false })
         })
         .catch(() => {
-          window.location = '/blogs'// TODO
+          window.location = `${window.location.origin}/error`
         })
     }
     this.handlePublishClick = (e) => {
@@ -167,12 +166,11 @@ class CreateBlog extends React.Component {
         .then(res => res.json())
         .then(body => {
           if (body.status) {
-            window.location = `${window.location.origin}/blogs/id/${body.blogId}` // TODO to weburl
+            window.location = `${window.location.origin}/blogs/id/${body.blogId}`
           }
         })
         .catch(() => {
-          // location
-          window.location = '/blogs'// TODO
+          window.location = `${window.location.origin}/error`
         })
       this.setState({ publishDisabled: false })
     }

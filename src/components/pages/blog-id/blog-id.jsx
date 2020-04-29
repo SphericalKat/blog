@@ -14,7 +14,6 @@ class BlogId extends React.Component {
     this.coverImage = props.blog.coverImage
     this.user = props.user
     this.author = props.blog.authorName
-    console.log(this.props)
 
     if (!this.title) {
       this.title = ''
@@ -26,7 +25,7 @@ class BlogId extends React.Component {
       this.tags = []
     }
     if (!this.coverImage) {
-      this.coverImage = '' // TODO add a blank image
+      this.coverImage = ''
     }
 
     // States

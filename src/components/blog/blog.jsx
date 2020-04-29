@@ -23,7 +23,7 @@ class Blog extends React.Component {
     this.tags.forEach((e, i) => {
       tags.push(<div key={i} className='single-blog-single-tag'>{e}</div>)
     })
-    console.log(this.coverImage)
+
     return (
       <div className='single-blog'>
         <div className='single-blog-cover-image'>

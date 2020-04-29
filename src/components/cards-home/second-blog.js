@@ -1,9 +1,9 @@
 import React from 'react'
 import SecondBlogLeft from './second-blog-left'
-import MorePost from './morepost'
-import InfoBox from './c4-bio-box'
-import Popular from './popular-post'
-import Tags from './tags'
+// import MorePost from './morepost'
+// import InfoBox from './c4-bio-box'
+// import Popular from './popular-post'
+// import Tags from './tags'
 
 class SecondBlog extends React.Component {
   // constructor (props) {

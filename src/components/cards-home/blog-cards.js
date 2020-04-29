@@ -1,11 +1,6 @@
 import React from 'react'
 
 class BlogCard extends React.Component {
-  constructor (props) {
-    super(props)
-    this.url = 'http://localhost:3000'
-  }
-
   render () {
     const render = this.props.posts.map((posts, index) => {
       const date = new Date(posts.dateTime)
@@ -19,11 +14,12 @@ class BlogCard extends React.Component {
           )
         })
       }
+
       return (
         <div
           key={index} className='blog-card' style={{ cursor: 'pointer' }}
           onClick={
-            () => { window.location = `${this.url}/blogs/id/${posts._id}` }
+            () => { window.location = `${window.location.origin}/blogs/id/${posts._id}` }
           }
         >
           <img src={posts.coverImage} />

@@ -8,7 +8,6 @@ marked.setOptions({
     try {
       return require('./prism').highlight(code, require('./prism').languages[lang], lang)
     } catch (e) {
-      console.log(e)
       return code
     }
   },

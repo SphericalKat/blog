@@ -15,14 +15,13 @@ router.get('/', JwtDecrypt(false), async (req, res) => {
 })
 
 router.get('/search', JwtDecrypt(false), async (req, res) => {
-  console.log(req.query)
   const query = decodeURIComponent(req.query.q)
   const ld = req.query.ld
   let response
   try {
     response = await BlogClient.search(query, Number(ld), req.jwt)
   } catch (e) {
-    // TODO
+    res.status(500).json({ status: false })
   }
   res.status(200).json(response)
 })

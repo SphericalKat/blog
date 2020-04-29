@@ -8,15 +8,19 @@ import BlogClient from '@c4-smoketrees/blog-client'
 const router = express.Router()
 
 router.get('/', JwtDecrypt(true), async (req, res) => {
-  const draftId = req.query.did
+  const draftId = req.query.did // did = draftId
+  if (req.user.allowBlog) {
+    res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+    return
+  }
   let blog = {}
   if (draftId) {
     try {
       const response = await BlogClient.getOneDraft(draftId, req.jwt)
       blog = response.draft
-      console.log(response)
     } catch (e) {
-
+      res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+      return
     }
   }
   const reactComp = renderToString(<CreateBlog user={req.user} blog={blog} />)
@@ -29,9 +33,12 @@ router.get('/', JwtDecrypt(true), async (req, res) => {
 })
 
 router.post('/', JwtDecrypt(true), async (req, res) => {
+  if (req.user.allowBlog) {
+    res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+    return
+  }
   const draft = req.body.draft
   const action = req.body.action
-  console.log(req.body)
   if (action === 'save') {
     if (draft.draftId) {
       try {
@@ -42,7 +49,7 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
         }
         res.status(200).json(response)
       } catch (e) {
-        // TODO
+        res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
       }
     } else {
       try {
@@ -53,7 +60,7 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
         }
         res.status(200).json(response)
       } catch (e) {
-        // TODO
+        res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
       }
     }
   } else if (action === 'publish') {
@@ -66,12 +73,11 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
         }
         res.status(500).json(response)
       } catch (e) {
-        // TODO
+        res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
       }
     } else {
       try {
         const response = await BlogClient.newDraft(draft.content, draft.title, draft.tags, draft.coverImage, req.jwt)
-        console.log(response)
         if (response.status) {
           const response1 = await BlogClient.publishDraft(response.draftId, req.jwt)
           if (response1.status) {
@@ -81,7 +87,7 @@ router.post('/', JwtDecrypt(true), async (req, res) => {
         }
         res.status(500).json(response)
       } catch (e) {
-        // TODO
+        res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
       }
     }
   }
