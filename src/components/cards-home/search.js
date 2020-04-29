@@ -32,12 +32,17 @@ class SearchCard extends React.Component {
         const items = this.state.items
         body.forEach((e) => {
           const card =
-            <SearchCardInfo
-              title={e.title}
-              author={e.authorName}
-              tags={e.tags}
-              date={e.dateTime}
-            />
+            <a
+              href={`${window.location.origin}/blogs/id/${e._id}`}
+              style={{ textDecoration: 'none' }}
+            >
+              <SearchCardInfo
+                title={e.title}
+                author={e.authorName}
+                tags={e.tags}
+                date={e.dateTime}
+              />
+            </a>
           items.push({ card })
         })
         this.setState({ item: items })

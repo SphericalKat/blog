@@ -9,6 +9,12 @@ import BlogEdit from '../components/pages/blog-edit/blog-edit'
 const router = Router()
 
 router.get('/:blogId', JwtDecrypt(true), async (req, res) => {
+  console.log(req.params.blogId)
+  const blogId = req.params.blogId
+  if (blogId.length !== 24) {
+    res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)
+    return
+  }
   let blog
   try {
     const response = await BlogClient.getOneBlog(req.params.blogId, req.jwt)
