@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@600&display=swap');
+
 body,
 html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto Slab', serif;
     width: 100%;
     /* #2fd219 */
-    --main-color: blue;
-    --main-color-lay: rgb(79, 79, 214);
+    --main-color: #365B58;
+    --main-color-lay: #5CAA9C;
     --sec-color: whitesmoke;
+    --dark-bg-font-color: #fcf1d1;
     --sec-color-lay: #ffffff;
     --third-color: rgb(41, 95, 211);
-    --secondary-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --secondary-font: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
 }
 
 * {
@@ -17,6 +20,7 @@ html {
 
 button {
     font: var(--secondary-font);
+    background: var(--sec-color);
 }
 
 body {
@@ -1647,26 +1651,26 @@ header {
 
 .head h1 {
     color: var(--main-color);
-    font-size: 100px;
+    font-size: 80px;
     padding-bottom: 4px;
 }
 
 .head-alt h1 {
-    color: var(--sec-color);
-    font-size: 100px;
+    color: var(--dark-bg-font-color);
+    font-size: 80px;
     padding-bottom: 4px;
 }
 
 .head-details {
     padding-top: 10px;
     font-size: 36px;
-    color: rgb(160, 160, 160);
+    color: rgba(0,0,0,.54);
 }
 
 .head-details-alt {
     padding-top: 10px;
     font-size: 36px;
-    color: rgb(223, 221, 250);
+    color: var(--sec-color);
 }
 
 .explore-btn {
@@ -2298,10 +2302,6 @@ header {
 
 .i-text {
     display: inline;
-}
-
-button {
-    background: var(--sec-color);
 }
 
 .button {
