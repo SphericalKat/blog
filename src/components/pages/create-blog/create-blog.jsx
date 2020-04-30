@@ -9,10 +9,12 @@ class CreateBlog extends React.Component {
   constructor (props) {
     super(props)
 
-    this.title = props.title
-    this.content = props.content
-    this.tags = props.tags
-    this.coverImage = props.coverImage
+    this.title = props.blog.title
+    this.content = props.blog.content
+    this.tags = props.blog.tags
+    this.coverImage = props.blog.coverImage
+    this.draftId = props.blog.draftId
+    this.user = props.user
 
     if (!this.title) {
       this.title = ''
@@ -24,7 +26,7 @@ class CreateBlog extends React.Component {
       this.tags = []
     }
     if (!this.coverImage) {
-      this.coverImage = '' // TODO add a blank image
+      this.coverImage = ''
     }
 
     // States
@@ -36,7 +38,10 @@ class CreateBlog extends React.Component {
       title: this.title,
       tags: this.tags,
       content: this.content,
-      currentContent: 0
+      draftId: this.draftId,
+      currentContent: 0,
+      saveDisabled: false,
+      publishDisabled: false
     }
 
     // Event Handlers
@@ -117,6 +122,58 @@ class CreateBlog extends React.Component {
       const preview = e.target.parentNode.querySelector('.single-blog-button-preview')
       preview.style.display = 'block'
     }
+
+    this.handleSaveClick = (e) => {
+      this.setState({ saveDisabled: true })
+      window.fetch(window.location.href, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          draft: {
+            draftId: this.state.draftId,
+            content: this.state.content,
+            title: this.state.title,
+            tags: this.state.tags,
+            coverImage: this.state.coverImage
+          },
+          action: 'save'
+        })
+      })
+        .then(res => res.json())
+        .then(body => {
+          this.setState({ draftId: body.draftId, saveDisabled: false })
+        })
+        .catch(() => {
+          window.location = `${window.location.origin}/error`
+        })
+    }
+    this.handlePublishClick = (e) => {
+      this.setState({ publishDisabled: true })
+      window.fetch(window.location.href, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          draft: {
+            draftId: this.state.draftId,
+            content: this.state.content,
+            title: this.state.title,
+            tags: this.state.tags,
+            coverImage: this.state.coverImage
+          },
+          action: 'publish'
+        })
+      })
+        .then(res => res.json())
+        .then(body => {
+          if (body.status) {
+            window.location = `${window.location.origin}/blogs/id/${body.blogId}`
+          }
+        })
+        .catch(() => {
+          window.location = `${window.location.origin}/error`
+        })
+      this.setState({ publishDisabled: false })
+    }
   }
 
   render () {
@@ -136,6 +193,8 @@ class CreateBlog extends React.Component {
               title={this.state.title}
               coverImage={this.state.coverImage}
               tags={this.state.tags}
+              author={`${this.user.firstName} ${this.user.lastName}`}
+              date={Date.now()}
             />
           </div>
         </div>
@@ -196,7 +255,7 @@ class CreateBlog extends React.Component {
     // Rendered
     const ret =
       <div className='center' style={{ height: '100%' }}>
-        <Navbar onToggleClick={this.handleToggleClick} user={{}} />
+        <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values-blog'>
@@ -214,10 +273,18 @@ class CreateBlog extends React.Component {
             >
               Edit
             </button>
-            <button className='single-blog-button'>
+            <button
+              className='single-blog-button'
+              onClick={this.handleSaveClick}
+              disabled={this.state.saveDisabled}
+            >
               Save
             </button>
-            <button className='single-blog-button'>
+            <button
+              className='single-blog-button'
+              onClick={this.handlePublishClick}
+              disabled={this.state.publishDisabled}
+            >
               Publish
             </button>
           </div>

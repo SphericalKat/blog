@@ -1,6 +1,10 @@
 import express from 'express'
 import compression from 'compression'
 import path from 'path'
+import dotenv from 'dotenv'
+import CookieParser from 'cookie-parser'
+
+dotenv.config()
 
 // Server var
 const app = express()
@@ -14,6 +18,10 @@ app.locals.url = 'http://localhost:3000'
 
 // Middleware
 app.use(compression())
+app.use(CookieParser())
+app.use(express.text())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static(path.join(__dirname, 'static', 'public')))
 
@@ -21,10 +29,12 @@ app.use(express.static(path.join(__dirname, 'static', 'public')))
 app.use('/', require('./routes/index'))
 app.use('/user', require('./routes/user-profile'))
 app.use('/signup', require('./routes/sign-up'))
-app.use('/createBlog', require('./routes/create-blog'))
 app.use('/login', require('./routes/login'))
-app.use('/indexBlog', require('./routes/index-blog'))
-app.use('/searchPage', require('./routes/search-page'))
+app.use('/blogs', require('./routes/index-blog'))
+app.use('/blogs/create', require('./routes/create-blog'))
+app.use('/blogs/id', require('./routes/blog-id'))
+app.use('/blogs/search', require('./routes/search-page'))
+app.use('/error', require('./routes/error'))
 
 const port = process.env.PORT || 3000
 

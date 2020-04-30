@@ -42,7 +42,6 @@ class CreateContent extends React.Component {
         <textarea value={this.state.content} className='create-content-input' onChange={this.handleInputChange} />
       )
     } else {
-      console.log('handler')
       stateComponent = (
         <div className='preview-container'>
           <Preview content={this.state.content} />

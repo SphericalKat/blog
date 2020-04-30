@@ -1,22 +1,11 @@
 import React from 'react'
-import Hashes from '../cards-home/user-hashtag'
-import Activity from '../cards-home/activity'
+// import Hashes from '../cards-home/user-hashtag'
+// import Activity from '../cards-home/activity'
 
 class SideDrawer extends React.Component {
   constructor (props) {
     super(props)
     this.user = props.user
-
-    if (!this.user) {
-      this.user = {
-        name: 'anshu',
-        emailId: '123@xyz.com',
-        Hash: { number: 10, arrayHash: ['hi', 'bye'] },
-        likes: 10,
-        issuesSolved: 69,
-        issues: 96
-      }
-    }
   }
 
   render () {
@@ -24,29 +13,29 @@ class SideDrawer extends React.Component {
     if (this.props.show) {
       drawerClasses = 'side-drawer open'
     }
-
-    return (
-      <nav className={drawerClasses}>
+    let userProfile
+    if (this.user) {
+      userProfile =
         <div className='user-profile'>
-          <img className='user-circle-profile' src=''/* insest photo */ />
+          <img className='user-circle-profile' src={this.user.profilePicture}/* insest photo */ />
           <div className='user-name-profile'>
-            {this.user.name}
+            {this.user.firstName} {this.user.lastName}
             <div className='userId'>
-              {this.user.emailId}
+              {this.user.email}
             </div>
           </div>
         </div>
+    }
+
+    return (
+      <nav className={drawerClasses}>
+        {userProfile}
         <ul className='side-drawer-ul'>
           <li><a href='/home'>Home</a></li>
           <li><a href='/'>Forum</a></li>
           <li><a href='/'>Blog</a></li>
           <li><a href='/'>Blog</a></li>
         </ul>
-        <div className='hash'>
-          <Hashes numberHash={this.user.Hash.number} arrayHash={this.user.Hash.arrayHash} />
-          <Activity likes={this.user.likes} issuesSolved={this.user.issuesSolved} issues={this.user.issues} />
-        </div>
-        <div className='activity-side' />
       </nav>
     )
   }

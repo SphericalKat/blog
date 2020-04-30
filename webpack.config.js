@@ -7,12 +7,15 @@ const templatePath = process.env.NODE_ENV === 'production' ? path.join('src', 'v
 const config = [{
   entry: {
     createBlog: [path.resolve('src', 'components', 'entrypoints', 'create-blog.jsx')],
+    blogId: [path.resolve('src', 'components', 'entrypoints', 'blog-id.jsx')],
+    blogEdit: [path.resolve('src', 'components', 'entrypoints', 'blog-edit.jsx')],
     index: [path.resolve('src', 'components', 'entrypoints', 'index.jsx')],
     login: [path.resolve('src', 'components', 'entrypoints', 'login.jsx')],
     signUp: [path.resolve('src', 'components', 'entrypoints', 'sign-up.jsx')],
     userProfile: [path.resolve('src', 'components', 'entrypoints', 'user-profile.jsx')],
     searchPage: [path.resolve('src', 'components', 'entrypoints', 'search-page.jsx')],
-    indexBlog: [path.resolve('src', 'components', 'entrypoints', 'index-blog.jsx')]
+    indexBlog: [path.resolve('src', 'components', 'entrypoints', 'index-blog.jsx')],
+    errorPage: [path.resolve('src', 'components', 'entrypoints', 'error')]
   },
 
   output: {
@@ -60,12 +63,22 @@ const config = [{
     new HtmlWebpackPlugin({
       chunks: ['createBlog'],
       filename: '../../views/pages/create-blog.ejs',
-      template: templatePath
+      template: path.resolve('src', 'views', 'pages', 'create-blog.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['blogId'],
+      filename: '../../views/pages/blog-id.ejs',
+      template: path.resolve('src', 'views', 'pages', 'blog-id.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['blogEdit'],
+      filename: '../../views/pages/blog-edit.ejs',
+      template: path.resolve('src', 'views', 'pages', 'blog-edit.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['index'],
       filename: '../../views/pages/index.ejs',
-      template: templatePath
+      template: path.resolve('src', 'views', 'pages', 'index.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['login'],
@@ -73,7 +86,7 @@ const config = [{
       template: templatePath
     }),
     new HtmlWebpackPlugin({
-      chunks: ['signUP'],
+      chunks: ['signUp'],
       filename: '../../views/pages/signup.ejs',
       template: templatePath
     }),
@@ -85,12 +98,17 @@ const config = [{
     new HtmlWebpackPlugin({
       chunks: ['indexBlog'],
       filename: '../../views/pages/index-blog.ejs',
-      template: templatePath
+      template: path.resolve('src', 'views', 'pages', 'index-blog.ejs')
     }),
     new HtmlWebpackPlugin({
       chunks: ['searchPage'],
-      filename: '../../views/pages/searchPage.ejs',
-      template: path.join('src', 'views', 'pages', 'template.ejs')
+      filename: '../../views/pages/search-page.ejs',
+      template: path.resolve('src', 'views', 'pages', 'search-page.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['errorPage'],
+      filename: '../../views/pages/error.ejs',
+      template: path.resolve('src', 'views', 'pages', 'error.ejs')
     })
   ]
 }]

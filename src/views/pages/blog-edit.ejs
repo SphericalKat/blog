@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>C4 projects</title>
+    <link type="text/css" rel="stylesheet" href='/styles/global.css'>
+    <link type="text/css" rel="stylesheet" href='/styles/prism.css'>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script
+            src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"><%- reactApp %></div>
+<script src="/myJs/animate-input.js" charset="utf-8"></script>
+<script src="/myJs/reveal.js" charset="utf-8"></script>
+<script charset="utf-8">
+  window.InitialData = {
+    user:<%- JSON.stringify(user) %>,
+    blog:<%- JSON.stringify(blog) %>
+  }
+</script>
+</body>
+</html>
