@@ -156,6 +156,7 @@ class BlogEdit extends React.Component {
               coverImage={this.state.coverImage}
               tags={this.state.tags}
               author={this.author}
+              profilePic={this.user.profilePicture}
               date={this.date}
             />
           </div>

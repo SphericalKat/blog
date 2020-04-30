@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body,
 html {
@@ -7,11 +7,11 @@ html {
     /* #2fd219 */
     --main-color: #365B58;
     --main-color-lay: #5CAA9C;
-    --sec-color: whitesmoke;
+    --sec-color: white;
     --dark-bg-font-color: #fcf1d1;
     --sec-color-lay: #ffffff;
     --third-color: rgb(41, 95, 211);
-    --secondary-font: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    --secondary-font: -apple-system, BlinkMacSystemFont, 'Roboto Slab', serif;
 }
 
 * {
@@ -77,9 +77,9 @@ textarea {
 
 /* markdown */
 
-.markdown * {
+.markdown  {
     font-family: var(--secondary-font);
-    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .markdown blockquote {
@@ -147,9 +147,11 @@ textarea {
 .markdown pre {
     margin: 1em 0 1em 0;
     padding: 0.5em;
-    background: #282c34;
+    background: #f6f8fa;
     overflow-x: scroll;
-    color: #abb2bf;
+    color: black;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-size: 1em;
 }
 
 .markdown ul {
@@ -159,6 +161,23 @@ textarea {
 .markdown img {
     max-width: 100%;
 }
+
+.markdown code {
+    padding: .2em .4em;
+    margin: 0;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+}
+
+.markdown pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
 
 
 /*login.jsx*/
@@ -1409,6 +1428,7 @@ header {
     flex-flow: row wrap;
     justify-content: center;
     width: 90%;
+    margin: 0 auto;
 }
 
 .single-blog-button {
@@ -1454,14 +1474,15 @@ header {
     box-sizing: border-box;
     margin-top: 10px;
     min-height: 800px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5);
-    width: 80%;
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); */
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .blog-container .single-blog-input {
     display: flex;
+    margin-left: 20px;
 }
 
 .blog-container textarea {
@@ -1521,7 +1542,7 @@ header {
 
 .single-blog .single-blog-tags {
     margin: 1em 0 2em 0;
-    padding: 2px 20px;
+    padding-top: 2px;
     display: flex;
     flex-flow: row wrap;
 }
@@ -1538,7 +1559,7 @@ header {
 }
 
 .single-blog .single-blog-content {
-    padding: 2px 20px;
+    padding-top: 2px;
     margin: 1em 0 2em 0;
 }
 
@@ -1579,6 +1600,7 @@ header {
     .blog-svg img {
         width: 60%;
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -3429,6 +3451,9 @@ header {
 
     .bio p {
         font-size: 12px;
+    }
+    .blog-container {
+        width: 100%;
     }
 }
 

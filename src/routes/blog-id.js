@@ -37,8 +37,6 @@ router.get('/:blogId/edit', JwtDecrypt(true), async (req, res) => {
   try {
     const response = await BlogClient.getOneBlog(req.params.blogId, req.jwt)
     blog = response.blog
-    console.log(blog)
-    console.log(req.user._id)
 
     if (blog.author !== req.user._id) {
       res.redirect(`${process.env.BLOG_FRONTEND_URL}/error`)

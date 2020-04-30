@@ -1,6 +1,7 @@
 import React from 'react'
 import marked from 'marked'
 import emoji from 'node-emoji'
+import sanitize from 'sanitize-html'
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -25,7 +26,7 @@ class Preview extends React.Component {
     const rendered = marked.parse(this.props.content)
     const emojified = emoji.emojify(rendered, null)
     return (
-      <div className='preview markdown' dangerouslySetInnerHTML={{ __html: emojified }} />
+      <div className='preview markdown' dangerouslySetInnerHTML={{ __html: sanitize(emojified) }} />
     )
   }
 }
