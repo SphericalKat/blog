@@ -44,8 +44,8 @@ class BlogEdit extends React.Component {
 
     // Event Handlers
     this.handleToggleClick = () => {
-      this.setState((pevState) => {
-        return { sideDrawerOpen: !pevState.sideDrawerOpen } // passing reference
+      this.setState((prevState) => {
+        return { sideDrawerOpen: !prevState.sideDrawerOpen } // passing reference
       })
     }
 
@@ -65,7 +65,7 @@ class BlogEdit extends React.Component {
       if (e.key === 'Backspace') {
         const tagLength = this.state.tags.length
         if (tagLength) {
-          if (this.state.tags[tagLength - 1].length === 1) {
+          if (this.state.tags[tagLength - 1].length === 2) {
             e.preventDefault()
             const tags = this.state.tags
             tags.pop()
@@ -87,8 +87,8 @@ class BlogEdit extends React.Component {
     this.handleTagChange = (e) => {
       const tags = e.target.value.split(',')
       tags.forEach((ele, i) => {
-        if (ele[0] !== '#') {
-          ele = '#' + ele
+        if (ele[1] !== '#') {
+          ele = i === 0 ? '‎#' + ele : ' #' + ele
         }
         tags[i] = ele
       })
