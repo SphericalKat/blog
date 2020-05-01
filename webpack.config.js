@@ -15,7 +15,8 @@ const config = [{
     userProfile: [path.resolve('src', 'components', 'entrypoints', 'user-profile.jsx')],
     searchPage: [path.resolve('src', 'components', 'entrypoints', 'search-page.jsx')],
     indexBlog: [path.resolve('src', 'components', 'entrypoints', 'index-blog.jsx')],
-    errorPage: [path.resolve('src', 'components', 'entrypoints', 'error')]
+    errorPage: [path.resolve('src', 'components', 'entrypoints', 'error')],
+    notFoundPage: [path.resolve('src', 'components', 'entrypoints', 'not-found')]
   },
 
   output: {
@@ -109,6 +110,11 @@ const config = [{
       chunks: ['errorPage'],
       filename: '../../views/pages/error.ejs',
       template: path.resolve('src', 'views', 'pages', 'error.ejs')
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['notFoundPage'],
+      filename: '../../views/pages/not-found.ejs',
+      template: path.resolve('src', 'views', 'pages', 'not-found.ejs')
     })
   ]
 }]
