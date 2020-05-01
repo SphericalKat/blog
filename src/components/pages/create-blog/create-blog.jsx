@@ -60,6 +60,7 @@ class CreateBlog extends React.Component {
         e.preventDefault()
       }
     }
+
     this.handleSpaceAndEnterKeyPress = (e) => {
       if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault()
@@ -67,7 +68,7 @@ class CreateBlog extends React.Component {
       if (e.key === 'Backspace') {
         const tagLength = this.state.tags.length
         if (tagLength) {
-          if (this.state.tags[tagLength - 1].length === 1) {
+          if (this.state.tags[tagLength - 1].length === 2) {
             e.preventDefault()
             const tags = this.state.tags
             tags.pop()
@@ -89,8 +90,8 @@ class CreateBlog extends React.Component {
     this.handleTagChange = (e) => {
       const tags = e.target.value.split(',')
       tags.forEach((ele, i) => {
-        if (ele[0] !== '#') {
-          ele = '#' + ele
+        if (ele[1] !== '#') {
+          ele = i === 0 ? '‎#' + ele : ' #' + ele
         }
         tags[i] = ele
       })

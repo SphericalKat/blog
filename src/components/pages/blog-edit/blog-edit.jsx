@@ -58,6 +58,7 @@ class BlogEdit extends React.Component {
         e.preventDefault()
       }
     }
+
     this.handleSpaceAndEnterKeyPress = (e) => {
       if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault()
