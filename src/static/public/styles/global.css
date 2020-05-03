@@ -27,6 +27,10 @@ body {
     background: var(--sec-color);
 }
 
+a {
+    color: #5CAA9C;
+}
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
