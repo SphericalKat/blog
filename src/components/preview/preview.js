@@ -24,7 +24,7 @@ marked.setOptions({
 class Preview extends React.Component {
   render () {
     const rendered = marked.parse(this.props.content)
-    const emojified = emoji.emojify(rendered, null)
+    const emojified = emoji.emojify(rendered, null, null)
     return (
       <div className='preview markdown' dangerouslySetInnerHTML={{ __html: sanitize(emojified) }} />
     )

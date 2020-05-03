@@ -19,7 +19,7 @@ router.get('/', [JwtDecrypt(false)], async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    let redirectPath = `${'http://localhost:3000'}/blogs`
+    let redirectPath = `${process.env.BLOG_FRONTEND_URL}/blogs`
     if (req.query.callback) {
       redirectPath = Buffer.from(req.query.callback, 'base64').toString('ascii')
     }
@@ -31,11 +31,11 @@ router.post('/', async (req, res) => {
     if (resp.status) {
       res.status(200).cookie('c4pin', encrypter.encrypt(resp.token)).redirect(redirectPath)
     } else {
-      res.status(200).redirect(`${'http://localhost:3000'}/login?err=1011`)
+      res.status(200).redirect(`${process.env.BLOG_FRONTEND_URL}/login?err=1011`)
     }
   } catch (e) {
     if (e.name === 'FetchError') {
-      res.redirect(`${'http://localhost:3000'}/login?err=1012`)
+      res.redirect(`${process.env.BLOG_FRONTEND_URL}/login?err=1012`)
     }
   }
 })
