@@ -31,7 +31,7 @@ class Blog extends React.Component {
         </div>
 
         <div className='single-blog-secondary-heading'>
-          <img src={this.profilePic} style={{ float: 'left', maxHeight: '50px', width: 'auto' }}/>
+          <img src={this.profilePic} className="single-blog-secondary-profile-pic"/>
         <div className='single-blog-secondary-heading-names'>
           <h5>{this.author}</h5>
           <h5

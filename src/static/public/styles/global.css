@@ -1565,6 +1565,13 @@ header {
     align-items: center;
 }
 
+.single-blog-secondary-profile-pic {
+    float: left;
+    max-height: 50px;
+    width: auto;
+    border-radius: 100%;
+}
+
 .single-blog-secondary-heading-names {
     height: 40px;
     display: flex;
