@@ -1,5 +1,6 @@
 import encrypter from './encrypter'
 import jwt from 'jsonwebtoken'
+import logger from '../logging/logger'
 
 const JwtDecrypt = function (redirect) {
   if (redirect) {
@@ -24,7 +25,7 @@ const JwtDecrypt = function (redirect) {
         req.user = jwt.verify(token, process.env.JWTSECRET)
         req.jwt = token
       } catch (e) {
-        console.error('Invalid JWT token')
+        logger.warn("Invalid JWT token")
       }
       next()
     }

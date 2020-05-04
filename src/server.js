@@ -3,6 +3,7 @@ import compression from 'compression'
 import path from 'path'
 import dotenv from 'dotenv'
 import CookieParser from 'cookie-parser'
+import logger from './logging/logger'
 
 dotenv.config()
 
@@ -40,5 +41,5 @@ app.use('*', require('./routes/not-found'))
 const port = process.env.PORT || 3000
 
 app.listen(port, function listenHandler () {
-  console.info(`Running on ${port}`)
+  logger.info(`Running on port ${port}`)
 })
