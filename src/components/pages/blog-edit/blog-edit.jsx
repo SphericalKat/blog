@@ -4,6 +4,9 @@ import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
 import Blog from '../../blog/blog'
 import TextareaAutosize from 'react-autosize-textarea'
+import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
 class BlogEdit extends React.Component {
   constructor (props) {
@@ -39,7 +42,8 @@ class BlogEdit extends React.Component {
       title: this.title,
       tags: this.tags,
       content: this.content,
-      currentContent: 0
+      currentContent: 0,
+      snackbarOpen: false
     }
 
     // Event Handlers
@@ -122,6 +126,17 @@ class BlogEdit extends React.Component {
       preview.style.display = 'block'
     }
 
+    this.handleSavedResp = () => {
+      this.setState({snackbarOpen:true})
+    }
+
+    this.handleSnackbarClose = (e, r) => {
+      if (r === 'clickaway') {
+        return
+      }
+      this.setState({snackbarOpen:false})
+    }
+
     this.handleSaveClick = (e) => {
       window.fetch(window.location.href, {
         method: 'POST',
@@ -134,7 +149,9 @@ class BlogEdit extends React.Component {
         })
       })
         .then(res => res.json())
-        .then(res => { /* TODO handle Save display */ })
+        .then(res => {
+          this.handleSavedResp()
+        })
         .catch(() => { window.location = `${window.location.origin}/error` })
     }
   }
@@ -220,6 +237,23 @@ class BlogEdit extends React.Component {
     const ret =
       <div className='center' style={{ height: '100%' }}>
         <Navbar onToggleClick={this.handleToggleClick} user={this.user} />
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left'
+          }}
+          open={this.state.snackbarOpen}
+          autoHideDuration={4000}
+          onClose={this.handleSnackbarClose}
+          message={"Your changes have been saved."}
+          action={
+            <React.Fragment>
+              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleSnackbarClose}>
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </React.Fragment>
+          }
+          />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values-blog'>

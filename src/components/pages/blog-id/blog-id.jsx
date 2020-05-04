@@ -42,8 +42,8 @@ class BlogId extends React.Component {
 
     // Event Handlers
     this.handleToggleClick = () => {
-      this.setState((pevState) => {
-        return { sideDrawerOpen: !pevState.sideDrawerOpen } // passing reference
+      this.setState((prevState) => {
+        return { sideDrawerOpen: !prevState.sideDrawerOpen } // passing reference
       })
     }
 

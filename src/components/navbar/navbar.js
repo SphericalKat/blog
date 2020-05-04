@@ -6,8 +6,13 @@ import Search from '../search/search'
 class Navbar extends React.Component {
   constructor (props) {
     super(props)
-    this.url = 'http://localhost:3000'
+    this.url = process.env.BLOG_FRONTEND_URL
     this.user = props.user
+
+    this.handleLogoutClick = () => {
+
+    }
+
   }
 
   render () {
@@ -29,6 +34,7 @@ class Navbar extends React.Component {
           <a
             className='nav-user-name'
             href='/' style={{ fontWeight: 'lighter', margin: '0 10px' }}
+            onClick={this.handleLogoutClick}
           >
             Logout
           </a>
