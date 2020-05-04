@@ -4,9 +4,9 @@ import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
 import Blog from '../../blog/blog'
 import TextareaAutosize from 'react-autosize-textarea'
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
+import Snackbar from '@material-ui/core/Snackbar'
 
 class CreateBlog extends React.Component {
   constructor (props) {
@@ -132,7 +132,7 @@ class CreateBlog extends React.Component {
       if (r === 'clickaway') {
         return
       }
-      this.setState({snackbarOpen:false})
+      this.setState({ snackbarOpen: false })
     }
 
     this.handleSaveClick = (e) => {
@@ -146,7 +146,7 @@ class CreateBlog extends React.Component {
             content: this.state.content,
             title: this.state.title,
             tags: this.state.tags,
-            coverImage: this.state.coverImage,
+            coverImage: this.state.coverImage
           },
           action: 'save'
         })
@@ -159,7 +159,7 @@ class CreateBlog extends React.Component {
           window.location = `${window.location.origin}/error`
         })
     }
-      this.handlePublishClick = (e) => {
+    this.handlePublishClick = (e) => {
       this.setState({ publishDisabled: true })
       window.fetch(window.location.href, {
         method: 'POST',
@@ -206,13 +206,13 @@ class CreateBlog extends React.Component {
           open={this.state.snackbarOpen}
           autoHideDuration={4000}
           onClose={this.handleSnackbarClose}
-          message={"Your changes have been saved."}
+          message='Your changes have been saved.'
           action={
-            <React.Fragment>
-              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleSnackbarClose}>
-                <CloseIcon fontSize="small" />
+            <>
+              <IconButton size='small' aria-label='close' color='inherit' onClick={this.handleSnackbarClose}>
+                <CloseIcon fontSize='small' />
               </IconButton>
-            </React.Fragment>
+            </>
           }
         />
         <div className='blog-container'>
@@ -241,13 +241,13 @@ class CreateBlog extends React.Component {
           open={this.state.snackbarOpen}
           autoHideDuration={4000}
           onClose={this.handleSnackbarClose}
-          message={"Your changes have been saved."}
+          message='Your changes have been saved.'
           action={
-            <React.Fragment>
-              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleSnackbarClose}>
-                <CloseIcon fontSize="small" />
+            <>
+              <IconButton size='small' aria-label='close' color='inherit' onClick={this.handleSnackbarClose}>
+                <CloseIcon fontSize='small' />
               </IconButton>
-            </React.Fragment>
+            </>
           }
         />
         <div className='blog-container'>

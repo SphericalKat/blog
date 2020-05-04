@@ -4,9 +4,9 @@ import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
 import Blog from '../../blog/blog'
 import TextareaAutosize from 'react-autosize-textarea'
-import Snackbar from '@material-ui/core/Snackbar';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
+import Snackbar from '@material-ui/core/Snackbar'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
 
 class BlogEdit extends React.Component {
   constructor (props) {
@@ -127,14 +127,14 @@ class BlogEdit extends React.Component {
     }
 
     this.handleSavedResp = () => {
-      this.setState({snackbarOpen:true})
+      this.setState({ snackbarOpen: true })
     }
 
     this.handleSnackbarClose = (e, r) => {
       if (r === 'clickaway') {
         return
       }
-      this.setState({snackbarOpen:false})
+      this.setState({ snackbarOpen: false })
     }
 
     this.handleSaveClick = (e) => {
@@ -245,15 +245,15 @@ class BlogEdit extends React.Component {
           open={this.state.snackbarOpen}
           autoHideDuration={4000}
           onClose={this.handleSnackbarClose}
-          message={"Your changes have been saved."}
+          message='Your changes have been saved.'
           action={
-            <React.Fragment>
-              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleSnackbarClose}>
-                <CloseIcon fontSize="small" />
+            <>
+              <IconButton size='small' aria-label='close' color='inherit' onClick={this.handleSnackbarClose}>
+                <CloseIcon fontSize='small' />
               </IconButton>
-            </React.Fragment>
+            </>
           }
-          />
+        />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <div className='rendered-values-blog'>
