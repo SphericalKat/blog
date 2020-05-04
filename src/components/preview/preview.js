@@ -2,13 +2,15 @@ import React from 'react'
 import marked from 'marked'
 import emoji from 'node-emoji'
 import sanitize from 'sanitize-html'
+import prism from './prism'
 
 marked.setOptions({
   renderer: new marked.Renderer(),
   highlight: function (code, lang) {
     try {
-      return require('./prism').highlight(code, require('./prism').languages[lang], lang)
+      return prism.highlight(code, prism.languages[lang], lang)
     } catch (e) {
+      console.log(e)
       return code
     }
   },

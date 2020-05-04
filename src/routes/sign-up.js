@@ -9,7 +9,7 @@ const router = express.Router()
 
 router.get('/', [JwtDecrypt(false)], async (req, res) => {
   if (req.user) {
-    req.redirect(process.env.BLOG_FRONTEND_URL)
+    res.redirect(process.env.BLOG_FRONTEND_URL)
     return
   }
   const reactComp = renderToString(<Signup />)

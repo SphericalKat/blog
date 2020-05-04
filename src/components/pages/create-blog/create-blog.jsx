@@ -4,6 +4,9 @@ import SideDrawer from '../../side-drawer/side-drawer'
 import Backdrop from '../../backdrop/backdrop'
 import Blog from '../../blog/blog'
 import TextareaAutosize from 'react-autosize-textarea'
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Snackbar from '@material-ui/core/Snackbar';
 
 class CreateBlog extends React.Component {
   constructor (props) {
@@ -41,7 +44,8 @@ class CreateBlog extends React.Component {
       draftId: this.draftId,
       currentContent: 0,
       saveDisabled: false,
-      publishDisabled: false
+      publishDisabled: false,
+      snackbarOpen: false
     }
 
     // Event Handlers
@@ -124,6 +128,13 @@ class CreateBlog extends React.Component {
       preview.style.display = 'block'
     }
 
+    this.handleSnackbarClose = (e, r) => {
+      if (r === 'clickaway') {
+        return
+      }
+      this.setState({snackbarOpen:false})
+    }
+
     this.handleSaveClick = (e) => {
       this.setState({ saveDisabled: true })
       window.fetch(window.location.href, {
@@ -135,20 +146,20 @@ class CreateBlog extends React.Component {
             content: this.state.content,
             title: this.state.title,
             tags: this.state.tags,
-            coverImage: this.state.coverImage
+            coverImage: this.state.coverImage,
           },
           action: 'save'
         })
       })
         .then(res => res.json())
         .then(body => {
-          this.setState({ draftId: body.draftId, saveDisabled: false })
+          this.setState({ draftId: body.draftId, saveDisabled: false, snackbarOpen: true })
         })
         .catch(() => {
           window.location = `${window.location.origin}/error`
         })
     }
-    this.handlePublishClick = (e) => {
+      this.handlePublishClick = (e) => {
       this.setState({ publishDisabled: true })
       window.fetch(window.location.href, {
         method: 'POST',
@@ -187,6 +198,23 @@ class CreateBlog extends React.Component {
     // Preview defined
     const preview =
       <div className='single-blog-container'>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left'
+          }}
+          open={this.state.snackbarOpen}
+          autoHideDuration={4000}
+          onClose={this.handleSnackbarClose}
+          message={"Your changes have been saved."}
+          action={
+            <React.Fragment>
+              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleSnackbarClose}>
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </React.Fragment>
+          }
+        />
         <div className='blog-container'>
           <div className='preview-container'>
             <Blog
@@ -196,6 +224,7 @@ class CreateBlog extends React.Component {
               tags={this.state.tags}
               author={`${this.user.firstName} ${this.user.lastName}`}
               date={Date.now()}
+              profilePic={this.user.profilePicture}
             />
           </div>
         </div>
@@ -204,6 +233,23 @@ class CreateBlog extends React.Component {
     // edit defined
     const edit =
       <div className='single-blog-container'>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left'
+          }}
+          open={this.state.snackbarOpen}
+          autoHideDuration={4000}
+          onClose={this.handleSnackbarClose}
+          message={"Your changes have been saved."}
+          action={
+            <React.Fragment>
+              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleSnackbarClose}>
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </React.Fragment>
+          }
+        />
         <div className='blog-container'>
           <div className='single-blog-input single-blog-input-title'>
             <TextareaAutosize

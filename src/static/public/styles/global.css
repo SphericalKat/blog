@@ -183,6 +183,22 @@ textarea {
     border: 0;
 }
 
+.markdown blockquote {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
+}
+
+.markdown-body blockquote>:first-child {
+    margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+    margin-bottom: 0;
+}
+
 
 /*login.jsx*/
 
