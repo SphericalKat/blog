@@ -23,7 +23,7 @@ marked.setOptions({
 })
 
 class Preview extends React.Component {
-  render() {
+  render () {
     const rendered = marked.parse(this.props.content)
     const emojified = emoji.emojify(rendered, null, null)
     return (
