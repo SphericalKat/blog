@@ -86,10 +86,6 @@ textarea {
     word-wrap: break-word;
 }
 
-.markdown blockquote {
-    margin: 1em 40px;
-}
-
 .markdown dd {
     margin-left: 40px;
 }
@@ -187,8 +183,11 @@ textarea {
     margin-top: 4px;
     margin-bottom: 12px;
     padding: 0 1em;
-    color: #6a737d;
-    border-left: .25em solid #dfe2e5;
+    color: rgba(0, 0, 0, 0.84);
+    box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.84);
+    font-style: italic;
+    letter-spacing: -0.003em;
+    word-break: break-word;
 }
 
 .markdown-body blockquote>:first-child {
