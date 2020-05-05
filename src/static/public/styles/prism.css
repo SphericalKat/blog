@@ -12,7 +12,6 @@ pre {
 	color: #ccc;
 	background: none;
 	font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -43,6 +42,7 @@ pre {
 :not(pre) > code[class*="language-"],
 pre {
 	background: #2d2d2d;
+	border-radius: 4px;
 }
 
 /* Inline code */

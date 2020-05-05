@@ -180,6 +180,9 @@ textarea {
 .markdown code {
     padding: .2em .4em;
     margin: 0;
+    background-color: rgba(0,0,0,0.04);
+    font-size: 85%;
+    border-radius: 4px;
 }
 
 .markdown pre > code {
