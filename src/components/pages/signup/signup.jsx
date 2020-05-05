@@ -16,8 +16,10 @@ class SignUp extends React.Component {
 
     // Event handler
     this.handleSubmit = (e) => {
+      const fileInput = document.getElementById('propic')
       if (this.state.firstName === '' || this.state.lastName === '' ||
-        this.state.emailID === '' || this.state.password === '' || this.state.reEnterPassword === '') {
+        this.state.emailID === '' || this.state.password === '' || this.state.reEnterPassword === ''
+        || fileInput.files.length === 0 || fileInput.files[0].type.split('/')[0] !== 'image') {
         window.alert('Fill the all the fields of the form')
         e.preventDefault()
         return
@@ -61,10 +63,10 @@ class SignUp extends React.Component {
         <div className='main-container'>
           <div className='index-container'>
             <div className='programmer'>
-              <img src='http://localhost:3000/svg/good_team.svg' alt='good-team' />
+              <img src='/svg/good_team.svg' alt='good-team' />
             </div>
             <div className='login-container'>
-              <form method='POST' onSubmit={this.handleSubmit} id='signupForm'>
+              <form method='POST' onSubmit={this.handleSubmit} id='signupForm' encType='multipart/form-data'>
                 <div className='input-div one'>
                   <div>
                     <h5>First Name</h5>
@@ -109,6 +111,16 @@ class SignUp extends React.Component {
                       onChange={this.handlePasswordCheck}
                       type='password' value={this.state.reEnterPassword}
                       className='input' name='confirmPassword'
+                    />
+                  </div>
+                </div>
+                <div className='input-div'>
+                  <div>
+                    <input
+                    type='file'
+                    name='propic'
+                    id='propic'
+                    accept='image/*'
                     />
                   </div>
                 </div>

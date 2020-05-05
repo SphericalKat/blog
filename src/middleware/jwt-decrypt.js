@@ -6,7 +6,6 @@ const JwtDecrypt = function (redirect) {
     return function (req, res, next) {
       const path = req.originalUrl
       const buffer = Buffer.from(`${process.env.BLOG_FRONTEND_URL}${path}`)
-      console.log(req.cookies)
       try {
         const token = encrypter.decrypt(req.cookies.c4pin)
         req.user = jwt.verify(token, process.env.JWTSECRET)
